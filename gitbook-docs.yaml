@@ -1,0 +1,6 @@
+version: v2
+structure:
+  spaces:
+    - id: economy-core
+      title: economy-core
+      path: ./
