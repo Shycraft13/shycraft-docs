@@ -2,7 +2,7 @@
 
 ## Requirements
 
-- **Server software**: Paper 1.21 or newer, or a Paper fork (Purpur, Folia, Canvas)
+- **Server software**: Paper 1.21 or newer, or a Paper fork
 - **Java**: 21 or newer
 - **Database**: one of the following
   - MongoDB 5.0+
