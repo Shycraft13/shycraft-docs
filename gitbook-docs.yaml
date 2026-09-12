@@ -1,4 +1,4 @@
-version: 1
+$schema: https://api.gitbook.com/gitbook-docs.yaml
 site:
-  spaces:
-    - path: ./
+  title: Shycraft13 Docs
+  structure: []
