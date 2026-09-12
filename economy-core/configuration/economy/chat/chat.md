@@ -14,7 +14,7 @@ CHAT:
     ENABLED: true
     LINES:
       - ""
-      - "  &#00FC00&lNEW &r&7» &fWelcome &#00FC00%player% &fon &#00FC00EconomySMP.net"
+      - "  &#00FC00&lNEW &r&7» &fWelcome &#00FC00%player% &fon &#00FC00yourserver.net"
       - "  &7#%unique_joins%"
       - ""
 
