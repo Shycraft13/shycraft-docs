@@ -10,11 +10,12 @@ messages:
   not-in-team:        "&cYou are not in a team."
   not-owner:          "&cOnly the team owner can do this."
   no-permission:      "&cYou don't have permission for this."
-  name-invalid:       "&cTeam name may only contain letters, digits and underscores (3–16 chars)."
+  name-invalid:       "&cTeam name may only contain letters, digits and underscores (3-16 chars)."
   name-taken:         "&cA team with that name already exists."
 
   invite-sent:        "&#00A4FC&lTEAM &r&7» &fInvite sent to &#00FC99%player%&f."
-  invite-received:    "&#00A4FC&lTEAM &r&7» &#00FC99%sender% &finvited you to join &#00FC99%team%&f."
+  # %accept% and %deny% inline the clickable buttons defined below.
+  invite-received:    "&#00A4FC&lTEAM &r&7» &#00FC99%sender% &finvited you to join &#00FC99%team%&f. %accept% %deny%"
   invite-accept-text: "&#00FC00[ACCEPT]"
   invite-accept-hover: "&7Click to accept the invite"
   invite-deny-text:   "&#FC0000[DENY]"
@@ -51,4 +52,17 @@ messages:
 
   chat-format:        "&#00A4FC&lTEAM &r&7» &#00FC99%player%&7: &f%message%"
   chat-no-perm:       "&cYou don't have team chat permission."
+
+  # ── /teammanager admin command ───────────────────────────────────────────
+  teammanager-usage:               "&cUsage: /teammanager <forcedisband|view|teamhome> <player_or_team>"
+  teammanager-usage-forcedisband:  "&cUsage: /teammanager forcedisband <player_or_team>"
+  teammanager-usage-view:          "&cUsage: /teammanager view <player_or_team>"
+  teammanager-usage-teamhome:      "&cUsage: /teammanager teamhome <player_or_team>"
+  teammanager-only-players-view:   "&cOnly players can open the team view."
+  teammanager-only-players-home:   "&cOnly players can be teleported to a team home."
+  # Placeholders: %team%
+  teammanager-forcedisband:        "&#00A4FC&lADMIN &r&7» &fForce disbanded team &#00FC99%team%&f."
+  teammanager-no-home:             "&cTeam &#00FC99%team%&c has no home set."
+  # Placeholders: %input%
+  teammanager-not-found:           "&cNo team or player found matching &f%input%&c."
 ```

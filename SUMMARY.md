@@ -18,12 +18,9 @@
     * [permission.yml](economy-core/configuration/config/permission.md)
     * [placeholder.yml](economy-core/configuration/config/placeholder.md)
   * economy
-    * afk
-      * [config.yml](economy-core/configuration/economy/afk/config.md)
-      * [messages.yml](economy-core/configuration/economy/afk/messages.md)
-      * [sounds.yml](economy-core/configuration/economy/afk/sounds.md)
     * announcement
       * [config.yml](economy-core/configuration/economy/announcement/config.md)
+      * [messages.yml](economy-core/configuration/economy/announcement/messages.md)
       * [reminder.yml](economy-core/configuration/economy/announcement/reminder.md)
     * bounty
       * gui
@@ -70,6 +67,9 @@
       * [media.yml](economy-core/configuration/economy/menus/media.md)
       * [rules.yml](economy-core/configuration/economy/menus/rules.md)
       * [store.yml](economy-core/configuration/economy/menus/store.md)
+    * money
+      * [config.yml](economy-core/configuration/economy/money/config.md)
+      * [messages.yml](economy-core/configuration/economy/money/messages.md)
     * mythictools
       * [config.yml](economy-core/configuration/economy/mythictools/config.md)
       * [mythictool.yml](economy-core/configuration/economy/mythictools/mythictool.md)
@@ -79,6 +79,8 @@
       * [config.yml](economy-core/configuration/economy/pay/config.md)
       * [messages.yml](economy-core/configuration/economy/pay/messages.md)
       * [sounds.yml](economy-core/configuration/economy/pay/sounds.md)
+    * profile
+      * [messages.yml](economy-core/configuration/economy/profile/messages.md)
     * rtp
       * gui
         * [selector.yml](economy-core/configuration/economy/rtp/gui/selector.md)
@@ -93,6 +95,7 @@
       * [sounds.yml](economy-core/configuration/economy/rtpqueue/sounds.md)
     * rtpzone
       * [config.yml](economy-core/configuration/economy/rtpzone/config.md)
+      * [messages.yml](economy-core/configuration/economy/rtpzone/messages.md)
     * sell
       * history
         * gui
@@ -113,6 +116,10 @@
       * gui
         * [mainmenu.yml](economy-core/configuration/economy/settings/gui/mainmenu.md)
       * [config.yml](economy-core/configuration/economy/settings/config.md)
+    * shards
+      * [config.yml](economy-core/configuration/economy/shards/config.md)
+      * [messages.yml](economy-core/configuration/economy/shards/messages.md)
+      * [sounds.yml](economy-core/configuration/economy/shards/sounds.md)
     * shop
       * gui
         * [maingui.yml](economy-core/configuration/economy/shop/gui/maingui.md)

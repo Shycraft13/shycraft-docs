@@ -1,6 +1,6 @@
-# `economy/afk/sounds.yml`
+# `economy/shards/sounds.yml`
 
-Location: `plugins/EconomyCore/economy/afk/sounds.yml`
+Location: `plugins/EconomyCore/economy/shards/sounds.yml`
 
 ```yaml
 sounds:

@@ -14,4 +14,10 @@ messages:
   cooldown:         "&7Please wait &#FCE300%time%s&7."
   no-permission:    "&cNo permission for that slot."
   homes-full:       "&cAll home slots are full."
+
+  # ── /homemanager admin command ───────────────────────────────────────────
+  homemanager-no-permission: "&cNo permission."
+  homemanager-usage:         "&cUsage: /homemanager view <player>"
+  homemanager-player-not-found: "&cPlayer not found."
+  homemanager-loading:       "&7Loading homes..."
 ```

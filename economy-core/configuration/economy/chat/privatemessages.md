@@ -10,4 +10,10 @@ PRIVATE-MESSAGES:
   SELF-MESSAGE: "&cYou cannot message yourself."
   DM-DISABLED: "&c%player% is not accepting private messages."
   NO-REPLY-TARGET: "&cNobody has messaged you yet."
+
+  # Usage hints. %label% is replaced with the actual command label the player typed
+  # (e.g. "msg", "pm", "reply", "r") so the correct form is always shown.
+  USAGE-MSG: "&cUsage: /%label% <player> <message>"
+  USAGE-REPLY: "&cUsage: /%label% <message>"
+  CONSOLE-DENIED: "Console cannot send private messages."
 ```

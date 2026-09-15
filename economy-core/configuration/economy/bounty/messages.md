@@ -13,4 +13,15 @@ messages:
   invalid-amount: "&cInvalid amount."
   cooldown: "&7Please wait before adding another bounty."
   usage: "&cUsage: /bounty [add <player> <amount>]"
+
+  # ── /bountymanager admin command ─────────────────────────────────────────
+  bountymanager-usage:        "&cUsage: /bountymanager <add|set|remove|clear> <player> [amount]"
+  bountymanager-usage-clear:  "&cUsage: /bountymanager clear <player>"
+  bountymanager-usage-action: "&cUsage: /bountymanager %action% <player> <amount>"
+  bountymanager-invalid-amount: "&cInvalid amount."
+  # Placeholders: %amount% (formatted money), %player%
+  bountymanager-added:   "&#00A4FC&lADMIN &r&7» &fAdded &#00FC00%amount% &fbounty to &#00FC99%player%&f."
+  bountymanager-set:     "&#00A4FC&lADMIN &r&7» &fSet &#00FC99%player%&f's bounty to &#00FC00%amount%&f."
+  bountymanager-removed: "&#00A4FC&lADMIN &r&7» &fRemoved &#00FC00%amount% &fbounty from &#00FC99%player%&f."
+  bountymanager-cleared: "&#00A4FC&lADMIN &r&7» &fCleared bounty for &#00FC99%player%&f."
 ```
