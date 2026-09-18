@@ -6,7 +6,7 @@ Every placeholder starts with `%economy_...%`. Requires [PlaceholderAPI](https:/
 
 | Placeholder | Returns | Example |
 | --- | --- | --- |
-| `%economy_name%` | Player name | `Shycraft13` |
+| `%economy_player%` | Player name | `Shycraft13` |
 | `%economy_ping%` | Player ping in milliseconds | `42` |
 | `%economy_money%` | Balance, formatted with a suffix | `12.3k`, `4.2m` |
 | `%economy_shards%` | Shard balance (raw integer) | `1250` |
@@ -33,7 +33,7 @@ Syntax:
 %economy_lb_<type>_position%          the viewing player's own rank
 ```
 
-- `<type>` — one of `balance`, `kills`, `deaths`, `playtime`, `shards`
+- `<type>` — one of `money`, `kills`, `deaths`, `playtime`, `shards`
 - `<pos>` — the rank number, `1` being the top spot
 - `<field>` — either `name` (the player's name) or `value` (the metric value)
 
@@ -43,15 +43,15 @@ If the rank is empty or the player is unranked, the placeholder returns `N/A`.
 
 | Placeholder | Returns |
 | --- | --- |
-| `%economy_lb_balance_1_name%` | Name of the richest player |
-| `%economy_lb_balance_1_value%` | Balance of the richest player |
-| `%economy_lb_balance_2_name%` | Name of the 2nd-richest player |
+| `%economy_lb_money_1_name%` | Name of the richest player |
+| `%economy_lb_money_1_value%` | Balance of the richest player |
+| `%economy_lb_money_2_name%` | Name of the 2nd-richest player |
 | `%economy_lb_kills_3_name%` | Name of the #3 killer |
 | `%economy_lb_kills_3_value%` | Kill count of the #3 killer |
 | `%economy_lb_playtime_1_name%` | Player with the most playtime |
 | `%economy_lb_playtime_1_value%` | That player's playtime, formatted |
 | `%economy_lb_shards_1_value%` | Top shard balance |
-| `%economy_lb_balance_position%` | Your own balance rank |
+| `%economy_lb_money_position%` | Your own balance rank |
 | `%economy_lb_kills_position%` | Your own kill rank |
 
 ### Common uses
