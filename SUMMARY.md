@@ -166,3 +166,29 @@
       * [config.yml](economy-core/configuration/economy/worth/config.md)
       * [messages.yml](economy-core/configuration/economy/worth/messages.md)
       * [worth.yml](economy-core/configuration/economy/worth/worth.md)
+
+## staffcore
+
+* [Introduction](staffcore/introduction.md)
+* [Installation](staffcore/installation.md)
+* [Commands](staffcore/commands.md)
+* [Permissions](staffcore/permissions.md)
+* [Punishment Templates](staffcore/templates.md)
+* [Cross-server & Proxy](staffcore/cross-server.md)
+* [How-to Guides](staffcore/how-to.md)
+* Configuration
+  * [Overview](staffcore/configuration/README.md)
+  * config
+    * [config.yml](staffcore/configuration/config/config.md)
+    * [database.yml](staffcore/configuration/config/database.md)
+    * [permissions.yml](staffcore/configuration/config/permissions.md)
+  * punishments
+    * [config.yml](staffcore/configuration/punishments/config.md)
+    * [messages.yml](staffcore/configuration/punishments/messages.md)
+    * [screens.yml](staffcore/configuration/punishments/screens.md)
+    * [sounds.yml](staffcore/configuration/punishments/sounds.md)
+    * [punishments.yml](staffcore/configuration/punishments/punishments.md)
+    * gui
+      * [punish.yml](staffcore/configuration/punishments/gui/punish.md)
+      * [history.yml](staffcore/configuration/punishments/gui/history.md)
+      * [alts.yml](staffcore/configuration/punishments/gui/alts.md)
