@@ -15,6 +15,8 @@ Every placeholder starts with `%economy_...%`. Requires [PlaceholderAPI](https:/
 | `%economy_playtime%` | Playtime in `Xd Xh Xm` form | `3d 4h 12m` |
 | `%economy_keyall%` | Remaining `/keyall` uses for this player | `2` |
 | `%economy_team%` | Team name, or `None` if the player has no team | `Vanguard` |
+| `%economy_tag%` | Equipped cosmetic tag, formatted with colors, or empty when none is equipped | `[VIP]` |
+| `%economy_tag_raw%` | Equipped tag display without the format wrapper | `VIP` |
 
 ## RTP zone placeholders
 
