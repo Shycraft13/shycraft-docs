@@ -188,7 +188,37 @@
     * [screens.yml](staffcore/configuration/punishments/screens.md)
     * [sounds.yml](staffcore/configuration/punishments/sounds.md)
     * [punishments.yml](staffcore/configuration/punishments/punishments.md)
+    * [limits.yml](staffcore/configuration/punishments/limits.md)
     * gui
       * [punish.yml](staffcore/configuration/punishments/gui/punish.md)
       * [history.yml](staffcore/configuration/punishments/gui/history.md)
       * [alts.yml](staffcore/configuration/punishments/gui/alts.md)
+  * teleports
+    * [config.yml](staffcore/configuration/teleports/config.md)
+    * [messages.yml](staffcore/configuration/teleports/messages.md)
+  * push
+    * [confirm.yml](staffcore/configuration/push/confirm.md)
+  * update
+    * [confirm.yml](staffcore/configuration/update/confirm.md)
+
+## rayguard-enterprise
+
+* [Introduction](rayguard-enterprise/introduction.md)
+* [Installation](rayguard-enterprise/installation.md)
+* [Commands](rayguard-enterprise/commands.md)
+* [Permissions](rayguard-enterprise/permissions.md)
+* [How-to Guides](rayguard-enterprise/how-to.md)
+* Configuration
+  * [Overview](rayguard-enterprise/configuration/README.md)
+  * [config.yml](rayguard-enterprise/configuration/config.md)
+  * [antifreecam.yml](rayguard-enterprise/configuration/antifreecam.md)
+  * [fakeworld.yml](rayguard-enterprise/configuration/fakeworld.md)
+  * [entityculling.yml](rayguard-enterprise/configuration/entityculling.md)
+  * [tileculling.yml](rayguard-enterprise/configuration/tileculling.md)
+  * [chunkprotect.yml](rayguard-enterprise/configuration/chunkprotect.md)
+  * [transparency.yml](rayguard-enterprise/configuration/transparency.md)
+  * anti-xray
+    * [config.yml](rayguard-enterprise/configuration/anti-xray/config.md)
+    * [world.yml](rayguard-enterprise/configuration/anti-xray/world.md)
+    * [world_nether.yml](rayguard-enterprise/configuration/anti-xray/world_nether.md)
+    * [world_the_end.yml](rayguard-enterprise/configuration/anti-xray/world_the_end.md)
