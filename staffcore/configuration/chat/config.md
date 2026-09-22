@@ -108,6 +108,13 @@ If `features.chat: false` in [`config/config.yml`](../config/config.md),
 no chat filters run on this backend at all. The keys in this file are
 ignored until the master switch is on.
 
+## Related: anti-swear
+
+The anti-swear filter (blocked words + normalisation + configurable
+action) lives in its own file, [`chat/blocked-words.yml`](blocked-words.md).
+It runs after the five filters above on chat and also gates signs, books
+and anvil renames.
+
 ## Interaction with mutes
 
 Chat filters run on `AsyncChatEvent` at HIGHEST priority with

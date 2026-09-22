@@ -16,6 +16,7 @@ Top-level roots:
   catalogue, and the three GUI layouts.
 - `teleports/`, `refund/`, `gamemodes/`, `chat/` per-feature settings for the
   optional feature groups gated by `features.<name>` in `config/config.yml`.
+  `chat/` also holds `blocked-words.yml`, the anti-swear filter.
 - `push/`, `update/` GUI layouts for the `/staffcore push` and
   `/staffcore update` confirm screens.
 
