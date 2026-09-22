@@ -2,9 +2,9 @@
 
 Location: `plugins/StaffCore/punishments/punishments.yml`
 
-The LiteBans-style template catalogue. Each category has its own top-level
-section; every template inside picks up the primary action from its section
-(ban-templates always ban, mute-templates always mute, etc.).
+The template catalogue. Each category has its own top-level section; every
+template inside picks up the primary action from its section (ban-templates
+always ban, mute-templates always mute, etc.).
 
 See [Punishment Templates](../../templates.md) for the full model
 walkthrough and field reference.
@@ -175,9 +175,6 @@ Every reason, message and action supports:
 
 `%player%`, `%staff%`, `%reason%`, `%duration%`, `%expires%`, `%remaining%`,
 `%date%`, `%template%`, `%tier%`.
-
-Note: placeholder syntax is `%name%`, not `$name`. LiteBans templates need
-their placeholders rewritten during import.
 
 ## Reloading
 

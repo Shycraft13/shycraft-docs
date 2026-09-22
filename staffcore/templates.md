@@ -2,7 +2,7 @@
 
 Templates are pre-defined punishments with a tier ladder. Instead of typing `/ban Steve 3d Cheating` for a first offence and `/ban Steve 30d Cheating` for a fourth, you configure the whole progression once and let staff apply `/punish Steve cheating` for every offence. The plugin picks the right tier automatically.
 
-The template model is closely modelled on LiteBans. If you have a LiteBans `templates.yml` sitting around, moving it over is mostly a placeholder-rename job (see [Placeholders](#placeholders) below).
+Templates live under `punishments/punishments.yml` and are grouped by category. See [Placeholders](#placeholders) for the full placeholder set.
 
 ## The four categories
 
@@ -101,7 +101,7 @@ Every message, screen and `actions` line supports the same placeholder set:
 | `%template%` | Template name |
 | `%tier%` | 1-based tier index of the applied step |
 
-Placeholders use `%name%` everywhere, **not** `$name`. If you're porting LiteBans templates, replace every `$name` with `%name%`.
+Placeholders use `%name%` syntax everywhere.
 
 ## Shipped defaults
 

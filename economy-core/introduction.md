@@ -19,7 +19,7 @@
 
 ## Design goals
 
-- **One plugin, no dependencies.** Every feature above lives inside a single JAR. No BentoBox, no Essentials, no CMI.
+- **One plugin, no dependencies.** Every feature above lives inside a single JAR.
 - **Backend of your choice.** MongoDB, MySQL/MariaDB and SQLite are all first-class.
 - **Every feature can be turned off individually.** The master `config.yml` has a feature-flag per subsystem.
 

@@ -11,6 +11,10 @@ staffcore:
   debug: false
   server-id: ""
 
+features:
+  punishments: true
+  teleports: false
+
 cross-server:
   enabled: true
   poll-interval-seconds: 5
@@ -27,6 +31,8 @@ proxy:
 | --- | --- | --- |
 | `staffcore.debug` | `false` | Verbose logging for diagnostics. |
 | `staffcore.server-id` | `""` (empty) | Unique identifier for THIS node inside the network. Required whenever cross-server or Redis is enabled. Used as the origin stamp on every event, the node-discovery heartbeat key, and the human-readable tag in logs. If left empty the plugin logs a WARNING and falls back to a per-boot random UUID. |
+| `features.punishments` | `true` | Master switch for the whole punishments feature group. When `false`, none of `/ban`, `/unban`, `/mute`, `/unmute`, `/warn`, `/unwarn`, `/warns`, `/kick`, `/punish`, `/history` or `/alts` is registered; no database tables are opened; no chat / sign / book / anvil / voicechat mute enforcement runs; cross-server ban events are ignored on this node. Set to `false` when another plugin owns bans and you only want the rest of staffcore. |
+| `features.teleports` | `false` | Master switch for the teleport feature group (`/tp`, `/tphere`, `/tppos`, `/back`). When `false`, none of these commands is registered, no last-location snapshot is kept, and no back-stack is recorded. Turn on to enable; per-feature settings and the cross-server switch live in [`teleports/config.yml`](../teleports/config.md). |
 | `cross-server.enabled` | `true` | Poll the shared database for events written by other nodes and apply them locally. Only works if the database is actually shared (mysql or mongodb). |
 | `cross-server.poll-interval-seconds` | `5` | How often the poller runs. When Redis is on, this is only a safety net; events arrive via Redis within milliseconds. |
 | `proxy.enabled` | `false` | Delegate `/ban`, `/unban` and `/kick` to the Velocity proxy for edge-enforcement. Requires the staffcore proxy JAR to be installed on Velocity. |

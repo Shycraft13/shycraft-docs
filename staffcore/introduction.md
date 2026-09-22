@@ -1,6 +1,6 @@
 # Introduction
 
-**staffcore** is a full staff and moderation toolkit for Paper-based Minecraft servers. It ships every day-to-day moderation command your staff needs, plus a LiteBans-style template system with automatic tier progression and cross-server synchronisation.
+**staffcore** is a full staff and moderation toolkit for Paper-based Minecraft servers. It ships every day-to-day moderation command your staff needs, plus a template-driven punishment system with automatic tier progression and cross-server synchronisation.
 
 ## What's inside
 
@@ -8,7 +8,7 @@
 - **Mutes** chat, commands, signs, books, anvil renames, and Simple Voice Chat microphone all blocked from a single mute record.
 - **Warns** with a per-player history and a numeric ladder threshold that can drive escalating actions.
 - **Kicks** persistent history entries just like bans and mutes.
-- **Punishment templates** LiteBans-style presets (e.g. `cheating`, `spam`, `advertising`), each with a tier ladder that escalates automatically on repeat offences. Templates fully replace the "should this be a 3d ban or a 7d ban?" guesswork.
+- **Punishment templates** Named presets (e.g. `cheating`, `spam`, `advertising`), each with a tier ladder that escalates automatically on repeat offences. Templates fully replace the "should this be a 3d ban or a 7d ban?" guesswork.
 - **`/punish` GUI** picker menu that shows every template, per-category colour, current tier hint, and click-to-apply.
 - **`/history` GUI** paginated timeline of every ban, mute, warn and kick a player ever received. Filter by type, sort newest/oldest, each entry shows lifted / expired / still-active status.
 - **`/alts` GUI** every account that has ever shared an IP address with the target, colour-coded by online / offline / banned status. IPs themselves are never rendered in-game.
@@ -21,7 +21,7 @@
 - **One JAR, both platforms.** The same artifact runs on Paper backends and on a Velocity proxy. Descriptors for both platforms coexist inside the JAR; each side loads only what it needs.
 - **YAML-only customisation.** Every command, message, screen, sound, GUI title, GUI slot and colour is in a config file. No recompile required.
 - **Redis-optional.** Redis makes cross-server ban propagation real-time. Turn it off and the plugin falls back to a poll-based path with the same guarantees, just with a few seconds of latency.
-- **LiteBans-compatible template model.** Anyone who knows LiteBans templates can pick up staffcore's `punishments.yml` immediately; the differences are documented in [Punishment Templates](templates.md).
+- **Readable template model.** Templates are plain YAML with named tiers and durations. See [Punishment Templates](templates.md) for the full model.
 
 ## Version compatibility
 

@@ -6,7 +6,8 @@ All chat + action-bar messages. Legacy colours (`&`) and hex colours
 (`&#RRGGBB`) are both accepted.
 
 **Placeholders:** `%player%`, `%staff%`, `%reason%`, `%duration%`, `%expires%`,
-`%remaining%`, `%count%`, `%id%`, `%date%`.
+`%remaining%`, `%count%`, `%id%`, `%date%`, plus `%requested%` / `%cap%` /
+`%action%` on the `limits:` keys.
 
 Chat is used for usage help, staff success confirmations, broadcasts, and
 persistent target-notify messages. Action bar is used for brief errors
@@ -94,6 +95,14 @@ kick:
   usage:      "&#F97603Usage: &#FCE300/kick <player> [reason]"
   success:    "&#F97603&lKICK &r&7» &fKicked &#00FC99%player%&f. Reason: &#FCE300%reason%&f."
   broadcast:  "&#F97603&lKICK &r&7» &#00FC99%player% &fhas been kicked by &#00FC99%staff%&f. Reason: &#FCE300%reason%&f."
+
+limits:
+  duration-clamped: "&#F97603&lLIMIT &r&7» &fRequested &#FCE300%requested% &fexceeds your cap. Clamped to &#FCE300%cap%&f."
+  duration-blocked: "&cDuration &f%requested% &cexceeds your cap of &f%cap%&c."
+  require-template: "&cYou must use a template. Try &f/punish <player> <template>&c."
+  cooldown-staff:   "&cCooldown on &f%action%&c. Try again in &f%remaining%&c."
+  cooldown-target:  "&cThis target was just punished. Try again in &f%remaining%&c."
+  cooldown-redo:    "&cYou just lifted a punishment on this target. Try again in &f%remaining%&c."
 
 staffcore:
   usage:         "&#F97603Usage: &#FCE300/staffcore reload"

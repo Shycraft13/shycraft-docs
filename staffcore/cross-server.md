@@ -84,14 +84,67 @@ Presets:
 
 `config/config.yml` is **never** pushed because it holds per-node identity (`server-id`, proxy toggles, per-node overrides). This rule is enforced on both send and receive.
 
+The source is always explicit: the `<from>` argument names the node whose configs get read. Any live node can be picked, not just the current one. When `<from>` is not the current node, the command publishes a request on `<prefix>:pushes:request`; the named source node subscribes on that channel, reads its own configs, and publishes them on `<prefix>:pushes:announce` as if it had been called there directly.
+
 Two ways to invoke:
 
-- `/staffcore push` (no args, as a player) opens a GUI: pick target servers → pick preset → confirm.
-- `/staffcore push <server-id|*> <preset>` scripted mode. Unknown server-ids are rejected upfront so a typo doesn't silently succeed.
+- `/staffcore push` (no args, as a player) opens a GUI: pick source node → pick target servers → pick preset → confirm.
+- `/staffcore push <from> <to|*> <preset>` scripted mode. Unknown server-ids are rejected upfront so a typo doesn't silently succeed. `<from>` and `<to>` must differ. When run by a player, the scripted variant still opens the confirm stage of the GUI so a chat typo cannot push by accident. Append `--yes` (alias `-y`) to skip the confirm — required for automation, shell scripts and cron. Console callers always skip. The confirm GUI layout is customizable in [`push/confirm.yml`](configuration/push/confirm.md).
 
 Node discovery works via Redis heartbeats: every node writes a short-lived key `<prefix>:nodes:<server-id>` with a 30-second TTL, refreshed every 10 seconds. The GUI reads these to list live nodes.
 
 Backends apply pushed configs by soft-reloading (same as `/staffcore reload`). The proxy writes the files to disk but does not soft-reload; restart the proxy to apply.
+
+## JAR update
+
+`/staffcore update` ships the running StaffCore JAR from one node to one
+or many other nodes over Redis. Requires Redis to be enabled
+network-wide.
+
+The source is always explicit: the `<from>` argument names the node
+whose JAR gets shipped. When `<from>` is not the current node, the
+command publishes a request on `<prefix>:updates:request`; the named
+source node subscribes on that channel and does the actual read + send
+on its side, exactly as if the command had been typed there.
+
+The source reads its running JAR, computes a SHA-256, wraps the bytes in
+a single-entry ZIP, base64-encodes and stores at
+`<prefix>:updates:payload:<update-id>` with a 15-minute TTL, then
+publishes an announce on `<prefix>:updates:announce`. Every subscriber
+whose server-id matches (`*` = everyone, otherwise exact match) fetches
+the payload, verifies size + SHA-256, and writes the JAR atomically to
+`plugins/update/<jarname>.jar`.
+
+Bukkit's built-in `plugins/update/` folder means the file is atomically
+swapped in on the receiver's next server restart. StaffCore does not
+force the restart. Each node reboots on its own schedule. Missing
+config files or folders the new JAR ships are recreated by
+`ResourceUpdater` on that first enable, so a node that was on an older
+version catches up on its own.
+
+The receiver rejects the JAR before writing if:
+
+- The payload key has expired (TTL passed before the receiver was
+  online).
+- The unzipped size doesn't match the announced `sizeBytes`.
+- The SHA-256 doesn't match the announced digest.
+
+Two ways to invoke:
+
+- `/staffcore update` (no args, as a player) opens a GUI: pick source
+  node → pick target servers → confirm.
+- `/staffcore update <from> <to|*>` scripted mode. Unknown server-ids
+  are rejected upfront. `<from>` and `<to>` must differ. When run by a
+  player, the scripted variant still opens the confirm stage of the
+  GUI so a chat typo cannot ship a JAR by accident. Append `--yes`
+  (alias `-y`) to skip the confirm, required for automation, shell
+  scripts and cron. Console callers always skip. The confirm GUI
+  layout is customizable in
+  [`update/confirm.yml`](configuration/update/confirm.md).
+
+Node discovery reuses the same `<prefix>:nodes:<server-id>` heartbeat
+keys as `/staffcore push`; the GUI lists every node that has published
+a heartbeat within the last 30 seconds.
 
 ## Payload types
 

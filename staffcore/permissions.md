@@ -73,6 +73,41 @@ Shipped template permission nodes (edit `punishments/punishments.yml` to add or 
 | --- | --- | --- |
 | `staffcore.alts` | `op` | Use `/alts`. |
 
+## Teleports
+
+Registered by the plugin when `features.teleports: true` in
+[`config/config.yml`](configuration/config/config.md).
+
+| Node | Default | Description |
+| --- | --- | --- |
+| `staffcore.tp` | `op` | Use `/tp <player>`. |
+| `staffcore.tphere` | `op` | Use `/tphere <player>`. |
+| `staffcore.tppos` | `op` | Use `/tppos <x> <y> <z> [world] [server]`. |
+| `staffcore.back` | `op` | Use `/back`. |
+| `staffcore.tp.offline` | `op` | Teleport to an offline player's last logout position. Denied when off even if `staffcore.tp` is granted. |
+| `staffcore.teleport.admin` | `op` | Bypass `teleports.blocked-worlds`. |
+| `staffcore.tp.bypass` | `false` | Immune to being pulled by `/tphere`. Overridden by `staffcore.admin`. |
+
+## Duration caps + cooldowns
+
+Grant one of the group-matching nodes below to a staff member to gate them
+by the matching group in [`punishments/limits.yml`](configuration/punishments/limits.md).
+The shipped groups (`admin`, `moderator`, `helper`) are examples; add /
+remove groups freely and register a matching node in `config/permissions.yml`.
+
+| Node | Default | Description |
+| --- | --- | --- |
+| `staffcore.limit.admin` | `false` | Matches the shipped `admin` group. |
+| `staffcore.limit.mod` | `false` | Matches the shipped `moderator` group. |
+| `staffcore.limit.helper` | `false` | Matches the shipped `helper` group. |
+| `staffcore.limit.bypass` | `false` | Skip duration caps entirely. |
+| `staffcore.limit.unlimited` | `false` | Skip duration caps AND every cooldown AND `require_template`. |
+| `staffcore.cooldown.bypass` | `false` | Skip every cooldown. |
+| `staffcore.cooldown.bypass.ban` | `false` | Skip only the ban cooldown. |
+| `staffcore.cooldown.bypass.mute` | `false` | Skip only the mute cooldown. |
+| `staffcore.cooldown.bypass.warn` | `false` | Skip only the warn cooldown. |
+| `staffcore.cooldown.bypass.kick` | `false` | Skip only the kick cooldown. |
+
 ## Bypass semantics
 
 - `staffcore.<action>.bypass` only takes effect when `punishments.respect-bypass-permissions: true` in `punishments/config.yml` (default: true).

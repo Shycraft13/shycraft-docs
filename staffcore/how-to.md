@@ -200,11 +200,3 @@ staffcore.alts
 
 For an "admin" role add `staffcore.admin` plus every remaining `staffcore.template.*` and `staffcore.ban.permanent` / `staffcore.mute.permanent`. See [Permissions](permissions.md) for the full node list.
 
-## Migrate templates from LiteBans
-
-The template model is a close match. To port:
-
-1. Copy the template names, reasons, ladder steps and durations over.
-2. Rename every `$name` placeholder to `%name%` (e.g. `$player` → `%player%`, `$reason` → `%reason%`).
-3. Note that staffcore doesn't currently support LiteBans-style `template-groups`. If your source uses them, flatten into standalone templates first.
-4. Set every template's `permission:` to something starting with `staffcore.template.` for consistency, and register the node in `config/permissions.yml`.

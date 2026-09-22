@@ -48,13 +48,30 @@ Templates are defined in [`punishments/punishments.yml`](configuration/punishmen
 | `/history <player>` | Open the `/history` GUI: paginated list of every ban, mute, warn, kick for the target. Filter by type, sort newest-first / oldest-first. Each entry shows whether it is still active, expired naturally, or was manually lifted. |
 | `/alts <player>` | Open the `/alts` GUI: every account that has shared an IP with the target, colour-coded online / offline / banned. IPs themselves are never shown in-game (only counted). Query the database directly if you need the raw addresses. |
 
+## Teleports
+
+Registered when `features.teleports: true` in
+[`config/config.yml`](configuration/config/config.md). Per-command
+permissions live in [Permissions](permissions.md#teleports); the shared
+settings (safe-teleport, back-stack size, blocked worlds, cross-server
+switch) live in [`teleports/config.yml`](configuration/teleports/config.md).
+
+| Command | Description |
+| --- | --- |
+| `/tp <player>` | Teleport to a player. Same-server = live position. Cross-server (with `teleports.cross-server: true` + proxy) = you are transferred to the target's server and land at their location. Offline targets teleport to their last logout position (requires `staffcore.tp.offline`). |
+| `/tphere <player>` | Pull an online player to your location. Cross-server aware. The target sees a `target-notify` message. Immunity via `staffcore.tp.bypass`. Offline targets are rejected. |
+| `/tppos <x> <y> <z> [world] [server]` | Teleport to explicit coordinates. `[world]` defaults to your current world. `[server]` triggers a cross-server transfer to that server id. |
+| `/back` | Return to your previous location. Every `/tp`, `/tphere`, `/tppos` and cross-server transfer pushes onto the back-stack; `/back` pops one. Back-stack size and cross-server behaviour live in [`teleports/config.yml`](configuration/teleports/config.md). |
+
 ## Admin
 
 | Command | Aliases | Description |
 | --- | --- | --- |
 | `/staffcore reload` | `/sc reload` | Re-read every YAML under `plugins/StaffCore/`. Templates + message cache rebuild. Database pool + registered listeners are not restarted. |
-| `/staffcore push` | `/sc push` | Open the config-push GUI: pick target servers, pick a preset, confirm. Every matching node rewrites its config tree and soft-reloads. Requires Redis. |
-| `/staffcore push <server-id\|*> <preset>` | `/sc push ...` | Scripted mode. Preset is one of `punishments`, `database`, `gui`, `all`. `config/config.yml` is never pushed (holds per-node identity). See [Cross-server & Proxy](cross-server.md#config-push). |
+| `/staffcore push` | `/sc push` | Open the config-push GUI: pick source node, pick target servers, pick a preset, confirm. Every matching node rewrites its config tree and soft-reloads. Requires Redis. |
+| `/staffcore push <from> <to\|*> <preset>` | `/sc push ...` | Scripted mode. `<from>` names the source node (any live node, not necessarily the current one); `<to>` is a receiver or `*` for every node except `<from>`. Preset is one of `punishments`, `database`, `gui`, `all`. When run by a player, opens the [confirm GUI](configuration/push/confirm.md) so a chat typo can't push by accident. Append `--yes` (alias `-y`) to skip the confirm, required in shell scripts. `config/config.yml` is never pushed (holds per-node identity). When `<from>` is not the current node, the request is forwarded via Redis and the named source publishes. See [Cross-server & Proxy](cross-server.md#config-push). |
+| `/staffcore update` | `/sc update` | Open the JAR-update GUI: pick source node, pick target servers, confirm. Every matching node stages the new JAR in `plugins/update/` and swaps it in on the next server restart. Requires Redis. |
+| `/staffcore update <from> <to\|*>` | `/sc update ...` | Scripted mode. `<from>` names the source node whose JAR gets shipped (any live node); `<to>` is a receiver or `*` for every node except `<from>`. When run by a player, opens the [confirm GUI](configuration/update/confirm.md) so a chat typo can't ship a JAR by accident. Append `--yes` (alias `-y`) to skip the confirm, required in shell scripts. Missing config files the new JAR ships get recreated on the receiver's first enable after the swap. When `<from>` is not the current node, the request is forwarded via Redis and the named source publishes. See [Cross-server & Proxy](cross-server.md#jar-update). |
 
 ## Time format
 
