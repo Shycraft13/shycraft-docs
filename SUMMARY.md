@@ -196,6 +196,17 @@
   * teleports
     * [config.yml](staffcore/configuration/teleports/config.md)
     * [messages.yml](staffcore/configuration/teleports/messages.md)
+  * refund
+    * [config.yml](staffcore/configuration/refund/config.md)
+    * [messages.yml](staffcore/configuration/refund/messages.md)
+    * gui
+      * [category.yml](staffcore/configuration/refund/gui/category.md)
+      * [list.yml](staffcore/configuration/refund/gui/list.md)
+      * [action.yml](staffcore/configuration/refund/gui/action.md)
+      * [view.yml](staffcore/configuration/refund/gui/view.md)
+  * gamemodes
+    * [config.yml](staffcore/configuration/gamemodes/config.md)
+    * [messages.yml](staffcore/configuration/gamemodes/messages.md)
   * push
     * [confirm.yml](staffcore/configuration/push/confirm.md)
   * update

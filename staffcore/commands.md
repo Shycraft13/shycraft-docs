@@ -63,6 +63,42 @@ switch) live in [`teleports/config.yml`](configuration/teleports/config.md).
 | `/tppos <x> <y> <z> [world] [server]` | Teleport to explicit coordinates. `[world]` defaults to your current world. `[server]` triggers a cross-server transfer to that server id. |
 | `/back` | Return to your previous location. Every `/tp`, `/tphere`, `/tppos` and cross-server transfer pushes onto the back-stack; `/back` pops one. Back-stack size and cross-server behaviour live in [`teleports/config.yml`](configuration/teleports/config.md). |
 
+## Refund
+
+Registered when `features.refund: true` in
+[`config/config.yml`](configuration/config/config.md). Feature settings
+(retention, capture triggers, cross-server switch) live in
+[`refund/config.yml`](configuration/refund/config.md).
+
+| Command | Description |
+| --- | --- |
+| `/refund <player>` | Open the refund GUI for the given player. First screen picks a category (Death / Join / Quit / Enderchest), then a paginated list of snapshots, then a per-snapshot action menu (Replace / Give-Out / Teleport / View). Works for online and offline targets alike, cross-server aware. |
+
+Per-button permissions are documented in
+[Permissions](permissions.md#refund). GUI slots, materials, titles and
+lore are fully customisable, see
+[`refund/gui/`](configuration/refund/gui/category.md).
+
+## Gamemodes
+
+Registered when `features.gamemodes: true` in
+[`config/config.yml`](configuration/config/config.md). Cross-server and
+offline switches live in
+[`gamemodes/config.yml`](configuration/gamemodes/config.md); chat
+strings live in
+[`gamemodes/messages.yml`](configuration/gamemodes/messages.md).
+
+| Command | Aliases | Description |
+| --- | --- | --- |
+| `/gamemode <mode> [player]` | `/gm` | Change a player's gamemode. `<mode>` accepts `survival`/`s`/`0`, `creative`/`c`/`1`, `adventure`/`a`/`2`, `spectator`/`sp`/`3` (case-insensitive). Without `[player]`, changes your own gamemode. With a `[player]` argument, works cross-server (online target on another backend) and on offline targets — every backend that stores player data for that UUID converges to the new mode, so the change sticks no matter which node they log into next. |
+| `/gms [player]` |  | Shortcut for survival. |
+| `/gmc [player]` |  | Shortcut for creative. |
+| `/gma [player]` |  | Shortcut for adventure. |
+| `/gmsp [player]` |  | Shortcut for spectator. |
+
+Per-mode permissions and the "other player" / "offline" gates are
+documented in [Permissions](permissions.md#gamemodes).
+
 ## Admin
 
 | Command | Aliases | Description |

@@ -28,6 +28,12 @@ warn:
 
 kick:
   staff-issued: "minecraft:entity.villager.no|0.8|1.0"
+
+refund:
+  take:     "minecraft:entity.item.pickup|0.6|1.2"
+  replace:  "minecraft:entity.experience_orb.pickup|0.6|1.0"
+  giveout:  "minecraft:entity.shulker.close|0.6|1.2"
+  teleport: "minecraft:entity.enderman.teleport|0.5|1.0"
 ```
 
 ## Sound keys
@@ -45,3 +51,7 @@ kick:
 | `warn.staff-unwarn` | To the staff member on `/unwarn`. |
 | `warn.target-notify` | To the warned player when the warn is applied. |
 | `kick.staff-issued` | To the staff member on `/kick`. |
+| `refund.take` | To the staff member on every successful take in the `/refund` View GUI. |
+| `refund.replace` | To the staff member on a successful Replace in the `/refund` action menu (local, remote, or offline). |
+| `refund.giveout` | To the staff member on a successful Give-Out in the `/refund` action menu. |
+| `refund.teleport` | To the staff member on a successful same-server Teleport in the `/refund` action menu. Cross-server teleports use the standard teleports feature and its own sounds. |

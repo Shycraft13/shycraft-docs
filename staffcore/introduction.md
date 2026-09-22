@@ -12,6 +12,8 @@
 - **`/punish` GUI** picker menu that shows every template, per-category colour, current tier hint, and click-to-apply.
 - **`/history` GUI** paginated timeline of every ban, mute, warn and kick a player ever received. Filter by type, sort newest/oldest, each entry shows lifted / expired / still-active status.
 - **`/alts` GUI** every account that has ever shared an IP address with the target, colour-coded by online / offline / banned status. IPs themselves are never rendered in-game.
+- **`/refund`** rolling inventory / enderchest snapshots captured on death, join, quit and enderchest-close. Staff can replace the current inventory, receive the snapshot packed into shulker boxes, teleport back to where it was taken, or browse the contents hands-on. Works cross-server and for offline targets.
+- **`/gamemode`** change any player's gamemode (`survival`, `creative`, `adventure`, `spectator`, or `0-3`) with dedicated shortcuts `/gm`, `/gms`, `/gmc`, `/gma`, `/gmsp`. Cross-server aware: switching an online player on another backend routes there; offline targets are edited directly on their `.dat` file (either locally or via a fan-out to the node that holds it).
 - **Cross-server** every ban, unban, mute, unmute and kick automatically propagates to every backend and the proxy sharing the same database, with an optional Redis event bus for sub-second latency.
 - **Config push** `/staffcore push` copies your `punishments/` folder to every other node in one command. No more editing the same YAML on five backends.
 - **Multi-backend storage** MongoDB, MySQL/MariaDB, and SQLite are all first-class.

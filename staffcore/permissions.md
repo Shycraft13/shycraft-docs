@@ -88,6 +88,43 @@ Registered by the plugin when `features.teleports: true` in
 | `staffcore.teleport.admin` | `op` | Bypass `teleports.blocked-worlds`. |
 | `staffcore.tp.bypass` | `false` | Immune to being pulled by `/tphere`. Overridden by `staffcore.admin`. |
 
+## Refund
+
+Registered by the plugin when `features.refund: true` in
+[`config/config.yml`](configuration/config/config.md).
+
+| Node | Default | Description |
+| --- | --- | --- |
+| `staffcore.refund.use` | `op` | Open `/refund <player>`. Base access to the refund GUI (category picker + list + view). |
+| `staffcore.refund.replace` | `op` | Click the Replace button in the action menu (overwrite the target's inventory / enderchest with the snapshot). |
+| `staffcore.refund.giveout` | `op` | Click the Give-Out button (receive the snapshot packed into shulker boxes). Also required to take items out of the View GUI. |
+| `staffcore.refund.teleport` | `op` | Click the Teleport button (jump to where the snapshot was captured, cross-server aware when `features.teleports` is also on). |
+
+`staffcore.admin` bypasses all four nodes above. A staff member with
+`staffcore.refund.use` but none of the action nodes can still browse and
+view snapshots; every action button they lack shows a "no permission"
+message on click.
+
+## Gamemodes
+
+Registered by the plugin when `features.gamemodes: true` in
+[`config/config.yml`](configuration/config/config.md).
+
+| Node | Default | Description |
+| --- | --- | --- |
+| `staffcore.gamemode.survival` | `op` | Switch to survival (`/gamemode survival`, `/gm 0`, `/gms`). Required for self and target changes to survival. |
+| `staffcore.gamemode.creative` | `op` | Switch to creative. |
+| `staffcore.gamemode.adventure` | `op` | Switch to adventure. |
+| `staffcore.gamemode.spectator` | `op` | Switch to spectator. |
+| `staffcore.gamemode.other` | `op` | Change another player's gamemode. Required in addition to the per-mode node whenever `[player]` is supplied. |
+| `staffcore.gamemode.offline` | `op` | Change an offline player's gamemode. Required in addition to `staffcore.gamemode.other` whenever the target is offline. |
+
+`staffcore.admin` bypasses all six nodes. A staff member with only the
+per-mode nodes but not `staffcore.gamemode.other` can only change their
+own gamemode; adding `staffcore.gamemode.other` unlocks online targets;
+adding `staffcore.gamemode.offline` on top of that unlocks `.dat` writes
+on offline targets.
+
 ## Duration caps + cooldowns
 
 Grant one of the group-matching nodes below to a staff member to gate them
