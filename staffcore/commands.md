@@ -62,6 +62,7 @@ switch) live in [`teleports/config.yml`](configuration/teleports/config.md).
 | `/tphere <player>` | Pull an online player to your location. Cross-server aware. The target sees a `target-notify` message. Immunity via `staffcore.tp.bypass`. Offline targets are rejected. |
 | `/tppos <x> <y> <z> [world] [server]` | Teleport to explicit coordinates. `[world]` defaults to your current world. `[server]` triggers a cross-server transfer to that server id. |
 | `/back` | Return to your previous location. Every `/tp`, `/tphere`, `/tppos` and cross-server transfer pushes onto the back-stack; `/back` pops one. Back-stack size and cross-server behaviour live in [`teleports/config.yml`](configuration/teleports/config.md). |
+| `/randomtp` | Teleport to a random online player across the whole network. No arguments. The picker never lands on you, and if the picked player just went offline you get a "try again" message. Uses the same routing as `/tp` once a target is picked (same-server or cross-server transfer). |
 
 ## Refund
 

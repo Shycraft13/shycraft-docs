@@ -2,8 +2,8 @@
 
 Location: `plugins/StaffCore/teleports/messages.yml`
 
-Chat + action-bar templates for `/tp`, `/tphere`, `/tppos` and `/back`. All
-messages support legacy `&` colours and `&#RRGGBB` hex.
+Chat + action-bar templates for `/tp`, `/tphere`, `/tppos`, `/back` and
+`/randomtp`. All messages support legacy `&` colours and `&#RRGGBB` hex.
 
 Placeholders (substituted per line, not every key uses every placeholder):
 
@@ -50,11 +50,17 @@ back:
   no-history:         "&cNo previous location on record."
   success:            "&#00FC00&lBACK &r&7» &fReturned to your previous location."
   cross-server:       "&#00FC00&lBACK &r&7» &fReturning to &#00FC99%server%&f..."
+
+randomtp:
+  no-players:         "&cNo other players are online right now."
+  pick-failed:        "&cThat player just went offline, try again."
+  success:            "&#00FC00&lTP &r&7» &fRandomly teleported to &#00FC99%player%&f."
+  cross-server:       "&#00FC00&lTP &r&7» &fRandomly picked &#00FC99%player%&f. Transferring you to &#00FC99%server%&f..."
 ```
 
-`common` keys are shared across every teleport command. The four
-command-scoped sections (`tp`, `tphere`, `tppos`, `back`) only fire from that
-one command.
+`common` keys are shared across every teleport command. The five
+command-scoped sections (`tp`, `tphere`, `tppos`, `back`, `randomtp`) only
+fire from that one command.
 
 `/staffcore reload` reloads this file alongside every other config; new
 values apply immediately with no restart.

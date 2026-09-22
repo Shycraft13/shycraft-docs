@@ -84,6 +84,7 @@ Registered by the plugin when `features.teleports: true` in
 | `staffcore.tphere` | `op` | Use `/tphere <player>`. |
 | `staffcore.tppos` | `op` | Use `/tppos <x> <y> <z> [world] [server]`. |
 | `staffcore.back` | `op` | Use `/back`. |
+| `staffcore.randomtp` | `op` | Use `/randomtp` (teleport to a random online player across the network). |
 | `staffcore.tp.offline` | `op` | Teleport to an offline player's last logout position. Denied when off even if `staffcore.tp` is granted. |
 | `staffcore.teleport.admin` | `op` | Bypass `teleports.blocked-worlds`. |
 | `staffcore.tp.bypass` | `false` | Immune to being pulled by `/tphere`. Overridden by `staffcore.admin`. |
