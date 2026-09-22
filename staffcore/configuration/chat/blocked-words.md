@@ -16,7 +16,7 @@ mutes are cancelled upstream.
 ```yaml
 ENABLED: true
 
-ACTION: MUTE
+ACTION: BLOCK
 MUTE-DURATION: 30m
 MUTE-REASON: "Inappropriate language."
 WARN-REASON: "Inappropriate language."
@@ -53,12 +53,12 @@ WORDS:
 | Key | Default | Description |
 | --- | --- | --- |
 | `ENABLED` | `true` | Master switch for the anti-swear filter. When `false`, no scan runs in any context. |
-| `ACTION` | `MUTE` | What to do on a match. One of `BLOCK`, `MUTE`, `WARN`, `KICK`. See [Actions](#actions). |
+| `ACTION` | `BLOCK` | What to do on a match. One of `BLOCK`, `MUTE`, `WARN`, `KICK`. See [Actions](#actions). |
 | `MUTE-DURATION` | `30m` | Duration for `ACTION: MUTE`. Supports `1s`, `1m`, `1h`, `1d`, `1w`, combinations like `1d2h`, plus `perm` / `permanent` / `forever` for a permanent mute. |
 | `MUTE-REASON` | `"Inappropriate language."` | Reason shown to the muted player and stored in history. |
 | `WARN-REASON` | `"Inappropriate language."` | Reason stored on the warn record. |
 | `KICK-REASON` | `"Inappropriate language."` | Kick screen for `ACTION: KICK`. Supports legacy `&` and `&#RRGGBB` hex. |
-| `BLOCK-MESSAGE` | `"&cThat message contains a blocked word."` | Feedback sent to the offender on any match. Always fires, regardless of `ACTION`. |
+| `BLOCK-MESSAGE` | `"&cThat message contains a blocked word."` | Feedback sent to the offender on any match, on the **action bar** so it doesn't spam the chat log. Always fires, regardless of `ACTION`. |
 | `CHECK.chat` | `true` | Scan chat messages. |
 | `CHECK.sign` | `true` | Scan every line of a placed / edited sign. |
 | `CHECK.book` | `true` | Scan the title + every page of a written book. |
@@ -75,7 +75,7 @@ WORDS:
 
 | Action | Effect |
 | --- | --- |
-| `BLOCK` | Cancel the event, send `BLOCK-MESSAGE`. Nothing else. |
+| `BLOCK` | Cancel the event, send `BLOCK-MESSAGE` on the action bar. Nothing else. |
 | `MUTE` | `BLOCK` + mute the player for `MUTE-DURATION` through the staffcore mute pipeline. Cross-server propagates through the same channel as `/mute`. Requires `features.punishments: true`; degrades to `BLOCK` (with a console warning) when the punishments feature is off. |
 | `WARN` | `BLOCK` + add one warn to the player's history via the staffcore warn pipeline. Requires `features.punishments: true`; degrades to `BLOCK` when off. |
 | `KICK` | `BLOCK` + kick the player with `KICK-REASON` as the disconnect screen. |
