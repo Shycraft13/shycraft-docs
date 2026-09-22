@@ -89,6 +89,15 @@ Registered by the plugin when `features.teleports: true` in
 | `staffcore.teleport.admin` | `op` | Bypass `teleports.blocked-worlds`. |
 | `staffcore.tp.bypass` | `false` | Immune to being pulled by `/tphere`. Overridden by `staffcore.admin`. |
 
+## Chat filters
+
+Registered by the plugin when `features.chat: true` in
+[`config/config.yml`](configuration/config/config.md).
+
+| Node | Default | Description |
+| --- | --- | --- |
+| `staffcore.chat.bypass` | `false` | Skip every chat filter (language, anti-repeat, caps, cooldown, rate limit) and every state update. Overridden by `staffcore.admin`. A bypassing player never counts toward their own anti-repeat or rate-limit buffers, so removing the node re-arms the filters from a clean slate. |
+
 ## Refund
 
 Registered by the plugin when `features.refund: true` in

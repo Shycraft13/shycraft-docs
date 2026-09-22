@@ -17,6 +17,7 @@ features:
   inspect: true
   refund: true
   gamemodes: true
+  chat: false
 
 cross-server:
   enabled: true
@@ -39,6 +40,7 @@ proxy:
 | `features.inspect` | `true` | Master switch for the inspect feature group (`/invsee`, `/echestsee`). When `false`, neither command is registered and no inspect-related listeners run. |
 | `features.refund` | `true` | Master switch for the refund feature group (`/refund`). When `false`, the command is not registered, no snapshots are captured on death / join / quit / enderchest-close, and cross-server refund events are ignored on this node. Per-feature settings (retention, capture triggers, cross-server switch) live in [`refund/config.yml`](../refund/config.md). |
 | `features.gamemodes` | `true` | Master switch for the gamemode feature group (`/gamemode`, `/gm`, `/gms`, `/gmc`, `/gma`, `/gmsp`). When `false`, no gamemode command is registered on this backend, no cross-server gamemode events are processed, and no offline `.dat` writes are performed. Per-feature settings (cross-server switch, offline switch, target notification) live in [`gamemodes/config.yml`](../gamemodes/config.md). |
+| `features.chat` | `false` | Master switch for the chat-filter feature group. When `true`, staffcore runs its five server-side chat filters (language, anti-repeat, caps, cooldown, rate limit) on every non-muted chat message. Off by default because another plugin usually owns the chat pipeline; turn on when staffcore is the sole chat gatekeeper. Filters live in [`chat/config.yml`](../chat/config.md). |
 | `cross-server.enabled` | `true` | Poll the shared database for events written by other nodes and apply them locally. Only works if the database is actually shared (mysql or mongodb). |
 | `cross-server.poll-interval-seconds` | `5` | How often the poller runs. When Redis is on, this is only a safety net; events arrive via Redis within milliseconds. |
 | `proxy.enabled` | `false` | Delegate `/ban`, `/unban` and `/kick` to the Velocity proxy for edge-enforcement. Requires the staffcore proxy JAR to be installed on Velocity. |
