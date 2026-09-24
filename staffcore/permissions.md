@@ -175,7 +175,7 @@ Registered by the plugin when `features.reports: true` in
 
 | Node | Default | Description |
 | --- | --- | --- |
-| `staffcore.report` | `true` | File a `/report <player> <reason>` against another player. Default is TRUE so every player can report. |
+| `staffcore.report` | `true` | File a `/report <player> <message>` against another player. Default is TRUE so every player can report. |
 | `staffcore.report.exempt` | `false` | Target-side: cannot be reported. Grant this to staff so their name is rejected when a player tries to report them. `staffcore.admin` overrides (so admins are always exempt). |
 | `staffcore.reports.review` | `op` | Open `/reports` (network-wide list), `/report check <player>` (per-target list), `/report check #<id>` (single-report detail), and click Dismiss / Mark Reviewed on the detail GUI. |
 | `staffcore.report.cooldown-bypass` | `false` | Skip the per-reporter cooldown between filings (`reports.cooldown-seconds` in `reports/config.yml`). |
