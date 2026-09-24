@@ -47,6 +47,16 @@ Every node follows the `staffcore.<feature>` scheme. Defaults are hardcoded in t
 | `staffcore.kick` | `op` | Use `/kick`. |
 | `staffcore.kick.bypass` | `false` | Immune to being kicked. |
 
+## Inspect (invsee / echestsee)
+
+| Node | Default | Description |
+| --- | --- | --- |
+| `staffcore.invsee.use` | `op` | Open `/invsee <player>` in read-only mode. |
+| `staffcore.invsee.edit` | `op` | Open `/invsee <player>` in edit mode (changes write back to the target). |
+| `staffcore.echestsee.use` | `op` | Open `/echestsee <player>` in read-only mode. |
+| `staffcore.echestsee.edit` | `op` | Open `/echestsee <player>` in edit mode. |
+| `staffcore.inspect.bypass` | `false` | Target-side: cannot be inspected or edited by other staff. `staffcore.admin` overrides. |
+
 ## Templates
 
 | Node | Default | Description |
@@ -96,7 +106,79 @@ Registered by the plugin when `features.chat: true` in
 
 | Node | Default | Description |
 | --- | --- | --- |
-| `staffcore.chat.bypass` | `false` | Skip every chat filter (language, anti-repeat, caps, cooldown, rate limit) and every state update. Overridden by `staffcore.admin`. A bypassing player never counts toward their own anti-repeat or rate-limit buffers, so removing the node re-arms the filters from a clean slate. |
+| `staffcore.chat.bypass` | `false` | Skip every chat filter (language, anti-repeat, caps, cooldown, rate limit) and every state update. Overridden by `staffcore.admin`. A bypassing player never counts toward their own anti-repeat or rate-limit buffers, so removing the node re-arms the filters from a clean slate. Also immune to `/chat pause` and `/chat clear`. |
+| `staffcore.chat.clear` | `op` | Use `/chat clear` (network-wide chat wipe). |
+| `staffcore.chat.pause` | `op` | Use `/chat pause [duration]` and `/chat unpause` (network-wide chat pause toggle). |
+
+## Announcements
+
+| Node | Default | Description |
+| --- | --- | --- |
+| `staffcore.announce` | `op` | Use `/announce <message>`: full-render network-wide (title + chat + sound). |
+| `staffcore.broadcast` | `op` | Use `/broadcast <message>`: chat-only network-wide message. |
+
+## Staff chat
+
+| Node | Default | Description |
+| --- | --- | --- |
+| `staffcore.staffchat` | `op` | Toggle `/staffchat` AND receive staff chat messages. |
+
+## Spy
+
+| Node | Default | Description |
+| --- | --- | --- |
+| `staffcore.spy` | `op` | Use `/spy <player\|list\|clear>`: watch a target's chat, private messages (both directions) and executed commands, cross-server. |
+
+## Freeze
+
+| Node | Default | Description |
+| --- | --- | --- |
+| `staffcore.freeze` | `op` | Use `/freeze <player> [reason]`. Cross-server and offline-aware: an offline target is frozen the moment they log in on any node. |
+
+## Vanish
+
+| Node | Default | Description |
+| --- | --- | --- |
+| `staffcore.vanish` | `op` | Toggle vanish on yourself (`/vanish`). Persists in the database and follows you across servers. |
+| `staffcore.vanish.other` | `op` | Toggle vanish on another player (`/vanish <player>`). |
+| `staffcore.vanish.see` | `op` | Target-side: staffer keeps seeing vanished players (staff-see-staff). |
+
+## Utils
+
+Registered by the plugin when `features.utils: true` in
+[`config/config.yml`](configuration/config/config.md). Every self / other
+node pair follows the same shape: the base node covers the arg-less
+"self" variant, the `.other` node covers the `[player]` argument (cross-
+server aware, and offline-aware via a pending flag applied on next join).
+
+| Node | Default | Description |
+| --- | --- | --- |
+| `staffcore.utils.fly` | `op` | Toggle fly on yourself (`/fly`). |
+| `staffcore.utils.fly.other` | `op` | Toggle fly on another player (`/fly <player>`). |
+| `staffcore.utils.flyspeed` | `op` | Set or reset your own fly speed (`/flyspeed <0-10\|reset>`). |
+| `staffcore.utils.flyspeed.other` | `op` | Set another player's fly speed (`/flyspeed <player> <0-10\|reset>`). |
+| `staffcore.utils.speed` | `op` | Set or reset your own walk speed (`/speed <0-10\|reset>`). |
+| `staffcore.utils.speed.other` | `op` | Set another player's walk speed. |
+| `staffcore.utils.heal` | `op` | Heal yourself (`/heal`). |
+| `staffcore.utils.heal.other` | `op` | Heal another player. |
+| `staffcore.utils.feed` | `op` | Refill your own hunger + saturation (`/feed`). |
+| `staffcore.utils.feed.other` | `op` | Refill another player's hunger + saturation. |
+| `staffcore.utils.repair` | `op` | Repair the item in your main hand (`/repair`). |
+| `staffcore.utils.repair.other` | `op` | Repair the item in another player's main hand. |
+| `staffcore.utils.near` | `op` | List nearby players in the current world (`/near [radius]`). Radius capped at 500. |
+| `staffcore.utils.top` | `op` | Teleport to the highest solid block above your XZ (`/top`). |
+
+## Reports
+
+Registered by the plugin when `features.reports: true` in
+[`config/config.yml`](configuration/config/config.md).
+
+| Node | Default | Description |
+| --- | --- | --- |
+| `staffcore.report` | `true` | File a `/report <player> <reason>` against another player. Default is TRUE so every player can report. |
+| `staffcore.report.exempt` | `false` | Target-side: cannot be reported. Grant this to staff so their name is rejected when a player tries to report them. `staffcore.admin` overrides (so admins are always exempt). |
+| `staffcore.reports.review` | `op` | Open `/reports` (network-wide list), `/report check <player>` (per-target list), `/report check #<id>` (single-report detail), and click Dismiss / Mark Reviewed on the detail GUI. |
+| `staffcore.report.cooldown-bypass` | `false` | Skip the per-reporter cooldown between filings (`reports.cooldown-seconds` in `reports/config.yml`). |
 
 ## Refund
 

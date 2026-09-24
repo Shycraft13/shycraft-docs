@@ -32,6 +32,13 @@ Which commands and text channels are blocked while a player is muted is configur
 | --- | --- |
 | `/kick <player> [reason]` | Kick a player. Recorded in history like any other punishment. |
 
+## Inspect
+
+| Command | Aliases | Description |
+| --- | --- | --- |
+| `/invsee <player>` |  | Open another player's inventory. Read-only with `staffcore.invsee.use`, editable with `staffcore.invsee.edit`. Cross-server aware and works on offline targets (changes are written back on their next login or immediately when they are online). Immunity via `staffcore.inspect.bypass`. |
+| `/echestsee <player>` | `/endersee`, `/enderchestsee` | Same as `/invsee` but for the target's enderchest. |
+
 ## Templates
 
 | Command | Description |
@@ -99,6 +106,88 @@ strings live in
 
 Per-mode permissions and the "other player" / "offline" gates are
 documented in [Permissions](permissions.md#gamemodes).
+
+## Chat control
+
+Registered when `features.chat: true` in
+[`config/config.yml`](configuration/config/config.md). Filter behaviour
+lives in [`chat/config.yml`](configuration/chat/config.md); the
+anti-swear list lives in
+[`chat/blocked-words.yml`](configuration/chat/blocked-words.md).
+
+| Command | Description |
+| --- | --- |
+| `/chat clear` | Wipe chat network-wide. Bypassed by anyone with `staffcore.chat.bypass`. |
+| `/chat pause [duration]` | Pause chat network-wide, optionally for a fixed duration (`10m`, `1h`, ...). Without a duration the pause stays until `/chat unpause`. |
+| `/chat unpause` | Resume chat network-wide. |
+
+## Announcements
+
+| Command | Description |
+| --- | --- |
+| `/announce <message>` | Full-render network-wide broadcast: title, chat line and sound. Colour codes and formatting from the message survive. |
+| `/broadcast <message>` | Chat-only network-wide broadcast (no title, no sound). |
+
+## Staff chat
+
+| Command | Description |
+| --- | --- |
+| `/staffchat` | Toggle staff chat. While active every message you send routes to the staff channel instead of public chat. Receiving is gated by `staffcore.staffchat` as well. |
+
+## Spy
+
+| Command | Description |
+| --- | --- |
+| `/spy <player>` | Toggle spying on a target's chat, private messages (both sent and received) and executed commands. Cross-server. |
+| `/spy list` | List everyone you are currently spying on. |
+| `/spy clear` | Stop spying on every current target in one call. |
+
+## Freeze
+
+| Command | Description |
+| --- | --- |
+| `/freeze <player> [reason]` | Toggle freeze on a player. A frozen player cannot move, take fall damage or execute most gameplay commands. Cross-server aware and works on offline targets (the freeze applies on their next login). |
+
+## Vanish
+
+| Command | Aliases | Description |
+| --- | --- | --- |
+| `/vanish [player]` | `/v` | Toggle vanish. Hides you from non-staff, silences join / quit messages, and skips container open animations for other players. Persists in the database so it survives restarts, and follows you across servers. `[player]` requires `staffcore.vanish.other`. |
+
+## Utils
+
+Registered when `features.utils: true` in
+[`config/config.yml`](configuration/config/config.md). Every command
+below is cross-server aware; `[player]`-targeted variants work on
+offline targets via a pending flag that is applied on their next login.
+
+| Command | Description |
+| --- | --- |
+| `/fly [player]` | Toggle fly on yourself or another player. |
+| `/flyspeed [player] <0-10\|reset>` | Set or reset fly speed (0-10). `reset` restores the vanilla default. |
+| `/speed [player] <0-10\|reset>` | Set or reset walk speed (0-10). |
+| `/heal [player]` | Fully heal a player (health, fire, air). |
+| `/feed [player]` | Refill hunger and saturation to max. |
+| `/repair [player]` | Repair the item in the target's main hand. |
+| `/near [radius]` | List nearby players in your current world. Radius capped at 500. |
+| `/top` | Teleport to the highest solid block above your current XZ. |
+
+## Reports
+
+Registered when `features.reports: true` in
+[`config/config.yml`](configuration/config/config.md). Behaviour
+settings (cooldowns, length caps, Discord webhook, auto-cleanup) live
+in [`reports/config.yml`](configuration/reports/config.md).
+
+| Command | Aliases | Description |
+| --- | --- | --- |
+| `/report <player> <reason>` |  | File a report against another player. Everything after `<player>` is the report body; the first `reports.reason-max-chars` characters become the short headline shown in the staff feed and the Discord embed, the full body is stored for the review GUI. Rate-limited per reporter via `reports.cooldown-seconds` (bypass with `staffcore.report.cooldown-bypass`). |
+| `/report check <player>` |  | Open the per-target report list (paginated GUI, filter by status, sort by date). |
+| `/report check #<report-id>` |  | Jump straight into the detail GUI for a single report. The `#` prefix disambiguates from a player name. |
+| `/reports` |  | Open the network-wide paginated report list. |
+| `/reports list` |  | Hidden alias of `/reports` kept for muscle memory. |
+
+Reviewing is gated by `staffcore.reports.review`. Filing is default-TRUE, so every player can `/report` out of the box; grant `staffcore.report.exempt` to staff so their names cannot be filed against. Reports resolved as REVIEWED or DISMISSED are automatically deleted after `reports.cleanup-resolved-after-hours` (default 12 hours; set to `<= 0` to disable).
 
 ## Admin
 
