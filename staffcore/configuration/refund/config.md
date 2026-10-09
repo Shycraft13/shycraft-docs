@@ -7,8 +7,11 @@ which capture triggers are active, and the cross-server switch.
 
 ```yaml
 refund:
+
   max-per-category: 10
+
   cross-server: true
+
   payload-ttl-seconds: 60
 
   capture:

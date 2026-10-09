@@ -3,7 +3,6 @@
 Location: `plugins/EconomyCore/economy/announcement/reminder.yml`
 
 ```yaml
-
 reminders:
 
   discord:

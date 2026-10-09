@@ -10,23 +10,29 @@ Multi-line disconnect screens shown to banned or kicked players. Uses legacy
 ```yaml
 ban:
   permanent: |-
-    &#FC0000&lYOU HAVE BEEN PERMANENTLY BANNED
+    &cYou have been permanently banned for %reason%
 
-    &fReason: &#FCE300%reason%
-    &fBanned by: &#00FC99%staff%
+    &7Banned on: &f%date%
+    &7Ban ID: &f#%id%
+
+    &7You may appeal this ban on &#00A4FCdiscord.gg/yourserver
 
   temporary: |-
-    &#FC0000&lYOU HAVE BEEN BANNED
+    &cYou have been temporarily banned for %reason%
 
-    &fReason: &#FCE300%reason%
-    &fBanned by: &#00FC99%staff%
-    &fRemaining: &#FCE300%remaining%
+    &7Banned on: &f%date%
+    &7Ban ID: &f#%id%
+    &7Expires in: &f%remaining%
+
+    &7You may appeal this ban on &#00A4FCdiscord.gg/yourserver
 
 kick: |-
-  &#F97603&lYOU HAVE BEEN KICKED
+  &cYou have been kicked for %reason%
 
-  &fReason: &#FCE300%reason%
-  &fKicked by: &#00FC99%staff%
+  &7Kicked on: &f%date%
+  &7Kicked by: &f%staff%
+
+  &7You may appeal this kick on &#00A4FCdiscord.gg/yourserver
 ```
 
 ## Which template is used

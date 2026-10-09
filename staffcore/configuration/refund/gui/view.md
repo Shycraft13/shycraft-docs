@@ -41,19 +41,20 @@ shows a permission error.
 
 **Enderchest snapshots** — dynamic size (27, 36, 45, or 54 slots):
 
-The view is as tall as the target's vanilla enderchest was at capture
-time. A vanilla 3-row enderchest renders 27 slots; a Canvas 6-row
-enderchest renders 54. Rows are computed as `ceil(size / 9)` clamped to
-1..6. Slots map 1:1 to enderchest slots.
+The view is as tall as the target's enderchest was at capture time. A
+3-row enderchest renders 27 slots; a 6-row one renders 54. Rows are
+computed as `ceil(size / 9)` clamped to 1..6. Slots map 1:1 to enderchest
+slots.
 
 ## Config
 
 ```yaml
 GUI:
-  TITLE: "&8%category% ᴠɪᴇᴡ"
+  TITLE: "&8%category-title% ᴠɪᴇᴡ"
 ```
 
-Placeholders in `TITLE`: `%player%`, `%category%`.
+Placeholders in `TITLE`: `%player%`, `%category%`, `%category-title%`.
+`%category%` is the category as plain text (`Death`), `%category-title%` the same in small caps for window titles (`ᴅᴇᴀᴛʜ`).
 
 ## Sections
 

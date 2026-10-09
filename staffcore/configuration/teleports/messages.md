@@ -20,7 +20,10 @@ common:
   no-permission:      "&cNo permission."
   player-not-found:   "&cPlayer not found."
   cannot-target-self: "&cYou cannot teleport to yourself."
-  cross-server-off:   "&cCross-server teleport is disabled on this network."
+  cross-server-off:              "&cCross-server teleport is disabled on this network."
+  cross-server-off-global:       "&cCross-server is disabled &7(cross-server.enabled in config/config.yml)&c."
+  cross-server-off-teleports:    "&cCross-server teleport is off &7(teleports.cross-server in teleports/config.yml)&c."
+  cross-server-off-proxy:        "&cProxy is disabled &7(proxy.enabled in config/config.yml)&c. Cross-server teleport needs the Velocity proxy."
   no-safe-location:   "&cNo safe location found near the target."
   blocked-world:      "&cThat world is blocked for teleports."
 

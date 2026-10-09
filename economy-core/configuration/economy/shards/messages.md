@@ -4,7 +4,19 @@ Location: `plugins/EconomyCore/economy/shards/messages.yml`
 
 ```yaml
 messages:
-  # ── /afk command + AFK zones ─────────────────────────────────────────────
+  shardpay-sent: "&#00A4FC&lSHARDS &r&7» &fPaid &#A303F9%amount% &fto &#00FC99%player%&f."
+  shardpay-received: "&#00A4FC&lSHARDS &r&7» &fReceived &#A303F9%amount% &ffrom &#00FC99%player%&f."
+  shardpay-usage: "&cUsage: /%label% <player> <amount>"
+  shardpay-disabled: "&cShard payments are disabled."
+  shardpay-no-permission: "&cYou don't have permission to use this."
+  shardpay-players-only: "&cOnly players can use this command."
+  shardpay-invalid-amount: "&cEnter at least %min% shards."
+  shardpay-max-amount: "&cYou can pay at most %max% shards at once."
+  shardpay-whole-only: "&cShards can only be paid in whole numbers."
+  shardpay-not-enough: "&cYou do not have that many shards."
+  shardpay-self: "&cYou cannot pay yourself."
+  shardpay-player-not-found: "&cPlayer not found."
+  shardpay-cooldown: "&cYou can pay again in %time%."
   no-afk-set: "&cAFK location has not been set yet."
   afk-set: "&#00A4FC&lAFK &r&7» &fAFK location has been set."
   teleporting: "&#00A4FC&lAFK &r&7» &fTeleporting to AFK..."
@@ -16,33 +28,30 @@ messages:
   pos1-set: "&#00A4FC&lAFK &r&7» &fCorner 1 set at &#FCE300%x%, %y%, %z%&f."
   pos2-set: "&#00A4FC&lAFK &r&7» &fCorner 2 set at &#FCE300%x%, %y%, %z%&f."
   both-corners-needed: "&cSet both corners first."
-
-  # Action bar shown to players in an AFK zone. %time% = formatted countdown.
   actionbar: "&7Next shard in &#A303F9%time%&7."
   shard-reward: "&#A303F9&lAFK &r&7» &f+&#A303F9%amount% &fshards."
 
-  # ── /shards command ──────────────────────────────────────────────────────
-  # Placeholders: %shards% = formatted shard count.
+  kill-reward: "&#A303F9&lSHARDS &r&7» &fYou earned &#A303F9%amount% shards &ffrom killing &#FCE300%player%&f."
+
   shards-self:  "&#00A4FC&lSHARDS &r&7» &fYour shards: &#FCE300%shards%"
-  # Placeholders: %player% = target name, %shards% = formatted shard count.
   shards-other: "&#00A4FC&lSHARDS &r&7» &f%player%'s shards: &#FCE300%shards%"
   shards-player-not-found: "&#FC0000Player not found."
 
-  # ── /shardmanager (admin) ────────────────────────────────────────────────
   admin-no-permission:      "&cNo permission."
   shardmanager-usage:       "&cUsage: /shardmanager <add|set|remove> <player> <amount>"
   shardmanager-invalid-amount: "&cInvalid amount."
   shardmanager-player-not-found: "&cPlayer not found."
   shardmanager-unknown-action:   "&cUnknown action. Use add, set, or remove."
-  # Placeholders: %amount% (formatted), %player%, %total% (formatted new total).
   shardmanager-added:       "&#00A4FC&lADMIN &r&7» &fAdded &#A303F9%amount% &fshards to &#00FC99%player%&f. New total: &#A303F9%total%&f."
   shardmanager-set:         "&#00A4FC&lADMIN &r&7» &fSet &#00FC99%player%&f's shards to &#A303F9%amount%&f."
   shardmanager-removed:     "&#00A4FC&lADMIN &r&7» &fRemoved &#A303F9%amount% &fshards from &#00FC99%player%&f. New total: &#A303F9%total%&f."
+  shardmanager-mass-done:  "&#00A4FC&lADMIN &r&7» &fApplied to &#FCE300%count% &fof &#FCE300%total% &fonline players."
+  shardmanager-mass-empty: "&cNobody is online."
+  shardmanager-not-loaded: "&cThat player's shards are not loaded yet. Try again in a moment."
   shardmanager-added-offline:   "&#00A4FC&lADMIN &r&7» &fAdded &#A303F9%amount% &fshards to offline player &#00FC99%player%&f."
   shardmanager-set-offline:     "&#00A4FC&lADMIN &r&7» &fSet offline player &#00FC99%player%&f's shards to &#A303F9%amount%&f."
   shardmanager-removed-offline: "&#00A4FC&lADMIN &r&7» &fRemoved &#A303F9%amount% &fshards from offline player &#00FC99%player%&f. New total: &#A303F9%total%&f."
 
-  # ── /afkmanager (admin) ──────────────────────────────────────────────────
   afkmanager-no-permission:   "&cYou don't have permission."
   afkmanager-usage:           "&cUsage: /afkmanager <setafk|afkarea>"
   afkmanager-usage-afkarea:   "&cUsage: /afkmanager afkarea <wand|create <name>|delete <name>>"

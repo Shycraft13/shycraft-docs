@@ -105,12 +105,72 @@ Placeholders use `%name%` syntax everywhere.
 
 ## Shipped defaults
 
-The plugin ships with eight example templates covering the most common offences. See [`punishments/punishments.yml`](configuration/punishments/punishments.md) for the full text. Delete the whole file (and any of its templates) to start from scratch; the file regenerates on next start if it's missing.
+The default template set is aligned **1:1 with the in-game `/rules` menu**. Griefing, stealing and scamming are legitimate SMP gameplay and have no templates.
+
+Voice-chat templates use the mute action — a mute silences both the target's chat AND their Simple Voice Chat microphone (when SVC is installed and `punishments/config.yml`'s `mute.voicechat.enabled: true`, which is the default).
+
+**Ban templates — Server Rules:**
+
+- *Client cheats (severe tier)*: `cheating` (catch-all for hacked clients, movement mods, inventory mods, health indicators, radar, freecam, auto-place, easy-place, mouse tweaks, crafting modifications and every other modified-client cheat), `autoclicker`, `macros`, `baritone`, `xray-pack`
+- *Integrity (severe tier)*: `bug-abuse`, `duping`, `seed-abuse`, `irl-trading`
+- *Cross-server*: `cross-server-trading` (basic tier)
+- *Alts (Server Rule: max 5 accounts)*: `alt-limit` (basic tier), `alt-abuse`, `ban-evasion` (severe tier)
+
+**Ban templates — Community / Chat Rules:**
+
+- *Staff*: `staff-impersonation`, `staff-disrespect`, `lying-to-staff` (basic tier)
+- *Payment*: `chargeback` (severe tier, straight permaban)
+- *Hate / threats (severe tier)*: `slurs-ban`, `racism`, `discrimination`, `nazi-content` (straight permaban), `threats`, `harassment`
+- *Admin-only (permanent + IP scope)*: `doxxing`, `ddos-threat`, `cp-content`, `ban-evasion-permanent`, `mass-alt`
+
+**Mute templates:**
+
+- *Chat noise (basic tier)*: `spam`, `caps`, `begging`, `off-topic`, `advertising-mute`, `drama`, `argument`
+- *Social offences*: `toxicity-minor`, `disrespect-staff`, `lying-to-staff-mute`, `false-accusation`, `impersonation` (basic tier); `toxicity-severe` (severe tier)
+- *Hate / severe (severe tier)*: `slurs`, `racism-mute`, `discrimination-mute`, `threats-mute`, `harassment-mute`, `nsfw-chat`
+- *Voice chat (basic tier)*: `mic-spam`, `soundboard`, `ear-rape`, `music-in-voice`, `voice-toxicity`, `voice-impersonation`
+- *Voice chat (severe tier)*: `voice-slurs`, `voice-threats`, `voice-harassment`, `voice-nsfw`
+- *Admin-only*: `chat-flood`
+
+**Warn templates (basic tier):**
+
+- *Chat rules*: `minor-spam`, `minor-caps`, `begging-warn`, `off-topic-warn`, `drama-warn`, `advertising-warn`
+- *Social*: `minor-toxicity`, `disrespect-warn`, `false-accusation-warn`, `lying-warn`
+- *Voice chat*: `voice-warning`, `voice-music-warn`, `voice-loud-warn`
+- *Integrity soft checks*: `suspected-cheats`, `suspected-autoclicker`, `suspected-bug-abuse`, `suspected-duping`, `suspected-seed`
+
+**Kick templates (basic tier):**
+
+- *Cool-downs / disruption*: `behavior`, `afk-kick`, `cooldown`, `argument-kick`, `disruption`
+- *Integrity*: `unsupported-client`, `suspicious-behavior`, `possible-alt`
+- *Admin-only*: `test-account`, `boot-off`
+
+See [`punishments/punishments.yml`](configuration/punishments/punishments.md) for the full text with ladder progressions. Delete the whole file to start from scratch; it regenerates on next start if missing.
 
 ## Permissions and templates
 
+Templates share permission nodes on purpose so an operator only has to grant a small number of buckets rather than one line per template.
+
+| Bucket | Templates it unlocks |
+| --- | --- |
+| `staffcore.template.ban.basic` | Everyday ban templates (griefing, scamming, ...) |
+| `staffcore.template.ban.severe` | Long / permanent bans (cheating, xray, threats, ...) |
+| `staffcore.template.mute.basic` | Everyday mute templates (spam, caps, ...) |
+| `staffcore.template.mute.severe` | Long-form mute templates (slurs, threats, ...) |
+| `staffcore.template.warn.basic` | Every warn template |
+| `staffcore.template.kick.basic` | Every kick template |
+| `staffcore.template.admin` | Permaban / IP-scope templates (doxxing, ban-evasion, ...) |
+
+Typical wiring:
+
+- **helper** → `ban.basic`, `mute.basic`, `warn.basic`, `kick.basic`
+- **mod** → helper + `ban.severe`, `mute.severe`
+- **admin** → mod + `admin`
+
+Adding a new template? Pick the tier that best fits its severity and reuse the perm — don't invent a new node per template.
+
 - Every template's `permission:` is a **hard** requirement: without it, staff cannot see the template in the `/punish` picker and cannot apply it directly.
-- The template permission does NOT imply the category permission. A staff member with `staffcore.template.cheating` but not `staffcore.punish` cannot use `/punish` at all.
+- The template permission does NOT imply the category permission. A staff member with a template perm but not `staffcore.punish` cannot use `/punish` at all.
 - If a template's `permission:` is missing or empty, it falls back to `staffcore.admin`.
 
 ## Reloading

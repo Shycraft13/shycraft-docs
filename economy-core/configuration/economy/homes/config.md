@@ -7,4 +7,9 @@ homes:
   max: 10
   default: 2
   teleport-delay: 5
+
+  rename:
+    enabled: true
+    min-length: 3
+    max-length: 16
 ```

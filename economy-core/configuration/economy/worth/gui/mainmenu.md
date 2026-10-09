@@ -21,7 +21,6 @@ stack-lore:
   - "&#00FC00▶ &#00FC00&l&nCLICK&r &#00FC00to %action%"
 
 stack:
-
   suffix: " (%amount%)"
   action-stack: "Stack"
   action-unstack: "Unstack"
@@ -76,7 +75,6 @@ sort:
   LORE-FOOTER:
     - ""
     - "&#FCE300▶ &#FCE300&l&nCLICK&r &#FCE300to Change"
-
   MODES:
     PRICE_HIGH: "Highest Price"
     PRICE_LOW:  "Lowest Price"
@@ -95,7 +93,6 @@ filter:
   LORE-FOOTER:
     - ""
     - "&#00A4FC▶ &#00A4FC&l&nCLICK&r &#00A4FCto Change"
-
   CATEGORIES:
     ALL:             "All"
     CROPS:           "Crops"

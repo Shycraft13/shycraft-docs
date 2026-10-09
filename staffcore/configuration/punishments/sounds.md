@@ -10,10 +10,14 @@ common:
   error: "minecraft:entity.villager.no|0.6|0.9"
 
 gui:
-  click: "minecraft:ui.button.click|0.5|1.0"
+  click: "minecraft:block.cherry_wood_button.click_on|0.3|0.6"
+  page: "minecraft:item.book.page_turn|1.0|1.0"
+  refresh: "minecraft:ui.toast.in|1.0|1.0"
+  sort: "minecraft:ui.loom.select_pattern|1.0|1.0"
+  filter: "minecraft:ui.button.click|1.0|1.0"
 
 ban:
-  staff-issued: "minecraft:entity.wither.death|0.6|1.0"
+  staff-issued: "minecraft:block.note_block.bell|0.6|0.8"
   staff-unban:  "minecraft:entity.player.levelup|0.6|1.0"
 
 mute:
@@ -27,7 +31,7 @@ warn:
   target-notify: "minecraft:entity.experience_orb.pickup|0.6|0.6"
 
 kick:
-  staff-issued: "minecraft:entity.villager.no|0.8|1.0"
+  staff-issued: "minecraft:block.cherry_wood_button.click_on|0.3|0.6"
 
 refund:
   take:     "minecraft:entity.item.pickup|0.6|1.2"

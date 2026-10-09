@@ -3,7 +3,6 @@
 Location: `plugins/EconomyCore/economy/rtpqueue/config.yml`
 
 ```yaml
-
 countdown-seconds: 5
 
 search-attempts: 15

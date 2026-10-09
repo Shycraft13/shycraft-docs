@@ -15,7 +15,18 @@ messages:
   no-permission:    "&cNo permission for that slot."
   homes-full:       "&cAll home slots are full."
 
-  # ── /homemanager admin command ───────────────────────────────────────────
+  renamed:           "&#00A4FC&lHOME &r&7» &fHome &#FCE300%old% &fis now &#FCE300%name%&f."
+  rename-usage:      "&#00A4FC&lHOME &r&7» &fUsage: &#FCE300/home rename <home> <name>"
+  rename-disabled:   "&cRenaming homes is disabled."
+  rename-one-word:   "&cUse a single word, no spaces."
+  rename-no-colors:  "&cA home name cannot contain colour codes."
+  rename-invalid:    "&cHome name must be %min%-%max% characters (letters, digits, underscores)."
+  rename-reserved:   "&cThat home name is not allowed."
+  rename-blocked:    "&cThat home name contains a blocked word."
+  rename-taken:      "&cYou already have a home with that name."
+  rename-slot-empty: "&cNo home set in that slot."
+  rename-unchanged:  "&cThat home already has that name."
+
   homemanager-no-permission: "&cNo permission."
   homemanager-usage:         "&cUsage: /homemanager view <player>"
   homemanager-player-not-found: "&cPlayer not found."

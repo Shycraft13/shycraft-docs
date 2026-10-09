@@ -11,10 +11,4 @@ FILLER-SLOTS: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 18, 19,
 FILLER:
   MATERIAL: GRAY_STAINED_GLASS_PANE
   TITLE: " "
-
-STATUS:
-  AVAILABLE: "&#00FC00Available"
-  COOLDOWN: "&#FC0000Ready in %time%"
-  ONE-TIME-USED: "&#FC0000Already claimed"
-  NO-PERMISSION: "&#FC0000No access"
 ```

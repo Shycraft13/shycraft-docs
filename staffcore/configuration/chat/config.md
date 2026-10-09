@@ -44,6 +44,21 @@ CHAT:
     MAX-MESSAGES: 5
     WINDOW-SECONDS: 10
     BLOCK-MESSAGE: "&cYou're sending messages too fast. Try again in %seconds%s."
+
+MODERATION:
+  cross-server: true
+
+  CLEAR-BLANK-LINES: 100
+  CLEARED-BROADCAST:  "&e&lChat has been cleared by %staff%."
+
+  PAUSED-BROADCAST:       "&e&lChat has been paused by %staff%."
+  PAUSED-TIMED-BROADCAST: "&e&lChat has been paused by %staff% for %duration%."
+  RESUMED-BROADCAST:      "&a&lChat has been resumed by %staff%."
+  AUTO-RESUMED-BROADCAST: "&a&lChat has been automatically resumed."
+  NOT-PAUSED:             "&7Chat is not currently paused."
+  INDEFINITE-LABEL:       "indefinitely"
+
+  PAUSED-BLOCK-MESSAGE: "&cChat is currently paused."
 ```
 
 ## Filters
@@ -117,11 +132,9 @@ and anvil renames.
 
 ## Interaction with mutes
 
-Chat filters run on `AsyncChatEvent` at HIGHEST priority with
-`ignoreCancelled = true`. Muted messages are cancelled upstream (at the
-packet layer, or by the mute event listener at LOWEST), so they never
-reach the filters. A muted player therefore never counts toward the
-anti-repeat, cooldown or rate-limit buffers.
+The chat filters run after a mute has already been applied, so a muted
+player's message never reaches them. A muted player therefore never counts
+toward the anti-repeat, cooldown or rate-limit buffers.
 
 ## Reload
 

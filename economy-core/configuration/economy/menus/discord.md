@@ -3,7 +3,6 @@
 Location: `plugins/EconomyCore/economy/menus/discord.yml`
 
 ```yaml
-
 command:
   - discord
 title: "&8ᴅɪꜱᴄᴏʀᴅ"
@@ -25,7 +24,7 @@ items:
       - ""
       - "&#5865F2▶ &#5865F2&l&nCLICK&r &#5865F2to get the link"
     ACTIONS:
-      - "[sound] minecraft:ui.button.click volume=1 pitch=1"
+      - "[sound] minecraft:block.cherry_wood_button.click_on volume=0.3 pitch=0.6"
       - "[close]"
       - "[msg]            &#5865F2&lDISCORD"
       - "[msg] "

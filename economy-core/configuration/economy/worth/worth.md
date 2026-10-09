@@ -3,7 +3,6 @@
 Location: `plugins/EconomyCore/economy/worth/worth.yml`
 
 ```yaml
-
 MULTIPLIER: 1.0
 
 TYPE:

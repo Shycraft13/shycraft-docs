@@ -3,7 +3,6 @@
 Location: `plugins/EconomyCore/economy/menus/rules.yml`
 
 ```yaml
-
 command:
   - rules
 title: "&8ʀᴜʟᴇꜱ"
@@ -41,7 +40,7 @@ items:
       - ""
       - "&#00A4FC▶ &#00A4FC&l&nCLICK&r &#00A4FCto view"
     ACTIONS:
-      - "[sound] minecraft:ui.button.click volume=1 pitch=1"
+      - "[sound] minecraft:block.cherry_wood_button.click_on volume=0.3 pitch=0.6"
       - "[close]"
       - "[msg]            &#00A4FC&lSERVER RULES"
       - "[msg] "
@@ -71,7 +70,7 @@ items:
       - ""
       - "&#00A4FC▶ &#00A4FC&l&nCLICK&r &#00A4FCto view"
     ACTIONS:
-      - "[sound] minecraft:ui.button.click volume=1 pitch=1"
+      - "[sound] minecraft:block.cherry_wood_button.click_on volume=0.3 pitch=0.6"
       - "[close]"
       - "[msg]             &#00A4FC&lCHAT RULES"
       - "[msg] "

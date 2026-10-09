@@ -21,7 +21,6 @@ GUI:
 
   WORLD:
     SLOT: 12
-
     MATERIAL: GRASS_BLOCK
     TITLE: "&#00A4FC&lWORLD"
     LORE:

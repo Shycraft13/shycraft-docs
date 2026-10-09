@@ -86,6 +86,7 @@ BLOCKS-MENU:
     PRICE-PER-UNIT: 150.0
     COMMAND: ""
     GIVE-ITEM: true
+    REQUIRES-INVENTORY-SPACE: true
     LORE:
       - "&7Blocks"
       - ""
@@ -1115,6 +1116,7 @@ SHARD-MENU:
     PRICE-PER-UNIT: 300.0
     COMMAND: "keymanager give %username% basic %amount%"
     GIVE-ITEM: false
+    REQUIRES-INVENTORY-SPACE: true
     LORE:
       - "&7Shard Shop"
       - ""

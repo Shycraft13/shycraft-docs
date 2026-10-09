@@ -3,5 +3,4 @@
 Location: `plugins/EconomyCore/config/permission.yml`
 
 ```yaml
-
 ```

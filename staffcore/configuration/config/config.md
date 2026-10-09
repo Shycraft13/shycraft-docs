@@ -9,24 +9,82 @@ in cross-server behaviour. Feature-specific settings live in
 ```yaml
 staffcore:
   debug: false
+
   server-id: ""
 
 features:
   punishments: true
-  teleports: false
+
+  teleports: true
+
   inspect: true
+
   refund: true
+
   gamemodes: true
-  chat: false
+
+  chat: true
+
+  utils: true
+
+  announcement: true
+
+  staffchat: true
+
+  spy: true
+
+  freeze: true
+
+  vanish: true
+
+  reports: true
+
+  commands: true
 
 cross-server:
   enabled: true
   poll-interval-seconds: 5
 
+  ban-event-batch-size: 500
+
+  node-heartbeat-seconds: 10
+  node-ttl-seconds: 30
+
+  online-heartbeat-seconds: 15
+  online-ttl-seconds: 60
+
 proxy:
   enabled: false
   wait-for-proxy: true
   timeout-ms: 2000
+
+push:
+  keep-backup: true
+  payload-ttl-seconds: 300
+
+update:
+  payload-ttl-seconds: 900
+
+mute:
+  blocked-commands:
+    - msg
+    - tell
+    - w
+    - whisper
+    - r
+    - reply
+    - pm
+    - message
+  blocked-message: "&cYou are muted. You can't use &f/%command% &cright now."
+
+freeze:
+  blocked-switch-message: "&cYou are frozen. You can't switch servers."
+
+glist:
+  override: true
+  permission: ""
+  header: "&7Online: &f%online%&7 / &f%total%"
+  server-line: "&7[&f%server%&7] &7(&f%count%&7): &f%names%"
 ```
 
 ## Keys

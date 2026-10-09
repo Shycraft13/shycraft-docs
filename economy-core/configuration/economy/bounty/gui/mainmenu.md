@@ -71,7 +71,6 @@ sort:
     - "&#FCE300▶ &#FCE300&l&nCLICK&r &#FCE300to Change"
   ACTIVE-PREFIX: "&#FCE300▶ &f"
   INACTIVE-PREFIX: "&7▶ &f"
-
   MODES:
     HIGHEST:        "Highest"
     LOWEST:         "Lowest"

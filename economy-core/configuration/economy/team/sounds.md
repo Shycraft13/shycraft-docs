@@ -11,5 +11,5 @@ sounds:
   kick:     "minecraft:entity.villager.no|1.0|1.0"
   disband:  "minecraft:entity.villager.no|1.0|0.8"
   home-set: "minecraft:entity.experience_orb.pickup|1.0|1.0"
-  open:     "minecraft:ui.button.click|1.0|1.0"
+  open:     "minecraft:block.cherry_wood_button.click_on|0.3|0.6"
 ```

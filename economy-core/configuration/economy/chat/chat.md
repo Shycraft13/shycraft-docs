@@ -4,7 +4,6 @@ Location: `plugins/EconomyCore/economy/chat/chat.yml`
 
 ```yaml
 CHAT:
-
   JOIN-LEAVE:
     ENABLE-JOIN-MESSAGES: true
     JOIN-MESSAGE: "&8[&a+&8] &7%player%"
@@ -28,7 +27,6 @@ CHAT:
 
   LANGUAGE-FILTER:
     ENABLED: true
-
     ALLOWED-ALPHABETS:
       - "LATIN"
       - "NUMBERS"

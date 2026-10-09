@@ -3,12 +3,9 @@
 Location: `plugins/EconomyCore/economy/tags/gui/main.yml`
 
 ```yaml
-
 gui:
   title: "&8ᴛᴀɢѕ"
-
   rows: 5
-
   items-per-page: 36
 
 prev-page:
@@ -47,7 +44,6 @@ sort:
   LORE-FOOTER:
     - ""
     - "&#FCE300▶ &#FCE300&l&nCLICK&r &#FCE300to Change"
-
   MODES:
     OWNED: "Owned First"
     A_Z:   "A-Z"

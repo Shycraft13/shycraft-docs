@@ -24,9 +24,14 @@ LOADING:
 PREV-PAGE:
   MATERIAL: ARROW
   SLOT: 27
-  TITLE: "&#00A4FC&lPREV PAGE"
+  TITLE: "&#FC0000&lPREVIOUS PAGE"
   LORE:
-    - "&7Page &f%page% &7/ &f%maxpage%"
+    - "&7Navigation"
+    - ""
+    - "&#FC0000Information"
+    - "&fGo to the previous page."
+    - ""
+    - "&#FC0000▶ &#FC0000&l&nCLICK&r &#FC0000to Go Back"
 
 FILTER:
   MATERIAL: HOPPER
@@ -78,9 +83,14 @@ SORT:
 NEXT-PAGE:
   MATERIAL: ARROW
   SLOT: 35
-  TITLE: "&#00A4FC&lNEXT PAGE"
+  TITLE: "&#00FC00&lNEXT PAGE"
   LORE:
-    - "&7Page &f%page% &7/ &f%maxpage%"
+    - "&7Navigation"
+    - ""
+    - "&#00FC00Information"
+    - "&fGo to the next page."
+    - ""
+    - "&#00FC00▶ &#00FC00&l&nCLICK&r &#00FC00to Next Page"
 
 HISTORY-ITEM:
   MATERIAL-BAN:  REDSTONE_BLOCK

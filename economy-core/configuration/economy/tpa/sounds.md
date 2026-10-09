@@ -4,7 +4,7 @@ Location: `plugins/EconomyCore/economy/tpa/sounds.yml`
 
 ```yaml
 sounds:
-  click: "minecraft:ui.button.click|1.0|1.0"
+  click: "minecraft:block.cherry_wood_button.click_on|0.3|0.6"
   request-sent: "minecraft:block.note_block.bit|1.0|1.0"
   request-received: "minecraft:block.note_block.chime|1.0|1.0"
   accepted: "minecraft:entity.experience_orb.pickup|1.0|1.0"

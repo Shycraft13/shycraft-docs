@@ -54,12 +54,12 @@ HOMES-MENU:
 
     HAS-HOME:
       MATERIAL: LIME_BED
-      TITLE: "&#00FC00&lHOME %number%"
+      TITLE: "&#00FC00&lHOME %name_caps%"
       LORE:
         - "&7Home"
         - ""
         - "&#00FC00Information"
-        - "&fClick to teleport to your home"
+        - "&fClick to teleport to %name%"
         - ""
         - "&#00FC00▶ &#00FC00&l&nCLICK&r &#00FC00to Teleport"
 
@@ -94,7 +94,7 @@ HOMES-MENU:
         - ""
         - "&#FC0000Information"
         - "&fClick to delete"
-        - "&fHome %number%"
+        - "&fHome %name%"
         - ""
         - "&#FC0000▶ &#FC0000&l&nCLICK&r &#FC0000to Delete"
 

@@ -19,7 +19,11 @@ Every node follows the `staffcore.<feature>` scheme. Defaults are hardcoded in t
 | `staffcore.ban.temp` | `op` | Issue temporary bans (`/ban <player> <time> <reason>`). |
 | `staffcore.ban.permanent` | `op` | Issue permanent bans (`/ban <player> <reason>`). |
 | `staffcore.ban.bypass` | `false` | Immune to being banned. Only respected when `punishments.respect-bypass-permissions: true` (default). Overridden by `staffcore.admin`. |
-| `staffcore.unban` | `op` | Use `/unban`. |
+| `staffcore.ban.ip` | `op` | Add `--ip` to `/ban` (or to `/punish` on a ban template) to also ban every IP the player was seen on. |
+| `staffcore.unban` | `op` | Use `/unban` on any ban regardless of who issued it. |
+| `staffcore.unban.group` | `false` | Use `/unban` when the original ban was issued by a staff member in your own or a lower-priority `limits.yml` group. |
+| `staffcore.unban.own` | `false` | Use `/unban` only when you issued the original ban yourself. |
+| `staffcore.checkban` | `op` | Use `/checkban <player>` to look up a player's active ban. |
 
 ## Mutes
 
@@ -29,7 +33,11 @@ Every node follows the `staffcore.<feature>` scheme. Defaults are hardcoded in t
 | `staffcore.mute.temp` | `op` | Issue temporary mutes. |
 | `staffcore.mute.permanent` | `op` | Issue permanent mutes. |
 | `staffcore.mute.bypass` | `false` | Immune to being muted. |
-| `staffcore.unmute` | `op` | Use `/unmute`. |
+| `staffcore.mute.ip` | `op` | Add `--ip` to `/mute` (or to `/punish` on a mute template) to also mute every account on an IP the player was seen on. |
+| `staffcore.unmute` | `op` | Use `/unmute` on any mute. |
+| `staffcore.unmute.group` | `false` | Use `/unmute` when the original mute was issued by staff in your own or a lower-priority `limits.yml` group. |
+| `staffcore.unmute.own` | `false` | Use `/unmute` only when you issued the original mute yourself. |
+| `staffcore.checkmute` | `op` | Use `/checkmute <player>`. |
 
 ## Warns
 
@@ -37,8 +45,11 @@ Every node follows the `staffcore.<feature>` scheme. Defaults are hardcoded in t
 | --- | --- | --- |
 | `staffcore.warn` | `op` | Use `/warn`. |
 | `staffcore.warn.bypass` | `false` | Immune to being warned. |
-| `staffcore.unwarn` | `op` | Use `/unwarn`. |
+| `staffcore.unwarn` | `op` | Use `/unwarn` on any warn. |
+| `staffcore.unwarn.group` | `false` | Use `/unwarn` when the original warn was issued by staff in your own or a lower-priority `limits.yml` group. |
+| `staffcore.unwarn.own` | `false` | Use `/unwarn` only when you issued the original warn yourself. |
 | `staffcore.warns` | `op` | Use `/warns`. |
+| `staffcore.checkwarn` | `op` | Use `/checkwarn <player>`. |
 
 ## Kicks
 
@@ -51,7 +62,7 @@ Every node follows the `staffcore.<feature>` scheme. Defaults are hardcoded in t
 
 | Node | Default | Description |
 | --- | --- | --- |
-| `staffcore.invsee.use` | `op` | Open `/invsee <player>` in read-only mode. |
+| `staffcore.invsee.use` | `op` | Open `/invsee <player>` in read-only mode. Display copy only, nothing can be taken out, so it is safe to give to every player. |
 | `staffcore.invsee.edit` | `op` | Open `/invsee <player>` in edit mode (changes write back to the target). |
 | `staffcore.echestsee.use` | `op` | Open `/echestsee <player>` in read-only mode. |
 | `staffcore.echestsee.edit` | `op` | Open `/echestsee <player>` in edit mode. |
@@ -216,6 +227,52 @@ per-mode nodes but not `staffcore.gamemode.other` can only change their
 own gamemode; adding `staffcore.gamemode.other` unlocks online targets;
 adding `staffcore.gamemode.offline` on top of that unlocks `.dat` writes
 on offline targets.
+
+## Commands filter
+
+Registered by the plugin when `features.commands: true` in
+[`config/config.yml`](configuration/config/config.md). The filter
+restricts which commands each group can tab-complete and execute; see
+[`commands/config.yml`](configuration/commands/config.md).
+
+| Node | Default | Description |
+| --- | --- | --- |
+| `staffcore.commands.bypass` | `false` | Skip the filter entirely. Sees + runs every command, including namespaced forms. |
+| `staffcore.commands.group.<name>` | `false` | Assigns the player to the `<name>` group in `commands/config.yml`. If a player holds several, the group with the highest `priority` wins. Players without any group node fall through to `default`. |
+| `staffcore.commands.pl.bypass` | `false` | Run the real `/pl` instead of the replacement message from `commands/fakes.yml`. |
+| `staffcore.commands.version.bypass` | `false` | Run the real `/version` instead of the replacement message. |
+| `staffcore.commands.help.bypass` | `false` | Run the real `/help` instead of the replacement message. |
+| `staffcore.commands.brand.bypass` | `false` | See the real server brand string in F3 instead of the value from `fake-brand.value`. |
+
+`staffcore.admin` does **not** bypass the commands filter. The only
+node that skips it is `staffcore.commands.bypass`, which is `false` by
+default so an op is not automatically opted out. Grant it explicitly
+to whoever needs to see every command.
+
+## Staff mode (`/staffmode`)
+
+`/staffmode` toggles which of a staff member's commands appear in
+tab-complete. See
+[`commands/staffmode.yml`](configuration/commands/staffmode.md) for
+the toggle messages and
+[`commands/config.yml`](configuration/commands/config.md) for the
+per-group `staff-commands` lists that decide what gets shown.
+
+Two-perm gate — both are required:
+
+| Node | Default | Description |
+| --- | --- | --- |
+| `staffcore.commands.group.<name>` | `false` | Puts the player in the group named `<name>` from `commands/config.yml`. Only groups with `staff: true` in the yaml unlock the toggle. Highest-priority group the player holds wins. |
+| `staffcore.staffmode` | `false` | Actually run `/staffmode`. Without this the group membership above is a dead grant. |
+
+Neither node is granted by `staffcore.admin` — grant them explicitly.
+`staff-commands` is a **visibility filter**, not a rights grant: a
+staff member still needs the actual command permission
+(`staffcore.vanish`, `staffcore.mute`, ...) for each command in the
+group's `staff-commands` list to actually run.
+
+`/staffmode` is a pure toggle: no sub-commands, no player targeting,
+no aliases. Every invocation flips the caller's own state.
 
 ## Duration caps + cooldowns
 

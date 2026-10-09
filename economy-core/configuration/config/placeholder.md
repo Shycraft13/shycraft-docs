@@ -3,5 +3,4 @@
 Location: `plugins/EconomyCore/config/placeholder.yml`
 
 ```yaml
-
 ```

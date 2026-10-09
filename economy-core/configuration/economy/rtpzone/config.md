@@ -3,7 +3,6 @@
 Location: `plugins/EconomyCore/economy/rtpzone/config.yml`
 
 ```yaml
-
 interval-seconds: 30
 
 world: world

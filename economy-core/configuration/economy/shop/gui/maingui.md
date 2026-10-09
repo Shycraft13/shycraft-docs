@@ -14,5 +14,4 @@ BACK-BUTTON:
     - "&fthe main shop"
     - ""
     - "&#FC0000▶ &#FC0000&l&nCLICK&r &#FC0000to go back"
-
 ```

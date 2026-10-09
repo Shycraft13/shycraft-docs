@@ -9,11 +9,16 @@ registered.
 
 ```yaml
 teleports:
-  cross-server: false
+  cross-server: true
+
   track-last-location: true
-  safe-teleport: true
+
+  safe-teleport: false
+
   back-stack-size: 5
+
   pending-teleport-ttl-seconds: 60
+
   blocked-worlds: []
 ```
 

@@ -37,6 +37,8 @@
       * [config.yml](economy-core/configuration/economy/combat/config.md)
       * [messages.yml](economy-core/configuration/economy/combat/messages.md)
       * [sounds.yml](economy-core/configuration/economy/combat/sounds.md)
+    * confirm
+      * [gui.yml](economy-core/configuration/economy/confirm/gui.md)
     * homes
       * gui
         * [delete.yml](economy-core/configuration/economy/homes/gui/delete.md)
@@ -160,6 +162,10 @@
     * util
       * [config.yml](economy-core/configuration/economy/util/config.md)
       * [sounds.yml](economy-core/configuration/economy/util/sounds.md)
+    * warp
+      * [config.yml](economy-core/configuration/economy/warp/config.md)
+      * [messages.yml](economy-core/configuration/economy/warp/messages.md)
+      * [sounds.yml](economy-core/configuration/economy/warp/sounds.md)
     * worth
       * gui
         * [mainmenu.yml](economy-core/configuration/economy/worth/gui/mainmenu.md)
@@ -204,6 +210,7 @@
       * [list.yml](staffcore/configuration/refund/gui/list.md)
       * [action.yml](staffcore/configuration/refund/gui/action.md)
       * [view.yml](staffcore/configuration/refund/gui/view.md)
+      * [confirm.yml](staffcore/configuration/refund/gui/confirm.md)
   * gamemodes
     * [config.yml](staffcore/configuration/gamemodes/config.md)
     * [messages.yml](staffcore/configuration/gamemodes/messages.md)
@@ -211,6 +218,37 @@
     * [confirm.yml](staffcore/configuration/push/confirm.md)
   * update
     * [confirm.yml](staffcore/configuration/update/confirm.md)
+  * commands
+    * [config.yml](staffcore/configuration/commands/config.md)
+    * [fakes.yml](staffcore/configuration/commands/fakes.md)
+    * [leak-hide.yml](staffcore/configuration/commands/leak-hide.md)
+    * [staffmode.yml](staffcore/configuration/commands/staffmode.md)
+  * chat
+    * [config.yml](staffcore/configuration/chat/config.md)
+    * [blocked-words.yml](staffcore/configuration/chat/blocked-words.md)
+  * reports
+    * [config.yml](staffcore/configuration/reports/config.md)
+    * [messages.yml](staffcore/configuration/reports/messages.md)
+    * gui
+      * [list.yml](staffcore/configuration/reports/gui/list.md)
+      * [detail.yml](staffcore/configuration/reports/gui/detail.md)
+  * vanish
+    * [config.yml](staffcore/configuration/vanish/config.md)
+  * freeze
+    * [config.yml](staffcore/configuration/freeze/config.md)
+  * inspect
+    * [config.yml](staffcore/configuration/inspect/config.md)
+    * [messages.yml](staffcore/configuration/inspect/messages.md)
+  * spy
+    * [config.yml](staffcore/configuration/spy/config.md)
+  * staffchat
+    * [config.yml](staffcore/configuration/staffchat/config.md)
+  * announcement
+    * [config.yml](staffcore/configuration/announcement/config.md)
+  * maintenance
+    * [config.yml](staffcore/configuration/maintenance/config.md)
+  * utils
+    * [config.yml](staffcore/configuration/utils/config.md)
 
 ## rayguard-enterprise
 

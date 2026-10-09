@@ -4,7 +4,6 @@ Location: `plugins/EconomyCore/economy/combat/config.yml`
 
 ```yaml
 combat:
-
   duration: 16
 
   logout-kill: true
@@ -29,14 +28,11 @@ combat:
 
   safezone-block:
     enabled: true
-
     knockback: 1.0
 
   command-block:
     enabled: true
-
     mode: whitelist
-
     commands:
       - msg
       - pm

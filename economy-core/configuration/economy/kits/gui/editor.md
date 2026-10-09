@@ -3,7 +3,6 @@
 Location: `plugins/EconomyCore/economy/kits/gui/editor.yml`
 
 ```yaml
-
 TITLE: "&8ᴇᴅɪᴛ %kit%"
 
 DIVIDER:

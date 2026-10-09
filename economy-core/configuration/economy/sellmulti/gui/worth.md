@@ -3,11 +3,8 @@
 Location: `plugins/EconomyCore/economy/sellmulti/gui/worth.yml`
 
 ```yaml
-
 WORTH-MENU:
-
   TITLE: "&8%category%"
-
   ITEM-LORE:
     - "&7Server Worth"
     - ""

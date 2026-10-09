@@ -3,7 +3,6 @@
 Location: `plugins/EconomyCore/economy/tags/tags.yml`
 
 ```yaml
-
 tags:
 
   berry:

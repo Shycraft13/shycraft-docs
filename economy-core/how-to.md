@@ -92,6 +92,15 @@ Fast admin adjustments — no menu needed.
 
 Or set it by name: `/worthmanager set <item> <price>`.
 
+## Sell a full shulker box
+
+Put the shulker box into `/sell` (or use a sell axe on a chest or barrel that holds
+one): everything inside is sold at its own worth price, the same as loose items.
+
+Whether the **box itself** is sold along with its contents is each player's own
+choice in `/settings` under "Sell shulker boxes" (default on). With it off, the box
+is handed back empty instead of being sold. The contents always sell either way.
+
 ## Give someone a Mythic Tool
 
 Mythic Tools are temporary premium tools that expire after a set duration.
@@ -152,3 +161,5 @@ Every YAML file can be reloaded without a restart:
 ```
 
 Feature flags in `config/config.yml` are re-evaluated. A subsystem turned off during a reload is fully unregistered (commands, listeners, menus).
+
+`/economy reload` also refreshes the runtime caches behind the YAMLs: worth prices, shop items and categories, kit definitions (icon, lore, cooldown, contents), the tag list, RTP zones and AFK thresholds. Edits to messages, sounds and GUI YAMLs take effect immediately.

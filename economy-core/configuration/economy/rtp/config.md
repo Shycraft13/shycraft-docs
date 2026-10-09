@@ -3,9 +3,7 @@
 Location: `plugins/EconomyCore/economy/rtp/config.yml`
 
 ```yaml
-
 search-attempts: 15
-
 parallel-chunks: 8
 teleport-delay: 5
 default-cooldown: 10

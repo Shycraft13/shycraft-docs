@@ -15,7 +15,11 @@ Per-snapshot action menu. Opened by clicking a snapshot entry in the
 - **View** opens the [view GUI](view.md) for hands-on browsing. Requires
   `staffcore.refund.giveout` to take items out.
 
-Placeholders in `TITLE` / `LORE`: `%player%`, `%category%`.
+Replace and Give Out ask for confirmation first, see
+[`confirm.yml`](confirm.md).
+
+Placeholders in `TITLE` / `LORE`: `%player%`, `%category%`, `%category-title%`, `%date%`.
+`%category%` is the category as plain text (`Death`), `%category-title%` the same in small caps for window titles (`ᴅᴇᴀᴛʜ`).
 
 ```yaml
 GUI:

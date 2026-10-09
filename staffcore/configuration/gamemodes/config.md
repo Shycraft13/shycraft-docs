@@ -10,7 +10,9 @@ optional paths.
 ```yaml
 gamemodes:
   cross-server: true
+
   offline-enabled: true
+
   notify-target: true
 ```
 

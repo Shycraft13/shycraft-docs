@@ -3,7 +3,6 @@
 Location: `plugins/EconomyCore/economy/kits/messages.yml`
 
 ```yaml
-
 messages:
   claimed: "&#00A4FC&lKITS &r&7» &fClaimed the &#00A4FC%kit% &fkit."
   cooldown: "&cYou can claim %kit% &cagain in %time%"
@@ -14,6 +13,13 @@ messages:
   usage: "&#00A4FC&lKITS &r&7» &fUsage: &7/kit claim <kit>"
   layout-saved: "&#00A4FC&lKITS &r&7» &fSaved your layout for &#00A4FC%kit%&f."
   layout-reset: "&#00A4FC&lKITS &r&7» &fReset your layout for &#00A4FC%kit%&f."
+  layout-already-default: "&7Layout is already default."
+
+status:
+  available:     "&#00FC00Available"
+  cooldown:      "&#FC0000Ready in %time%"
+  one-time-used: "&#FC0000Already claimed"
+  no-permission: "&#FC0000No access"
 
 manager:
   usage: "&#00A4FC&lKITS &r&7» &fUsage: &7/kitmanager <create|delete|edit> <kit> &for &7give|reset <player> <kit>"
@@ -22,7 +28,9 @@ manager:
   not-on-cooldown: "&#00A4FC&lKITS &r&7» &c&#00A4FC%player% &chas no cooldown on &#00A4FC%kit%&c."
   given: "&#00A4FC&lKITS &r&7» &fGave &#00A4FC%kit% &fto &#00A4FC%player%&f."
   received: "&#00A4FC&lKITS &r&7» &fYou received the &#00A4FC%kit% &fkit."
-
+  mass-given: "&#00A4FC&lKITS &r&7» &fGave &#00A4FC%kit% &fto &#00A4FC%count% &fof &#00A4FC%total% &fonline players."
+  mass-reset: "&#00A4FC&lKITS &r&7» &fReset the &#00A4FC%kit% &fcooldown of &#00A4FC%count% &fof &#00A4FC%total% &fonline players."
+  mass-empty: "&cNobody is online."
   player-not-found: "&#00A4FC&lKITS &r&7» &cThat player is not online."
   player-unknown: "&#00A4FC&lKITS &r&7» &cNo player by that name has been on this server."
   created: "&#00A4FC&lKITS &r&7» &fCreated kit &#00A4FC%kit% &ffrom your inventory."

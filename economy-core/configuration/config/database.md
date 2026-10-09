@@ -3,11 +3,9 @@
 Location: `plugins/EconomyCore/config/database.yml`
 
 ```yaml
-
 type: sqlite
 
 sqlite:
-
   file: "database.db"
 
 mysql:
@@ -16,7 +14,6 @@ mysql:
   database: economysmp
   username: root
   password: ""
-
   pool-size: 10
 
 mongodb:

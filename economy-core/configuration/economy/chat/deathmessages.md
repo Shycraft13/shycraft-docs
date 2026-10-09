@@ -3,14 +3,11 @@
 Location: `plugins/EconomyCore/economy/chat/deathmessages.yml`
 
 ```yaml
-
 SETTINGS:
-
   RADIUS: false
   CHUNKS: 5
 
 MESSAGES:
-
   FALL:
     NORMAL: "&6☠ &6%player% &fhit the ground too hard."
     PVP: "&6☠ &6%player% &fwas doomed to fall by &6%killer%&f."

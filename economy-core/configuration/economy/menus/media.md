@@ -3,7 +3,6 @@
 Location: `plugins/EconomyCore/economy/menus/media.yml`
 
 ```yaml
-
 command:
   - media
 title: "&8ᴍᴇᴅɪᴀ"
@@ -30,5 +29,5 @@ items:
       - "&#FC00E3&l| &r&fMust be from the new season"
       - "&#FC00E3&l| &r&fOpen a ticket in Discord for the rank"
     ACTIONS:
-      - "[sound] minecraft:ui.button.click volume=1 pitch=1"
+      - "[sound] minecraft:block.cherry_wood_button.click_on volume=0.3 pitch=0.6"
 ```

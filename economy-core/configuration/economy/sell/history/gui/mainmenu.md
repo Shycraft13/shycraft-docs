@@ -41,7 +41,6 @@ sort:
     - "&#FCE300▶ &#FCE300&l&nCLICK&r &#FCE300to Change"
   ACTIVE-PREFIX: "&#FCE300▶ &f"
   INACTIVE-PREFIX: "&7▶ &f"
-
   MODES:
     EARNED_HIGH: "Most Earned"
     AMOUNT_HIGH: "Most Sold"
@@ -59,7 +58,6 @@ filter:
     - "&#00A4FC▶ &#00A4FC&l&nCLICK&r &#00A4FCto Change"
   ACTIVE-PREFIX: "&#00A4FC▶ &f"
   INACTIVE-PREFIX: "&7▶ &f"
-
   CATEGORIES:
     ALL:             "All"
     CROPS:           "Crops"

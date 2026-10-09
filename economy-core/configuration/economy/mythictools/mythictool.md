@@ -3,13 +3,11 @@
 Location: `plugins/EconomyCore/economy/mythictools/mythictool.yml`
 
 ```yaml
-
 TREECHOPPER:
   PARTICLE:
     NAME: FALLING_DUST
     MATERIAL: PURPLE_CONCRETE_POWDER
     AMOUNT: 10
-
   BLOCKS-PER-TICK: 3
   DELAY-TICKS: 2
   NAME: "&#00A4FC&lMYTHIC TREECHOPPER"
@@ -68,4 +66,15 @@ SELLAXE:
   ENCHANTMENTS:
     - EFFICIENCY:5
     - UNBREAKING:3
+
+FIREWORK:
+  PARTICLE:
+    NAME: FIREWORK
+    AMOUNT: 8
+  FLIGHT-DURATION: 1
+  COOLDOWN-SECONDS: 1
+  NAME: "&#00A4FC&lMYTHIC FIREWORK"
+  LORE:
+    - "&7Never consumed"
+    - "&8Self Destruct: %time%"
 ```

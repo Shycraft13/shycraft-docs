@@ -48,12 +48,10 @@ TPA-CONFIRM-MENU:
       TITLE: "&#00FC00&lLOCATION"
       MATERIAL: GRASS_BLOCK
       SLOT: 12
-
       WORLD-BLOCKS:
         world: GRASS_BLOCK
         world_nether: NETHERRACK
         world_the_end: END_STONE
-
       LORE:
         - "&7Current World"
         - ""

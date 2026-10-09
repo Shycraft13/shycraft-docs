@@ -54,11 +54,18 @@ Home limits are permission-based: give players `economy.homes.<n>` to grant up t
 | `/spawn` | Teleport to spawn. |
 | `/afk` | Teleport to the AFK area, if configured. |
 
+## Warps
+
+| Command | Description |
+| --- | --- |
+| `/warp` | List every warp that exists. |
+| `/warp <name>` | Teleport to that warp, after the warm-up from `economy/warp/config.yml`. |
+
 ## Sell / Shop / Worth
 
 | Command | Aliases | Description |
 | --- | --- | --- |
-| `/sell` | — | Open the sell GUI to sell items in your inventory. |
+| `/sell` | — | Open the sell GUI to sell items in your inventory. Shulker boxes are emptied and sold too; whether the box itself sells is a per-player toggle in `/settings`. |
 | `/sellhistory [player]` | — | View your (or another player's) sell history. |
 | `/sellmulti` | `/sellmultiplier` | View your active sell multipliers. |
 | `/shop` | — | Open the configured shop menu. |
@@ -95,6 +102,7 @@ Home limits are permission-based: give players `economy.homes.<n>` to grant up t
 | `/team deny` | Deny a pending invite. |
 | `/team leave` | Leave your current team. |
 | `/team disband` | Disband your team (owner only). |
+| `/team rename <new-name>` | Rename your team (owner only). Same name rules as `/team create`. |
 | `/team kick <player>` | Remove a member (owner or with permission). |
 | `/team sethome` | Set the team home. |
 | `/team delhome` | Delete the team home. |
@@ -114,7 +122,7 @@ Home limits are permission-based: give players `economy.homes.<n>` to grant up t
 
 | Command | Description |
 | --- | --- |
-| `/settings` | Open your personal settings menu (chat toggles, notifications, PM/pay confirmation, and more). |
+| `/settings` | Open your personal settings menu (chat toggles, auction and order announcements, sell options, PM/pay confirmation, and more). |
 
 ## Utility Commands
 
@@ -167,6 +175,8 @@ Every admin command below is gated by `economycore.admin` (default: `op`).
 | Command | Description |
 | --- | --- |
 | `/spawnmanager setspawn` | Set the server spawn point to your current location. |
+| `/warpmanager create <name>` | Create a warp at your current location. |
+| `/warpmanager delete <name>` | Delete a warp. |
 | `/afkmanager setafk` | Set the AFK teleport target. |
 | `/afkmanager afkarea wand` | Give yourself the AFK-zone wand. Left-click for corner 1, right-click for corner 2. |
 | `/afkmanager afkarea create <name>` | Create an AFK zone from the two corners you've selected. |
@@ -197,4 +207,4 @@ Every admin command below is gated by `economycore.admin` (default: `op`).
 
 | Command | Description |
 | --- | --- |
-| `/economy reload` | Reload every config file. Feature flags in `config.yml` are re-evaluated: a subsystem turned off during a reload is fully unregistered. |
+| `/economy reload` | Reload every config file and refresh the runtime caches behind them: worth prices, shop items and categories, kit definitions (icon, lore, cooldown, contents), the tag list, RTP zones and AFK thresholds. Edits to messages, sounds and GUI YAMLs take effect immediately without a restart. |

@@ -8,8 +8,11 @@ and `/punish`. Every staff member is matched against each group by its
 
 ```yaml
 reduce-to-limit: true
+
 default-cooldown: 5s
+
 console-cooldown: 1s
+
 default-redo-cooldown: 30s
 
 groups:
@@ -21,19 +24,17 @@ groups:
     cooldown_ban:  3m
     require_template: true
 
-  moderator:
+  mod:
     permission: staffcore.limit.mod
     tempban:  7d
     tempmute: 7d
     cooldown_ban:  3m
-    require_template: true
 
   helper:
     permission: staffcore.limit.helper
     tempmute: 3d
     cooldown_mute: 10m
     cooldown_warn: 5m
-    require_template: true
 ```
 
 ## Global fallbacks
@@ -75,6 +76,24 @@ per rule:
 - **`require_template`** — strict. Any matched group setting it to `true`
   forces the staff member into template-only mode; no other group can
   "unlock" free-form punishments.
+
+## Group priority
+
+Group declaration order in the YAML doubles as priority for the reversal
+scope permissions (`staffcore.unban.group`, `staffcore.unmute.group`,
+`staffcore.unwarn.group`). Top of the file = strongest, bottom = weakest.
+With the example above, `admin` beats `moderator` beats `helper`.
+
+`staffcore.unban.group` lets a staff member revert punishments issued by
+anyone in **their own group or a weaker one**. A moderator can lift a
+helper's ban but not an admin's; an admin can lift anyone's. Console and
+`staffcore.admin` are treated as above every group and can lift anything
+through this permission.
+
+If the original issuer's group cannot be resolved (staff not online AND
+no LuckPerms available for the offline lookup), the `.group` permission
+fails closed — the caller must fall back to the broad `staffcore.unban`
+or issue the reversal from an account that holds it.
 
 ## Template override
 

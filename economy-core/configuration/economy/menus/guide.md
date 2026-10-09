@@ -3,7 +3,6 @@
 Location: `plugins/EconomyCore/economy/menus/guide.yml`
 
 ```yaml
-
 command:
   - guide
   - help
@@ -25,7 +24,7 @@ items:
       - ""
       - "&#00FC1C▶ &#00FC1C&l&nCLICK&r &#00FC1Cto sell"
     ACTIONS:
-      - "[sound] minecraft:ui.button.click volume=1 pitch=1"
+      - "[sound] minecraft:block.cherry_wood_button.click_on volume=0.3 pitch=0.6"
       - "[close]"
       - "[command] sell"
 
@@ -42,7 +41,7 @@ items:
       - ""
       - "&#00A4FC▶ &#00A4FC&l&nCLICK&r &#00A4FCto view"
     ACTIONS:
-      - "[sound] minecraft:ui.button.click volume=1 pitch=1"
+      - "[sound] minecraft:block.cherry_wood_button.click_on volume=0.3 pitch=0.6"
       - "[open] rules"
 
   combat:
@@ -58,7 +57,7 @@ items:
       - ""
       - "&#FC0000▶ &#FC0000&l&nCLICK&r &#FC0000to view"
     ACTIONS:
-      - "[sound] minecraft:ui.button.click volume=1 pitch=1"
+      - "[sound] minecraft:block.cherry_wood_button.click_on volume=0.3 pitch=0.6"
       - "[close]"
       - "[command] rtpqueue"
 
@@ -75,7 +74,7 @@ items:
       - ""
       - "&#9400FF▶ &#9400FF&l&nCLICK&r &#9400FFto view"
     ACTIONS:
-      - "[sound] minecraft:ui.button.click volume=1 pitch=1"
+      - "[sound] minecraft:block.cherry_wood_button.click_on volume=0.3 pitch=0.6"
       - "[close]"
       - "[command] afk"
 
@@ -92,7 +91,7 @@ items:
       - ""
       - "&#00A4FC▶ &#00A4FC&l&nCLICK&r &#00A4FCto open"
     ACTIONS:
-      - "[sound] minecraft:ui.button.click volume=1 pitch=1"
+      - "[sound] minecraft:block.cherry_wood_button.click_on volume=0.3 pitch=0.6"
       - "[close]"
       - "[command] team"
 
@@ -109,7 +108,7 @@ items:
       - ""
       - "&#00FC1C▶ &#00FC1C&l&nCLICK&r &#00FC1Cto teleport"
     ACTIONS:
-      - "[sound] minecraft:ui.button.click volume=1 pitch=1"
+      - "[sound] minecraft:block.cherry_wood_button.click_on volume=0.3 pitch=0.6"
       - "[close]"
       - "[command] rtp"
 
@@ -126,6 +125,6 @@ items:
       - ""
       - "&#00FC00▶ &#00FC00&l&nCLICK&r &#00FC00to view"
     ACTIONS:
-      - "[sound] minecraft:ui.button.click volume=1 pitch=1"
+      - "[sound] minecraft:block.cherry_wood_button.click_on volume=0.3 pitch=0.6"
       - "[open] store"
 ```

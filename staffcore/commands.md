@@ -2,19 +2,23 @@
 
 Every command is grouped by feature below. Aliases match the shipped `plugin.yml`. Permission nodes are documented in [Permissions](permissions.md).
 
+**Players who never joined.** Punishment commands (`/ban`, `/mute`, `/warn`, `/punish`, `/history`, `/alts`) and the maintenance bypass list also accept players who have never been on your server: the name is looked up as a Minecraft account. A name that does not belong to a real account is refused with "Player not found", so a typo never bans or whitelists a player who does not exist. `/kick`, `/freeze`, `/vanish` and `/spy` only work on players who are or were online.
+
 ## Bans
 
 | Command | Aliases | Description |
 | --- | --- | --- |
-| `/ban <player> [time] [reason] [--kill]` |  | Ban a player. No time = permanent. Time formats: `5s`, `10m`, `2h`, `1d`, `1w`, `permanent`. `--kill` kills the target on the spot before the disconnect (so death drops trigger and stats count); flag position inside the reason doesn't matter, it is stripped from the recorded reason. |
-| `/unban <player> [--void]` | `/pardon` | Remove an active ban. `--void` also voids the newest matching template-usage row so the template ladder tier does not advance because of this ban. Use when the ban was applied in error. |
+| `/ban <player> [time] [reason] [--kill] [--ip]` |  | Ban a player with your own reason (templates are applied with `/punish`). No time = permanent. The time can stand anywhere: `/ban Steve hacking 7d`, `/ban Steve 1d 12h spam`, `/ban Steve griefing 7 days`. Time formats: `5s`, `10m`, `2h`, `1d`, `1w`, `permanent` (`permanent` only as the first word after the name). `--kill` kills the target on the spot before the disconnect (so death drops trigger and stats count). `--ip` also bans every IP the player was seen on: other accounts already online from those IPs are kicked with the same ban screen, and no other account can join from them until the ban ends or `/unban` lifts it (needs `staffcore.ban.ip`). Flag position inside the reason does not matter, flags are stripped from the recorded reason. |
+| `/unban <player> [--void]` | `/pardon` | Remove an active ban. `--void` also voids the newest matching template-usage row so the template ladder tier does not advance because of this ban. Use when the ban was applied in error. Scope permissions: `staffcore.unban` for any ban, `staffcore.unban.group` for bans issued by staff in your own or a weaker `limits.yml` group, `staffcore.unban.own` for bans you issued yourself. |
+| `/checkban <player \| #id>` |  | Chat summary of a ban. Pass a player name for their active ban, or `#<id>` (the ban id shown on the disconnect screen) to look up ANY ban including expired / manually lifted ones. |
 
 ## Mutes
 
 | Command | Aliases | Description |
 | --- | --- | --- |
-| `/mute <player> [time] [reason]` |  | Mute chat, blocked commands, signs, books and anvil renames. If Simple Voice Chat is installed, the microphone is muted too. No time = permanent. |
-| `/unmute <player>` |  | Remove an active mute. |
+| `/mute <player> [time] [reason] [--ip]` |  | Mute chat, blocked commands, signs, books and anvil renames. If Simple Voice Chat is installed, the microphone is muted too. No time = permanent. The time can stand anywhere, for example `/mute Steve spam 7d`. Templates are applied with `/punish`. `--ip` also mutes every account that is online or joins from an IP the player was seen on, on every server, until the mute ends or `/unmute` lifts it (needs `staffcore.mute.ip`). Re-muting a player who is already muted overrides the old mute; the previous entry is closed out in history and the new one takes over (same behaviour as re-banning). |
+| `/unmute <player>` |  | Remove an active mute. Scope permissions: `staffcore.unmute` for any mute, `staffcore.unmute.group` for mutes issued by staff in your own or a weaker `limits.yml` group, `staffcore.unmute.own` for mutes you issued yourself. |
+| `/checkmute <player>` |  | Chat summary of the target's active mute or a brief "not muted" action bar if there is none. |
 
 Which commands and text channels are blocked while a player is muted is configurable in [`punishments/config.yml`](configuration/punishments/config.md) under `mute:`.
 
@@ -22,29 +26,30 @@ Which commands and text channels are blocked while a player is muted is configur
 
 | Command | Aliases | Description |
 | --- | --- | --- |
-| `/warn <player> [reason]` |  | Add a warn to the player's history. The warn count is displayed and drives template ladders. |
-| `/unwarn <player> <id> [--void]` |  | Remove a warn by its short id (6 hex chars, visible in `/warns`). `--void` keeps the row in history but voids it so it no longer counts toward template ladder progression. |
+| `/warn <player> [reason]` |  | Add a warn to the player's history with your own reason (templates are applied with `/punish`). The warn count is displayed and drives template ladders. |
+| `/unwarn <player> <id> [--void]` |  | Remove a warn by its short id (6 hex chars, visible in `/warns`). `--void` keeps the row in history but voids it so it no longer counts toward template ladder progression. Scope permissions: `staffcore.unwarn` for any warn, `staffcore.unwarn.group` for warns issued by staff in your own or a weaker `limits.yml` group, `staffcore.unwarn.own` for warns you issued yourself. |
 | `/warns <player>` | `/warnings` | Print the player's warn history to chat. |
+| `/checkwarn <player>` |  | Chat summary of the target's active (non-voided) warns, header line plus the 5 most recent entries. Full history is behind `/warns`. |
 
 ## Kicks
 
 | Command | Description |
 | --- | --- |
-| `/kick <player> [reason]` | Kick a player. Recorded in history like any other punishment. |
+| `/kick <player> [reason]` | Kick a player with your own reason (templates are applied with `/punish`). Recorded in history like any other punishment. |
 
 ## Inspect
 
 | Command | Aliases | Description |
 | --- | --- | --- |
-| `/invsee <player>` |  | Open another player's inventory. Read-only with `staffcore.invsee.use`, editable with `staffcore.invsee.edit`. Cross-server aware and works on offline targets (changes are written back on their next login or immediately when they are online). Immunity via `staffcore.inspect.bypass`. |
-| `/echestsee <player>` | `/endersee`, `/enderchestsee` | Same as `/invsee` but for the target's enderchest. |
+| `/invsee <player>` |  | Open another player's inventory. Read-only with `staffcore.invsee.use`, editable with `staffcore.invsee.edit`. Read-only shows a display copy only: nothing can be taken out, so `staffcore.invsee.use` is safe to give to every player. Cross-server aware and works on offline targets (changes are written back on their next login or immediately when they are online). Immunity via `staffcore.inspect.bypass`. |
+| `/echestsee <player>` | `/endersee`, `/enderchestsee` | Same as `/invsee` but for the target's enderchest. Read-only is a display copy as well, so `staffcore.echestsee.use` is safe to give to every player. |
 
 ## Templates
 
 | Command | Description |
 | --- | --- |
 | `/punish <player>` | Open the punish GUI: shows every template you have permission to use, colour-coded per category (ban / mute / warn / kick). |
-| `/punish <player> <template> [--kill]` | Apply the named template directly. Template category determines the action. `--kill` only affects BAN-category templates, mirrors `/ban --kill`. |
+| `/punish <player> <template> [--kill] [--ip]` | Apply the named template directly. Template category determines the action. `--kill` only affects BAN-category templates, mirrors `/ban --kill`. `--ip` only affects BAN and MUTE templates, mirrors `/ban --ip` and `/mute --ip`. |
 
 Templates are defined in [`punishments/punishments.yml`](configuration/punishments/punishments.md). See [Punishment Templates](templates.md) for the ladder model.
 

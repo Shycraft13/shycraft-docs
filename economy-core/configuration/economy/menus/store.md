@@ -3,7 +3,6 @@
 Location: `plugins/EconomyCore/economy/menus/store.yml`
 
 ```yaml
-
 command:
   - store
 title: "&8ꜱᴛᴏʀᴇ"
@@ -25,7 +24,7 @@ items:
       - ""
       - "&#00FC00▶ &#00FC00&l&nCLICK&r &#00FC00to get the link"
     ACTIONS:
-      - "[sound] minecraft:ui.button.click volume=1 pitch=1"
+      - "[sound] minecraft:block.cherry_wood_button.click_on volume=0.3 pitch=0.6"
       - "[close]"
       - "[msg]              &#00FC00&lSTORE"
       - "[msg] "

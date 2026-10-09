@@ -2,8 +2,11 @@
 
 Location: `plugins/EconomyCore/economy/kits/kits/starter.yml`
 
-```yaml
+The starter kit is only shipped once — on the very first startup. A hidden `.starter-shipped` marker file is written into `economy/kits/kits/` after the first ship, so deleting `starter.yml` on purpose does **not** cause it to be re-created on the next restart. To get the default starter kit back, delete both `starter.yml` and `.starter-shipped`.
 
+To create additional kits, copy this file to a new name (the file name without `.yml` is the kit id used in `/kit <id>` and `/kitmanager edit <id>`).
+
+```yaml
 SLOT: 13
 
 MATERIAL: LIGHT_BLUE_CANDLE

@@ -3,9 +3,6 @@
 Location: `plugins/EconomyCore/config/config.yml`
 
 ```yaml
-economy:
-  starting-balance: 1000.0
-
 world-names:
   world: "overworld"
   world_nether: "nether"
@@ -25,9 +22,11 @@ features:
   leaderboard: true
   bounty: true
   team: true
+  combat: true
   keyall: true
   chat: true
   spawn: true
+  warp: true
   afk: true
   rtpzone: true
   rtpqueue: true

@@ -3,7 +3,6 @@
 Location: `plugins/EconomyCore/economy/tags/messages.yml`
 
 ```yaml
-
 messages:
   equipped: "&#00FC00&lTAG &r&7» &fEquipped %tag%&f."
   cleared: "&#00FC00&lTAG &r&7» &fCleared your tag."
@@ -23,13 +22,15 @@ manager:
   invalid-name: "&cInvalid name. Letters, digits, _ and - only."
   exists: "&cThat tag already exists."
   not-found: "&cNo such tag."
-
   player-not-found: "&cNo player by that name has been on this server."
   created: "&#00FC00&lTAG &r&7» &fCreated %tag%&f."
   deleted: "&#FC0000&lTAG &r&7» &fDeleted the &#FCE300%name%&f tag."
   edited: "&#00FC00&lTAG &r&7» &fUpdated %tag%&f."
   given: "&#00FC00&lTAG &r&7» &fGave %tag% &fto &#00FC99%player%&f."
   removed: "&#FC0000&lTAG &r&7» &fRemoved %tag% &ffrom &#00FC99%player%&f."
+  mass-given:   "&#00FC00&lTAG &r&7» &fGave %tag% &fto &#00FC99%count% &fof &#00FC99%total% &fonline players."
+  mass-removed: "&#FC0000&lTAG &r&7» &fRemoved %tag% &ffrom &#00FC99%count% &fof &#00FC99%total% &fonline players."
+  mass-empty:   "&cNobody is online."
   already-owned: "&cThat player already owns that tag."
   target-not-owned: "&cThat player does not own that tag."
 ```

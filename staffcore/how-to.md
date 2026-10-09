@@ -19,6 +19,15 @@ Quick walkthroughs for the most common admin tasks.
 /ban Steve 3d Multi-account exploit.
 ```
 
+The time does not have to come first. These all work the same way:
+```
+/ban Steve Multi-account exploit 3d
+/ban Steve Multi-account 1d 12h exploit
+/ban Steve Multi-account exploit 3 days
+```
+
+`/ban` is always a ban with your own reason. To apply a template from `punishments.yml`, use `/punish Steve <template>`.
+
 **Kill the target on the way out** (drops items, counts toward stats):
 ```
 /ban Steve 7d Griefing spawn. --kill

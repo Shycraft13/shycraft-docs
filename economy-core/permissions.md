@@ -25,25 +25,26 @@ Every basic command has a permission but is on by default. Revoke them if you wa
 | `economycore.settings` | `true` | Open `/settings`. |
 | `economycore.spawn` | `true` | Use `/spawn`. |
 | `economycore.afk` | `true` | Use `/afk`. |
+| `economycore.warp` | `true` | Use `/warp`. |
 | `economycore.kit` | `true` | Use `/kit`, `/kits`. |
 | `economycore.tags` | `true` | Use `/tags`. |
 | `economycore.ignore` | `true` | Use `/ignore`, `/unignore`. |
 
 ## Utility commands
 
-Every utility command has its own node so you can grant a subset, matching the `permission` field in `economy/util/config.yml`.
+Every utility command has its own node so you can grant a subset, matching the `permission` field in `economy/util/config.yml`. All utility and glow nodes default to `op` so the feature is locked down out of the box — grant them explicitly (via LuckPerms or another permissions plugin) to open them to normal players.
 
 | Node | Default | Description |
 | --- | --- | --- |
-| `economy.util.enderchest` | `true` | `/enderchest` |
-| `economy.util.workbench` | `true` | `/craft` |
-| `economy.util.anvil` | `true` | `/anvil` |
-| `economy.util.grindstone` | `true` | `/grindstone` |
-| `economy.util.loom` | `true` | `/loom` |
-| `economy.util.cartography` | `true` | `/cartography` |
-| `economy.util.smithing` | `true` | `/smithing` |
-| `economy.util.stonecutter` | `true` | `/stonecutter` |
-| `economy.glow.use` | `true` | `/glow` on self. |
+| `economy.util.enderchest` | `op` | `/enderchest` |
+| `economy.util.workbench` | `op` | `/craft` |
+| `economy.util.anvil` | `op` | `/anvil` |
+| `economy.util.grindstone` | `op` | `/grindstone` |
+| `economy.util.loom` | `op` | `/loom` |
+| `economy.util.cartography` | `op` | `/cartography` |
+| `economy.util.smithing` | `op` | `/smithing` |
+| `economy.util.stonecutter` | `op` | `/stonecutter` |
+| `economy.glow.use` | `op` | `/glow` on self. |
 | `economy.glow.others` | `op` | `/glow <player>` on someone else, including offline targets. |
 
 ## Home limits
