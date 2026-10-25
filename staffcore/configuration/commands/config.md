@@ -224,6 +224,7 @@ groups:
       - tp
       - tphere
       - tppos
+      - spectate
       - gamemode
       - gm
       - gms
@@ -245,6 +246,7 @@ groups:
       - warns
       - reports
       - spy
+      - staffclear
 
   owner:
     priority: 100

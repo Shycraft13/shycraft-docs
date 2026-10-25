@@ -22,6 +22,7 @@ common:
   player-not-found:           "&cPlayer not found."
   cannot-target-self:         "&cYou cannot view yourself."
   target-immune:              "&cYou cannot view this player."
+  target-private:             "&c%player% does not allow others to view their inventory."
   cross-server-off-global:    "&cThat player is on another server."
   cross-server-off-feature:   "&cThat player is on another server."
 
@@ -46,4 +47,17 @@ invsee:
 echestsee:
   usage:                      "&7Usage: &f/echestsee <player>"
   viewing:                    "&7Viewing &f%player%&7's ender chest"
+  opened:                     "&7Opened &f%player%&7's ender chest (%mode%&7)."
+  opened-offline:             "&7Opened &f%player%&7's ender chest offline (%mode%&7)."
+  snapshot-pending:           "&7Loading &f%player%&7's ender chest..."
+  snapshot-timeout:           "&cCould not load %player%'s ender chest right now."
+  snapshot-failed:            "&cCould not load %player%'s ender chest."
+  offline-searching:          "&7Loading &f%player%&7's ender chest..."
+  offline-unavailable:        "&cNo saved ender chest found for %player%."
+  offline-target-joined:      "&e%player% joined while you were editing offline, changes discarded."
+  live-target-left:           "&e%player% left the server, inspect window closed."
+  applied:                    "&aEdits applied to &f%player%&a's ender chest."
+  applied-remote:             "&aEdits shipped to &f%player% &aon &f%server%&a."
+  applied-offline:            "&aOffline edits written for &f%player%&a."
+  apply-failed:               "&cCould not ship edits for %player%."
 ```

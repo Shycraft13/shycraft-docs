@@ -75,6 +75,7 @@ switch) live in [`teleports/config.yml`](configuration/teleports/config.md).
 | `/tppos <x> <y> <z> [world] [server]` | Teleport to explicit coordinates. `[world]` defaults to your current world. `[server]` triggers a cross-server transfer to that server id. |
 | `/back` | Return to your previous location. Every `/tp`, `/tphere`, `/tppos` and cross-server transfer pushes onto the back-stack; `/back` pops one. Back-stack size and cross-server behaviour live in [`teleports/config.yml`](configuration/teleports/config.md). |
 | `/randomtp` | Teleport to a random online player across the whole network. No arguments. The picker never lands on you, and if the picked player just went offline you get a "try again" message. Uses the same routing as `/tp` once a target is picked (same-server or cross-server transfer). |
+| `/spectate [player]` | Spectate a player: you switch to spectator mode at their position, on any backend when cross-server is on. `/spectate` without a player ends it and puts you back at your start point in the gamemode you had. The session survives a quit, a restart and a server switch. Changing your gamemode yourself ends it where you stand. Players with `staffcore.spectate.exempt` cannot be spectated (admins excepted). Also answers `/grim spectate` and `/grim stopspectating` while `teleports.spectate.override-grim` is on. |
 
 ## Refund
 
@@ -193,6 +194,31 @@ in [`reports/config.yml`](configuration/reports/config.md).
 | `/reports list` |  | Hidden alias of `/reports` kept for muscle memory. |
 
 Reviewing is gated by `staffcore.reports.review`. Filing is default-TRUE, so every player can `/report` out of the box; grant `staffcore.report.exempt` to staff so their names cannot be filed against. Reports resolved as REVIEWED or DISMISSED are automatically deleted after `reports.cleanup-resolved-after-hours` (default 12 hours; set to `<= 0` to disable).
+
+## Staff mode
+
+| Command | Description |
+| --- | --- |
+| `/staffmode` | Toggle your own staff mode: shows or hides your group's `staff-commands` in tab-complete. See [Permissions](permissions.md). |
+
+## Staff clear
+
+Settings live in [`staffclear/config.yml`](configuration/staffclear/config.md).
+
+| Command | Description |
+| --- | --- |
+| `/staffclear <player>` | Reset everything a player can only have as staff: staff mode, vanish, staff chat toggle, spy targets, maintenance bypass, fly, fly and walk speed, gamemode (back to survival) and an open `/invsee` or `/echestsee` edit window. Punishment history and alt records stay. Works for players on any backend and for offline players (applied on their next join). |
+
+## Maintenance
+
+Settings and screens live in [`maintenance/config.yml`](configuration/maintenance/config.md).
+
+| Command | Description |
+| --- | --- |
+| `/maintenance <on|off> <server|all|proxy>` | Switch maintenance on or off for one server, the proxy or every server. Switching it on kicks every player without bypass from the affected servers; new joins are denied. `off all` also clears single-server entries. |
+| `/maintenance add <player>` | Add a player to the bypass list. |
+| `/maintenance remove <player>` | Remove a player from the bypass list. |
+| `/maintenance list` | Show the current maintenance state and the bypass list. |
 
 ## Admin
 

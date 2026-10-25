@@ -247,6 +247,8 @@
     * [config.yml](staffcore/configuration/announcement/config.md)
   * maintenance
     * [config.yml](staffcore/configuration/maintenance/config.md)
+  * staffclear
+    * [config.yml](staffcore/configuration/staffclear/config.md)
   * utils
     * [config.yml](staffcore/configuration/utils/config.md)
 

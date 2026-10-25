@@ -59,6 +59,19 @@ randomtp:
   pick-failed:        "&cThat player just went offline, try again."
   success:            "&#00FC00&lTP &r&7» &fRandomly teleported to &#00FC99%player%&f."
   cross-server:       "&#00FC00&lTP &r&7» &fRandomly picked &#00FC99%player%&f. Transferring you to &#00FC99%server%&f..."
+
+spectate:
+  self:               "&cYou cannot spectate yourself."
+  success:            "&#00FC00&lSPECTATE &r&7» &fSpectating &#00FC99%player%&f. &7/spectate to stop."
+  cross-server:       "&#00FC00&lSPECTATE &r&7» &fTransferring you to &#00FC99%server%&f to spectate &#00FC99%player%&f..."
+  returning:          "&#00FC00&lSPECTATE &r&7» &fReturning you to &#00FC99%server%&f..."
+  ended:              "&#00FC00&lSPECTATE &r&7» &fStopped spectating. Back at your start point."
+  ended-here:         "&#00FC00&lSPECTATE &r&7» &fStopped spectating. Your start point is on another server."
+  ended-by-gamemode:  "&#00FC00&lSPECTATE &r&7» &fGamemode changed, spectating stopped. You stay where you are."
+  not-spectating:     "&cYou are not spectating anyone."
+  exempt:             "&cThat player cannot be spectated."
+  transfer-failed:    "&cTransfer to &f%server% &cfailed. Try again."
+  failed:             "&cCould not start spectating. See console."
 ```
 
 `common` keys are shared across every teleport command. The five

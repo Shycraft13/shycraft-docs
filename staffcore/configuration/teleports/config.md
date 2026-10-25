@@ -20,6 +20,9 @@ teleports:
   pending-teleport-ttl-seconds: 60
 
   blocked-worlds: []
+
+  spectate:
+    override-grim: true
 ```
 
 ## Options
@@ -32,6 +35,7 @@ teleports:
 | `back-stack-size` | `5` | How many previous locations `/back` remembers per player. Higher = further undo, more storage rows. `/back` never records itself, so a ping-pong doesn't grow the stack. |
 | `pending-teleport-ttl-seconds` | `60` | Timeout for a cross-server teleport. If the target server doesn't pick the arriving player up within this window (proxy transfer failed, target down), the pending teleport is dropped. Once the client actually arrives and the server teleports them, the row is consumed regardless of TTL. |
 | `blocked-worlds` | `[]` | List of world names staff cannot teleport into. Case-insensitive. Bypass via `staffcore.teleport.admin`. Use for world-borders, private staff areas, or in-progress builds. |
+| `spectate.override-grim` | `true` | When on, `/spectate`, `/grim spectate` and `/grim stopspectating` all run StaffCore's spectate instead of the Grim anticheat's. Off leaves those commands to Grim; `/staffcore:spectate` always works. Needs a restart to change. |
 
 ## Commands + permissions
 
@@ -41,6 +45,7 @@ teleports:
 | `/tphere <player>` | `staffcore.tphere` | Target-side immunity: `staffcore.tp.bypass`. |
 | `/tppos <x> <y> <z> [world] [server]` | `staffcore.tppos` | `[server]` requires `cross-server: true`. |
 | `/back` | `staffcore.back` |  |
+| `/spectate [player]` | `staffcore.spectate` | Target-side immunity: `staffcore.spectate.exempt`. Cross-server needs `cross-server: true`. |
 
 ## Message keys
 

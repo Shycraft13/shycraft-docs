@@ -24,6 +24,9 @@
 - **Vanish** `/vanish` hides you from non-staff, silences join / quit messages and skips container open animations. Persists in the database and follows you across servers.
 - **Reports** `/report <player> <message>` filed by any player, with a per-reporter cooldown and a single configurable length cap (`reports.message-max-chars`). Staff review through `/reports` (network-wide list) or `/report check <player>` (per-target list). Resolved reports auto-delete after a configurable window (default 12 hours). Optional Discord webhook posts each new report as a full embed with reporter head, target thumbnail and inline metadata.
 - **Inspect** `/invsee` and `/echestsee` open a target's inventory or enderchest in read-only or edit mode, cross-server aware, works for offline players too.
+- **Spectate** `/spectate <player>` puts you in spectator mode at a player on any backend; `/spectate` brings you back to your start point in your old gamemode. Survives quits, restarts and server switches.
+- **Staff clear** `/staffclear <player>` resets every piece of staff state (staff mode, vanish, fly, gamemode, ...) of a player, online anywhere or offline. Players who lose `staffcore.staff` are reset automatically.
+- **Maintenance** `/maintenance` switches maintenance on per server, for the proxy or network-wide, with a bypass list and a configurable kick screen.
 - **Utils** self / other variants of `/fly`, `/flyspeed`, `/speed`, `/heal`, `/feed`, `/repair`, plus local-only `/near [radius]` and `/top`. Cross-server aware and offline-aware where meaningful.
 - **Cross-server** every ban, unban, mute, unmute and kick automatically propagates to every backend and the proxy sharing the same database, with an optional Redis event bus for sub-second latency.
 - **Config push** `/staffcore push` copies your `punishments/` folder to every other node in one command. No more editing the same YAML on five backends.

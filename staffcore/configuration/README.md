@@ -15,8 +15,8 @@ Top-level roots:
   behaviour toggles, chat messages, disconnect screens, sounds, the template
   catalogue, and the three GUI layouts.
 - `teleports/`, `refund/`, `gamemodes/`, `chat/`, `reports/`, `vanish/`,
-  `freeze/`, `inspect/`, `spy/`, `staffchat/`, `announcement/`, `maintenance/`
-  and `utils/` per-feature settings for the optional feature groups gated by
+  `freeze/`, `inspect/`, `spy/`, `staffchat/`, `announcement/`, `maintenance/`,
+  `staffclear/` and `utils/` per-feature settings for the optional feature groups gated by
   `features.<name>` in `config/config.yml`. `chat/` also holds
   `blocked-words.yml`, the anti-swear filter; `reports/` holds the two GUI
   layouts for the report list and the single-report view.

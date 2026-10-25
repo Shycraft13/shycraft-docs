@@ -67,6 +67,7 @@ Every node follows the `staffcore.<feature>` scheme. Defaults are hardcoded in t
 | `staffcore.echestsee.use` | `op` | Open `/echestsee <player>` in read-only mode. |
 | `staffcore.echestsee.edit` | `op` | Open `/echestsee <player>` in edit mode. |
 | `staffcore.inspect.bypass` | `false` | Target-side: cannot be inspected or edited by other staff. `staffcore.admin` overrides. |
+| `staffcore.inspect.private.bypass` | `op` | Read-only views ignore a player's "Inventory View: off" setting (EconomyCore `/settings`). Give it to staff who only have the `.use` nodes. |
 
 ## Templates
 
@@ -109,6 +110,8 @@ Registered by the plugin when `features.teleports: true` in
 | `staffcore.tp.offline` | `op` | Teleport to an offline player's last logout position. Denied when off even if `staffcore.tp` is granted. |
 | `staffcore.teleport.admin` | `op` | Bypass `teleports.blocked-worlds`. |
 | `staffcore.tp.bypass` | `false` | Immune to being pulled by `/tphere`. Overridden by `staffcore.admin`. |
+| `staffcore.spectate` | `op` | Use `/spectate [player]`. |
+| `staffcore.spectate.exempt` | `false` | Target-side: cannot be spectated. Overridden by `staffcore.admin`. |
 
 ## Chat filters
 
@@ -273,6 +276,24 @@ group's `staff-commands` list to actually run.
 
 `/staffmode` is a pure toggle: no sub-commands, no player targeting,
 no aliases. Every invocation flips the caller's own state.
+
+## Staff clear (`/staffclear`)
+
+Settings live in [`staffclear/config.yml`](configuration/staffclear/config.md).
+
+| Node | Default | Description |
+| --- | --- | --- |
+| `staffcore.staff` | `op` | Marks a staff member. Grant it to every staff role: a player who loses it is reset automatically (staff mode, vanish, staff chat, spy, fly, speeds, gamemode, ...). A player who never held it is never reset automatically. |
+| `staffcore.staffclear` | `op` | Use `/staffclear <player>`. |
+
+## Maintenance
+
+Settings live in [`maintenance/config.yml`](configuration/maintenance/config.md).
+
+| Node | Default | Description |
+| --- | --- | --- |
+| `staffcore.maintenance.admin` | `op` | Use `/maintenance`: switch maintenance on or off per server and manage the bypass list. |
+| `staffcore.maintenance.bypass` | `false` | Join and stay on a server in maintenance even when not on the bypass list. `staffcore.admin` also bypasses. |
 
 ## Duration caps + cooldowns
 
