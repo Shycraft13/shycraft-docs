@@ -103,7 +103,7 @@ next-page:
 
 credits:
   SLOT: 42
-  MATERIAL: NAME_TAG
+  MATERIAL: BOOK
   TITLE: "&#FCE300&lTAG CREDITS"
   LORE:
     - "&7Tag Credits"
