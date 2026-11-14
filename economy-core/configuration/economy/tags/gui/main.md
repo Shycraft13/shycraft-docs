@@ -101,6 +101,18 @@ next-page:
     - ""
     - "&#00FC00▶ &#00FC00&l&nCLICK&r &#00FC00to Go Forward"
 
+credits:
+  SLOT: 42
+  MATERIAL: SUNFLOWER
+  TITLE: "&#FCE300&lTAG CREDITS"
+  LORE:
+    - "&7Tag Credits"
+    - ""
+    - "&#FCE300Information"
+    - "&fCredits: &#FCE300%credits%"
+    - "&fClick a locked tag to"
+    - "&funlock it with credits."
+
 entry:
   TITLE: "%tag%"
   LORE-EQUIPPED:
@@ -126,6 +138,24 @@ entry:
     - "&for with a rank."
     - ""
     - "&#FC0000▶ &#FC0000&l&nLOCKED"
+  LORE-UNLOCKABLE:
+    - "&7Tag"
+    - ""
+    - "&#FCE300Information"
+    - "&fYou do not own this tag."
+    - "&fCost: &#FCE300%cost% Tag Credit(s)"
+    - "&fYour Credits: &#FCE300%credits%"
+    - ""
+    - "&#FCE300▶ &#FCE300&l&nCLICK&r &#FCE300to Unlock"
+  LORE-CREDIT-LOCKED:
+    - "&7Tag"
+    - ""
+    - "&#FC0000Information"
+    - "&fYou do not own this tag."
+    - "&fCost: &#FCE300%cost% Tag Credit(s)"
+    - "&fYour Credits: &#FC0000%credits%"
+    - ""
+    - "&#FC0000▶ &#FC0000&l&nNOT ENOUGH CREDITS"
 
 FILLER:
   MATERIAL: AIR

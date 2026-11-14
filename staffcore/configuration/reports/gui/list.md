@@ -26,7 +26,7 @@ LOADING:
 EMPTY:
   MATERIAL: BARRIER
   SLOT: 31
-  TITLE: "&cNo reports"
+  TITLE: "&c&lNO REPORTS"
   LORE:
     - "&7Nothing to review."
 

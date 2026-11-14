@@ -109,8 +109,8 @@ template:
   punish-usage: "&#F97603Usage: &#FCE300/punish <player> [template] [--kill] [--ip]"
   applied:      "&#00A4FC&lTEMPLATE &r&7» &fApplied &#FCE300%template% &f(tier &#FCE300%tier%&f) to &#00FC99%player%&f."
   broadcast:    "&#00A4FC&lTEMPLATE &r&7» &#00FC99%player% &freceived &#FCE300%template% &f(tier &#FCE300%tier%&f) from &#00FC99%staff%&f. Reason: &#FCE300%reason%&f."
-  wrong-category: "&c&#FCE300%template% &cis not a %category% template."
-  no-permission:  "&cNo permission for template &#FCE300%template%&c."
+  wrong-category: "&c%template% is not a %category% template."
+  no-permission:  "&cNo permission for template %template%."
 
 kick:
   usage:      "&#F97603Usage: &#FCE300/kick <player> [reason]"
@@ -124,10 +124,16 @@ limits:
   cooldown-staff:   "&cCooldown on &f%action%&c. Try again in &f%remaining%&c."
   cooldown-target:  "&cThis target was just punished. Try again in &f%remaining%&c."
   cooldown-redo:    "&cYou just lifted a punishment on this target. Try again in &f%remaining%&c."
+  lookup-failed:    "&cCooldowns could not be checked. Try again in a moment."
 
 staffcore:
-  usage:         "&#F97603Usage: &#FCE300/staffcore reload"
+  usage:         "&#F97603Usage: &#FCE300/staffcore reload [server|all]"
   reload-start:  "&#00A4FC&lRELOAD &r&7» &fReloading configuration..."
   reload-done:   "&#00FC00&lRELOAD &r&7» &fReloaded &#FCE300%files% &ffile(s) and &#FCE300%templates% &ftemplate(s) in &#FCE300%ms%ms&f."
+  reload-sent:          "&#00A4FC&lRELOAD &r&7» &fReload sent to &#FCE300%target%&f."
+  reload-remote-done:   "&#00FC00&lRELOAD &r&7» &#FCE300%server% &freloaded in &#FCE300%ms%ms&f."
+  reload-remote-failed: "&cReload on &f%server% &cfailed: %error%"
   reload-failed: "&cReload failed: %error%"
+  reload-no-redis: "&cReloading another server requires Redis."
+  reload-unknown-server: "&cUnknown server &f%server%&c. Live: &f%servers%"
 ```

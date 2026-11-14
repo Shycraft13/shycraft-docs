@@ -50,6 +50,7 @@
       * [config.yml](economy-core/configuration/economy/keyall/config.md)
     * kits
       * gui
+        * [claim.yml](economy-core/configuration/economy/kits/gui/claim.md)
         * [editor.yml](economy-core/configuration/economy/kits/gui/editor.md)
         * [main.yml](economy-core/configuration/economy/kits/gui/main.md)
         * [preview.yml](economy-core/configuration/economy/kits/gui/preview.md)
@@ -74,6 +75,7 @@
       * [messages.yml](economy-core/configuration/economy/money/messages.md)
     * mythictools
       * [config.yml](economy-core/configuration/economy/mythictools/config.md)
+      * [messages.yml](economy-core/configuration/economy/mythictools/messages.md)
       * [mythictool.yml](economy-core/configuration/economy/mythictools/mythictool.md)
     * pay
       * gui
@@ -140,6 +142,7 @@
       * [sounds.yml](economy-core/configuration/economy/stats/sounds.md)
     * tags
       * gui
+        * [confirm.yml](economy-core/configuration/economy/tags/gui/confirm.md)
         * [main.yml](economy-core/configuration/economy/tags/gui/main.md)
       * [config.yml](economy-core/configuration/economy/tags/config.md)
       * [messages.yml](economy-core/configuration/economy/tags/messages.md)

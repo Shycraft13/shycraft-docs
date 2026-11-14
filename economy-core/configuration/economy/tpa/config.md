@@ -4,4 +4,5 @@ Location: `plugins/EconomyCore/economy/tpa/config.yml`
 
 ```yaml
 teleport-delay: 5
+request-timeout: 60
 ```

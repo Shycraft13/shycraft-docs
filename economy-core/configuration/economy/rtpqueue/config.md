@@ -5,7 +5,24 @@ Location: `plugins/EconomyCore/economy/rtpqueue/config.yml`
 ```yaml
 countdown-seconds: 5
 
+spawn-distance: 3
+
 search-attempts: 15
+
+MASS-QUEUE:
+  ENABLED: false
+  INTERVAL: "1h"
+  WAIT-SECONDS: 60
+  REMINDERS: [30, 10]
+  MIN-PLAYERS: 2
+  WORLD: world
+  SPACING: 3
+  MAX-RADIUS: 32
+
+DUEL:
+  ENABLED: false
+  REQUEST-SECONDS: 60
+  REQUEST-COOLDOWN-SECONDS: 30
 
 WORLD-SETTINGS:
   world:

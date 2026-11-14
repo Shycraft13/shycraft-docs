@@ -9,5 +9,7 @@ kits:
   default-cooldown: 1d
   default-permission-required: true
 
-  layout-requires-permission: false
+  layout-requires-permission: true
+
+  allow-shulker-claim: false
 ```

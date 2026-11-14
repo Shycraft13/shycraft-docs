@@ -12,6 +12,8 @@ staffcore:
 
   server-id: ""
 
+  lowercase-commands: true
+
 features:
   punishments: true
 
@@ -85,6 +87,12 @@ glist:
   permission: ""
   header: "&7Online: &f%online%&7 / &f%total%"
   server-line: "&7[&f%server%&7] &7(&f%count%&7): &f%names%"
+
+hidden-channels:
+  - "staffcore:ban"
+  - "bungeecord:main"
+  - "bungeecord"
+  - "luckperms:update"
 ```
 
 ## Keys

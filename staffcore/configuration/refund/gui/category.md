@@ -11,7 +11,7 @@ Placeholders in `TITLE` / `LORE`: `%player%`.
 ```yaml
 GUI:
   ROWS: 3
-  TITLE: "&8ʀᴇғᴜɴᴅ"
+  TITLE: "&8ʀᴇꜰᴜɴᴅ"
 
 CATEGORIES:
   DEATH:

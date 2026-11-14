@@ -5,7 +5,7 @@ Location: `plugins/EconomyCore/economy/rtpzone/messages.yml`
 ```yaml
 messages:
   rtpmanager-no-permission:  "&cYou don't have permission."
-  rtpmanager-usage:          "&cUsage: /rtpmanager rtpzone <wand|create <name>|delete <name>>"
+  rtpmanager-usage:          "&cUsage: /rtpmanager <rtpzone <wand|create <name>|delete <name>>|mass <start|stop>>"
   rtpmanager-usage-create:   "&cUsage: /rtpmanager rtpzone create <name>"
   rtpmanager-usage-delete:   "&cUsage: /rtpmanager rtpzone delete <name>"
   rtpmanager-feature-off:    "&cRTPZone is disabled. Enable features.rtpzone in config.yml."

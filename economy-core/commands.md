@@ -139,6 +139,14 @@ Every utility command opens the vanilla screen for that block from anywhere. `/e
 | `/smithing` | — | Smithing table |
 | `/stonecutter` | — | Stonecutter |
 | `/glow [player]` | — | Toggle the entity glow flag on yourself, or on another player (admin). |
+| `/nightvision` | `/nv` | Toggle permanent night vision. Survives a restart and cannot be removed by milk or a death while it is on. |
+
+Two more commands live in the same config file but act on the item in your hand:
+
+| Command | Description |
+| --- | --- |
+| `/rename <name>` | Rename the held item. Same name rules as team names, and items that belong to a plugin (spawners, mythic tools, anything that already has a coloured name) are refused. See [`economy/util/config.yml`](configuration/economy/util/config.md). |
+| `/sign [message]` | Add "Signed by <you>" plus an optional short message to the held item's lore. Each player can sign a given item once. |
 
 ## Admin Commands
 
@@ -167,6 +175,7 @@ Every admin command below is gated by `economycore.admin` (default: `op`).
 | `/tagsmanager edit <tag>` | Edit an existing tag. |
 | `/tagsmanager give <player> <tag>` | Give a tag to a player. |
 | `/tagsmanager remove <player> <tag>` | Take a tag from a player. |
+| `/tagsmanager credits <add\|remove\|set\|check> <player\|*> [amount]` | Manage a player's tag credits. Players spend them in `/tags` to unlock a tag of their choice. |
 | `/worthmanager set <item\|hand> <price>` | Set the worth of an item. `hand` uses the item you're holding. |
 | `/mythictool give <player> <tool> <time>` | Give a player a timed mythic tool that expires after `<time>`. |
 
@@ -193,7 +202,7 @@ Every admin command below is gated by `economycore.admin` (default: `op`).
 | `/teammanager forcedisband <team>` | Disband a team without the owner's consent. |
 | `/teammanager teamhome <team>` | Teleport to a team's home. |
 | `/combatmanager tag <player> [duration]` | Force-combat-tag a player. |
-| `/combatmanager untag <player\|all>` | Clear the combat tag from a player, or from everyone. |
+| `/combatmanager untag <player\|*>` | Clear the combat tag from a player, or from everyone with `*`. |
 | `/bountymanager <add\|set\|remove\|clear> <player> [amount]` | Manage bounties on a player. |
 
 ### Broadcasting

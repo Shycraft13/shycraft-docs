@@ -32,7 +32,7 @@ Every basic command has a permission but is on by default. Revoke them if you wa
 
 ## Utility commands
 
-Every utility command has its own node so you can grant a subset, matching the `permission` field in `economy/util/config.yml`. All utility and glow nodes default to `op` so the feature is locked down out of the box — grant them explicitly (via LuckPerms or another permissions plugin) to open them to normal players.
+Every utility command has its own node so you can grant a subset, matching the `permission` field in `economy/util/config.yml`. The nodes that open a vanilla screen from anywhere, plus the glow nodes, default to `op` so the feature is locked down out of the box — grant them explicitly (via LuckPerms or another permissions plugin) to open them to normal players. `/nightvision`, `/sign` and `/rename` default to `true` instead: they are cosmetic, so revoke them if you do not want them.
 
 | Node | Default | Description |
 | --- | --- | --- |
@@ -44,6 +44,9 @@ Every utility command has its own node so you can grant a subset, matching the `
 | `economy.util.cartography` | `op` | `/cartography` |
 | `economy.util.smithing` | `op` | `/smithing` |
 | `economy.util.stonecutter` | `op` | `/stonecutter` |
+| `economy.util.nightvision` | `true` | `/nightvision`, `/nv` |
+| `economy.util.sign` | `true` | `/sign` |
+| `economy.util.rename` | `true` | `/rename` |
 | `economy.glow.use` | `op` | `/glow` on self. |
 | `economy.glow.others` | `op` | `/glow <player>` on someone else, including offline targets. |
 

@@ -37,13 +37,13 @@ CHAT:
   COOLDOWN:
     ENABLED: false
     SECONDS: 2
-    BLOCK-MESSAGE: "&cSlow down. You can chat again in %seconds%s."
+    BLOCK-MESSAGE: "&cSlow down. You can chat again in %time%."
 
   MESSAGE-LIMIT:
     ENABLED: false
     MAX-MESSAGES: 5
     WINDOW-SECONDS: 10
-    BLOCK-MESSAGE: "&cYou're sending messages too fast. Try again in %seconds%s."
+    BLOCK-MESSAGE: "&cYou're sending messages too fast. Try again in %time%."
 
 MODERATION:
   cross-server: true

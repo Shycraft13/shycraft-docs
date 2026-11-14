@@ -10,6 +10,8 @@ messages:
   invalid-amount:     "&cInvalid amount."
   self-pay:           "&cYou cannot pay yourself."
   player-not-found:   "&cPlayer not found."
-  cooldown:           "&7Please wait before paying again."
+  cooldown:           "&cPlease wait before paying again."
+  payments-disabled:  "&c%player% is not accepting payments."
+  usage:              "&#F97603Usage: &#FCE300/pay <player> <amount>"
   spam-blocked:       "&cToo many payments. Try again in &#FCE300%time%&c."
 ```

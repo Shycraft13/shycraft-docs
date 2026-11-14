@@ -311,8 +311,9 @@ rtpqueue:
     - "&7Teleport"
     - ""
     - "&#00A4FCInformation"
-    - "&fReceive broadcasts when"
-    - "&fplayers join the 1v1 queue"
+    - "&fReceive 1v1 queue broadcasts,"
+    - "&fMass RTPQueue invites and"
+    - "&fRTPQueue duel requests"
     - ""
     - "&#00A4FC▶ &fStatus: %status%"
     - ""
@@ -366,22 +367,6 @@ explosion-sounds:
     - ""
     - "&#FC0000▶ &#FC0000&l&nCLICK&r &#FC0000to Toggle"
 
-phantom-spawns:
-  SLOT: 33
-  DEFAULT: true
-  MATERIAL: PHANTOM_MEMBRANE
-  TITLE: "&#AAAAAA&lPHANTOM SPAWNS"
-  LORE:
-    - "&7Spawns"
-    - ""
-    - "&#AAAAAAInformation"
-    - "&fAllow phantoms to"
-    - "&fspawn near you"
-    - ""
-    - "&#AAAAAA▶ &fStatus: %status%"
-    - ""
-    - "&#AAAAAA▶ &#AAAAAA&l&nCLICK&r &#AAAAAAto Toggle"
-
 mob-spawns:
   SLOT: 34
   DEFAULT: true
@@ -391,7 +376,8 @@ mob-spawns:
     - "&7Spawns"
     - ""
     - "&#FC0000Information"
-    - "&fAllow hostile mobs"
+    - "&fAllow hostile mobs,"
+    - "&fphantoms and glow squids"
     - "&fto spawn near you"
     - ""
     - "&#FC0000▶ &fStatus: %status%"
@@ -417,6 +403,38 @@ sell-shulker-boxes:
     - "&#00FC00▶ &fStatus: %status%"
     - ""
     - "&#00FC00▶ &#00FC00&l&nCLICK&r &#00FC00to Toggle"
+
+inventory-view:
+  SLOT: 33
+  DEFAULT: true
+  MATERIAL: CHEST
+  TITLE: "&#FCE300&lINVENTORY VIEW"
+  LORE:
+    - "&7Privacy"
+    - ""
+    - "&#FCE300Information"
+    - "&fLet other players view"
+    - "&fyour inventory"
+    - ""
+    - "&#FCE300▶ &fStatus: %status%"
+    - ""
+    - "&#FCE300▶ &#FCE300&l&nCLICK&r &#FCE300to Toggle"
+
+enderchest-view:
+  SLOT: 35
+  DEFAULT: true
+  MATERIAL: ENDER_CHEST
+  TITLE: "&#FCE300&lENDER CHEST VIEW"
+  LORE:
+    - "&7Privacy"
+    - ""
+    - "&#FCE300Information"
+    - "&fLet other players view"
+    - "&fyour ender chest"
+    - ""
+    - "&#FCE300▶ &fStatus: %status%"
+    - ""
+    - "&#FCE300▶ &#FCE300&l&nCLICK&r &#FCE300to Toggle"
 
 auction-notifications:
   SLOT: 40

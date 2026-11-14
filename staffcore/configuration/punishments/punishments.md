@@ -800,7 +800,7 @@ mute-templates:
 warn-templates:
 
   minor-spam:
-    reason: 'Minor chat spam — first warning'
+    reason: 'Minor chat spam, first warning'
     permission: staffcore.template.warn.basic
     expire-ladder: 30d
     ladder:
@@ -814,7 +814,7 @@ warn-templates:
       first: {}
 
   minor-caps:
-    reason: 'Excessive caps in chat — first warning'
+    reason: 'Excessive caps in chat, first warning'
     permission: staffcore.template.warn.basic
     expire-ladder: 30d
     ladder:
@@ -918,7 +918,7 @@ warn-templates:
       first: {}
 
   lying-warn:
-    reason: 'Being dishonest with staff — first warning'
+    reason: 'Being dishonest with staff, first warning'
     permission: staffcore.template.warn.basic
     expire-ladder: 60d
     ladder:
@@ -1047,7 +1047,7 @@ kick-templates:
       first: {}
 
   afk-kick:
-    reason: 'AFK — come back to play actively'
+    reason: 'AFK, come back to play actively'
     permission: staffcore.template.kick.basic
     expire-ladder: 7d
     ladder:
@@ -1090,14 +1090,14 @@ kick-templates:
       first: {}
 
   unsupported-client:
-    reason: 'Modified client — rejoin on a clean client'
+    reason: 'Modified client, rejoin on a clean client'
     permission: staffcore.template.kick.basic
     expire-ladder: 7d
     ladder:
       first: {}
 
   suspicious-behavior:
-    reason: 'Suspicious behaviour — please rejoin normally'
+    reason: 'Suspicious behaviour, please rejoin normally'
     permission: staffcore.template.kick.basic
     expire-ladder: 30d
     ladder:
@@ -1109,7 +1109,7 @@ kick-templates:
       first: {}
 
   possible-alt:
-    reason: 'Possible alt account — please switch to your main'
+    reason: 'Possible alt account, please switch to your main'
     permission: staffcore.template.kick.basic
     expire-ladder: 30d
     ladder:

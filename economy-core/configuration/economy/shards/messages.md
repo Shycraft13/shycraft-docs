@@ -15,6 +15,7 @@ messages:
   shardpay-whole-only: "&cShards can only be paid in whole numbers."
   shardpay-not-enough: "&cYou do not have that many shards."
   shardpay-self: "&cYou cannot pay yourself."
+  shardpay-payments-disabled: "&c%player% is not accepting payments."
   shardpay-player-not-found: "&cPlayer not found."
   shardpay-cooldown: "&cYou can pay again in %time%."
   no-afk-set: "&cAFK location has not been set yet."
@@ -29,7 +30,7 @@ messages:
   pos2-set: "&#00A4FC&lAFK &r&7» &fCorner 2 set at &#FCE300%x%, %y%, %z%&f."
   both-corners-needed: "&cSet both corners first."
   actionbar: "&7Next shard in &#A303F9%time%&7."
-  shard-reward: "&#A303F9&lAFK &r&7» &f+&#A303F9%amount% &fshards."
+  shard-reward: "&7+&#A303F9%amount% &7%shards%."
 
   kill-reward: "&#A303F9&lSHARDS &r&7» &fYou earned &#A303F9%amount% shards &ffrom killing &#FCE300%player%&f."
 

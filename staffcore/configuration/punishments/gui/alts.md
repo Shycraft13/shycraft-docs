@@ -20,7 +20,7 @@ GUI:
 LOADING:
   MATERIAL: CLOCK
   SLOT: 31
-  TITLE: "&#FCE300Loading alts..."
+  TITLE: "&#FCE300&lLOADING ALTS"
   LORE:
     - "&7Fetching accounts"
 

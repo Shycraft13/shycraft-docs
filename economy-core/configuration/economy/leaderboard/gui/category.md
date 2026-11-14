@@ -76,3 +76,35 @@ deaths:
     - ""
     - "&#F97603▶ &#F97603&l&nCLICK&r &#F97603to View"
 ```
+
+## Placeholders
+
+Every `TITLE`, every `LORE` line and the window title accept PlaceholderAPI placeholders,
+resolved against the player who opens the menu. A category item can therefore show the current
+standings right in its lore:
+
+```yaml
+balance:
+  SLOT: 11
+  MATERIAL: EMERALD
+  COLOR: "&#00FC00"
+  TITLE: "&#00FC00&lBALANCE"
+  LORE:
+    - "&7Top Balance"
+    - ""
+    - "&f1. %economy_lb_money_1_name% &7- &#00FC00%economy_lb_money_1_value%"
+    - "&f2. %economy_lb_money_2_name% &7- &#00FC00%economy_lb_money_2_value%"
+    - "&f3. %economy_lb_money_3_name% &7- &#00FC00%economy_lb_money_3_value%"
+    - ""
+    - "&7Your rank: &f#%economy_lb_money_position%"
+    - ""
+    - "&#00FC00▶ &#00FC00&l&nCLICK&r &#00FC00to View"
+```
+
+The full list of leaderboard placeholders is on the
+[placeholder page](../../../../placeholders.md). Any installed expansion works too
+(`%luckperms_prefix%`, `%vault_eco_balance%`, ...). Needs PlaceholderAPI; without it the text
+stays as typed.
+
+The menu is rebuilt every time it is opened, so the values are the ones from the moment the
+player opened it.

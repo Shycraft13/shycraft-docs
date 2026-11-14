@@ -95,3 +95,26 @@ next-page:
     - ""
     - "&#00FC00▶ &#00FC00&l&nCLICK&r &#00FC00to go forward"
 ```
+
+## Placeholders
+
+The window title and the `prev-page`, `next-page`, `search`, `search-active` and `refresh` items
+accept PlaceholderAPI placeholders, resolved against the player looking at the menu. The full list
+of EconomyCore placeholders is on the [placeholder page](../../../../placeholders.md); any
+installed expansion works too (`%luckperms_prefix%`, `%vault_eco_balance%`, ...). Without
+PlaceholderAPI the text stays as typed.
+
+`entry` and `sort` do not. An `entry` row describes the listed player, not the viewer, so a
+placeholder there would show the wrong person's numbers. Use the row's own keys instead:
+
+| Key | In | Shows |
+| --- | --- | --- |
+| `%position%` | `entry`, `refresh` | Rank number |
+| `%name%` | `entry` | Listed player's name |
+| `%value%` | `entry`, `refresh` | That player's value, formatted |
+| `%type%` | `entry`, `refresh`, `gui.title` | Category name, for example `Balance` |
+| `%color%` | `entry`, `refresh` | The category colour from `category.yml` |
+| `%query%` | `search-active` | The name currently being filtered for |
+
+For a live top list in a menu item, put the placeholders on the category buttons instead, see
+[`category.yml`](category.md).

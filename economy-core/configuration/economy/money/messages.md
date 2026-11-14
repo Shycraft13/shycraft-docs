@@ -8,7 +8,7 @@ messages:
 
   balance-other:    "&#00A4FC&lMONEY &r&7» &f%player%'s balance: &#FCE300%balance%"
 
-  player-not-found: "&#FC0000Player not found."
+  player-not-found: "&cPlayer not found."
 
   moneymanager-no-permission: "&cNo permission."
   moneymanager-usage:         "&cUsage: /moneymanager <add|set|remove> <player> <amount>"

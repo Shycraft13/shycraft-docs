@@ -19,6 +19,17 @@ BACK:
     - ""
     - "&#FC0000▶ &#FC0000&l&nCLICK&r &#FC0000to Go Back"
 
+CLOSE:
+  MATERIAL: RED_STAINED_GLASS_PANE
+  TITLE: "&#FC0000&lCLOSE"
+  LORE:
+    - "&7Navigation"
+    - ""
+    - "&#FC0000Information"
+    - "&fClose this menu."
+    - ""
+    - "&#FC0000▶ &#FC0000&l&nCLICK&r &#FC0000to Close"
+
 REVERT:
   SLOT: 52
   MATERIAL: CHEST_MINECART

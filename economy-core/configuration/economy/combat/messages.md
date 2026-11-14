@@ -10,9 +10,13 @@ messages:
   action-bar-lunge: "&fLunge: &#FC0000%time%"
   action-bar-separator: "  "
 
+  untag-on-kill: "&fCombat: &#00FC00ended"
+
   elytra-blocked: "&cYou cannot use elytra while in combat."
 
   firework-blocked: "&cYou cannot use fireworks while in combat."
+
+  teleport-blocked: "&cYou cannot teleport while in combat."
 
   command-blocked: "&cYou cannot use this command while in combat."
 
@@ -30,3 +34,7 @@ messages:
   combatmanager-mass-tagged: "&#00A4FC&lADMIN &r&7» &fTagged &#00FC99%count%&f of &#00FC99%total%&f online players for &#00FC99%time%&f."
   combatmanager-mass-empty:  "&cNobody is online."
 ```
+
+`untag-on-kill` is the action bar the killer sees when
+[`combat.untag-on-kill`](config.md) released their tag. Set it to `""` for no message; the
+combat-expired sound still plays.

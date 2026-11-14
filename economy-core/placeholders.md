@@ -62,3 +62,4 @@ If the rank is empty or the player is unranked, the placeholder returns `N/A`.
 - **Tab list header/footer** — show the viewer's own balance and rank.
 - **Hologram** — put a "Top 10 Richest" hologram at spawn using DecentHolograms or similar.
 - **Chat format** — prefix chat with a player's team and balance.
+- **Leaderboard menu** — put a live top 3 straight into the lore of a category button, see [`economy/leaderboard/gui/category.yml`](configuration/economy/leaderboard/gui/category.md).

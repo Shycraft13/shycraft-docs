@@ -3,6 +3,9 @@
 Location: `plugins/EconomyCore/config/config.yml`
 
 ```yaml
+license:
+  key: "LIC-XXXXXXXX-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+
 world-names:
   world: "overworld"
   world_nether: "nether"

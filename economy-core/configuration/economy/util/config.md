@@ -79,6 +79,12 @@ rename:
   max-length: 25
   allow-color-codes: false
   cooldown-seconds: 60
+  blocked-materials:
+    - SPAWNER
+    - TRIAL_SPAWNER
+  block-mythic-tools: true
+  block-styled-names: true
+  block-custom-model-data: false
 
 messages:
   no-permission: "&#FC0000You don't have permission to use this."
@@ -105,6 +111,7 @@ messages:
   rename-success: "&7Item renamed."
   rename-usage: "&cUsage: /rename <name>"
   rename-no-item: "&cHold an item to rename it."
+  rename-not-allowed: "&cThis item cannot be renamed."
   rename-cooldown: "&cYou can rename again in %time%."
   rename-no-colors: "&cColor codes are not allowed in item names."
   rename-tag-forbidden: "&cThe &f<%tag%> &ctag is not allowed in an item name. Only colours and gradients are."
@@ -113,3 +120,28 @@ messages:
   nightvision-enabled: "&7Night vision is now on."
   nightvision-disabled: "&7Night vision is now off."
 ```
+
+## Protecting plugin items from `/rename`
+
+`/rename` refuses items that belong to a plugin instead of to the player, so a rename
+cannot destroy an item's identity or be silently undone the next time the owning plugin
+rewrites that item. All four checks are independent and share one message,
+`rename-not-allowed`. They run before the cooldown, so a player holding a protected item
+is told the item is the problem instead of being sent away with a wait time.
+
+| Key | Default | What it refuses |
+| --- | --- | --- |
+| `blocked-materials` | `SPAWNER`, `TRIAL_SPAWNER` | Item types that can never be renamed. Add the materials of your own custom items here. An unknown material name is logged on startup and skipped, it never disables the command. |
+| `block-mythic-tools` | `true` | Mythic tools created with `/mythictool`. |
+| `block-styled-names` | `true` | Any item whose current name already carries a colour, a format code or a click/hover action. |
+| `block-custom-model-data` | `false` | Items with custom model data. Off by default, because it also catches purely cosmetic resource-pack items. |
+
+`block-styled-names` is the general rule for third-party custom items: a vanilla item has
+no name at all and an anvil-renamed item has a plain white one, while a custom item from
+another plugin is almost always coloured. Any colour, any formatting that is actually
+switched on, or any click or hover action counts as "not the player's item", including
+inside a gradient.
+
+An item that was renamed with `/rename` itself stays renamable. With
+`allow-color-codes: true` a player would otherwise lock themselves out of their own item
+the moment they gave it a colour.

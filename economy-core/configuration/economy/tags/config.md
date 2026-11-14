@@ -10,4 +10,8 @@ search-min-length: 3
 placeholder:
   format: " %tag%"
   empty: ""
+
+credits:
+  enabled: false
+  auto-equip: false
 ```

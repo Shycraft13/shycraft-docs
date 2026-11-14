@@ -58,6 +58,7 @@ permissions:
   - staffcore.echestsee.use
   - staffcore.echestsee.edit
   - staffcore.inspect.bypass
+  - staffcore.inspect.private.bypass
 
   - staffcore.refund.use
   - staffcore.refund.replace
@@ -76,6 +77,8 @@ permissions:
   - staffcore.tppos
   - staffcore.back
   - staffcore.randomtp
+  - staffcore.spectate
+  - staffcore.spectate.exempt
   - staffcore.tp.offline
   - staffcore.teleport.admin
   - staffcore.tp.bypass
@@ -132,7 +135,9 @@ permissions:
   - staffcore.commands.brand.bypass
 
   - staffcore.staffmode
-  - staffcore.staffmode.manage
+
+  - staffcore.staff
+  - staffcore.staffclear
 
   - staffcore.maintenance.admin
   - staffcore.maintenance.bypass

@@ -11,6 +11,10 @@ team:
   max-members: 20
   allow-color-codes: false
   allow-symbols: false
+
+allies:
+  enabled: false
+  max-allies: 3
 ```
 
 - `min-name-length` / `max-name-length` count only visible characters — colour codes and MiniMessage tags do not count. `&aB` is one character (`B`).

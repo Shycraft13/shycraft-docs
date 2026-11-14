@@ -23,18 +23,22 @@ refund:
   usage:                      "&7Usage: &f/refund <player>"
   opened:                     "&7Opened refund GUI for &f%player%&7."
   no-backups:                 "&7No backups yet for &f%player%&7 in &f%category%&7."
+  self:                       "&cYou cannot open your own backups."
 
 view:
   loading:                    "&#AAAAAA&lLOADING"
   no-permission-take:         "&cYou lack permission to take items."
   took-item:                  "&7Took &f%amount%x %item%&7."
+  take-only:                  "&cThis view is take-only. Your cursor item goes back on close."
+  cursor-first:               "&cPut down the item on your cursor first."
+  drop-blocked:               "&cYou cannot drop items here."
 
 action:
   no-permission-replace:      "&cYou lack permission for replace."
   no-permission-giveout:      "&cYou lack permission for give-out."
   no-permission-teleport:     "&cYou lack permission for teleport."
   replace-applied:            "&7Replace applied for &f%player%&7."
-  replace-applied-remote:     "&7Replace applied on &f%server%&7."
+  replace-applied-remote:     "&7Replace sent to &f%server%&7."
   replace-applied-offline:    "&7Offline replace queued for &f%player%&7."
   replace-failed:             "&cReplace failed: no route to the target."
   giveout-done:               "&7Packed backup into &f%shulkers% shulker(s)&7."

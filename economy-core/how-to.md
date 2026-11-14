@@ -61,6 +61,15 @@ Tags are cosmetic name prefixes. You create them from the game and hand them out
 2. Edit `plugins/EconomyCore/economy/tags/tags.yml` for the tag's display text and permission requirements (or use `/tagsmanager edit <tag>`).
 3. Give a tag to a player with `/tagsmanager give <player> <tag>`. Take it back with `/tagsmanager remove <player> <tag>`.
 
+### Tag credits (optional)
+
+Tag credits let players pick a tag themselves instead of you handing out each one. Off by default.
+
+1. Turn it on in `plugins/EconomyCore/economy/tags/config.yml`: `credits.enabled: true`. With `credits.auto-equip: true` the tag is worn right after the unlock.
+2. Give credits with `/tagsmanager credits add <player> <amount>`. Credits stack. `remove`, `set` and `check` work the same way, also for offline players, and `*` targets everyone online.
+3. Per tag in `tags.yml`: `CREDIT-COST` sets the price (default 1), `CREDIT-UNLOCK: false` keeps a tag out of the credit shop (for rank or store tags).
+4. Players open `/tags`, see their credits at the bottom and click a tag to unlock it after a confirm. The confirm menu is `economy/tags/gui/confirm.yml`.
+
 ## Adjust player balance or shards
 
 Fast admin adjustments — no menu needed.
@@ -118,7 +127,7 @@ Useful when a player logs out mid-fight and you want the tag to stay when they l
 ```
 /combatmanager tag <player> [duration]
 /combatmanager untag <player>
-/combatmanager untag all
+/combatmanager untag *
 ```
 
 Duration accepts formats like `120`, `120s`, `3m`, `1h`. Without a duration the default from `economy/combat/config.yml` is used.

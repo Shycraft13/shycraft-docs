@@ -9,11 +9,13 @@ messages:
   one-time-used: "&cYou have already claimed %kit%"
   no-permission: "&cYou do not have access to %kit%"
   no-space: "&cClear your inventory before claiming %kit%"
+  no-space-shulker: "&cYou need %slots% free slots to claim %kit% &cin shulkers"
   not-found: "&#00A4FC&lKITS &r&7» &cThat kit does not exist."
-  usage: "&#00A4FC&lKITS &r&7» &fUsage: &7/kit claim <kit>"
+  usage: "&#00A4FC&lKITS &r&7» &fUsage: &7/kit <claim|preview> <kit>"
   layout-saved: "&#00A4FC&lKITS &r&7» &fSaved your layout for &#00A4FC%kit%&f."
   layout-reset: "&#00A4FC&lKITS &r&7» &fReset your layout for &#00A4FC%kit%&f."
   layout-already-default: "&7Layout is already default."
+  layout-cursor-full: "&cPlace the item you are holding first."
 
 status:
   available:     "&#00FC00Available"
