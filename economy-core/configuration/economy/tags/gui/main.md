@@ -103,7 +103,7 @@ next-page:
 
 credits:
   SLOT: 42
-  MATERIAL: SUNFLOWER
+  MATERIAL: NAME_TAG
   TITLE: "&#FCE300&lTAG CREDITS"
   LORE:
     - "&7Tag Credits"
