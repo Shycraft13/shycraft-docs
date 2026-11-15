@@ -11,8 +11,8 @@ messages:
   duplicate-removed: "&cA duplicated mythic tool was removed."
   firework-crossbow: "&cA mythic firework cannot be loaded into a crossbow."
   sellaxe-nothing: "&cNothing to sell."
-  switch-fortune: "&#00A4FC&lMYTHIC &r&7» &fSwitched to &#FCE300Fortune %level%"
-  switch-silk-touch: "&#00A4FC&lMYTHIC &r&7» &fSwitched to &#00FC99Silk Touch"
+  switch-fortune: "&fSwitched to &#FCE300Fortune %level%"
+  switch-silk-touch: "&fSwitched to &#00FC99Silk Touch"
   time-expired: "&cExpired"
 
   no-permission: "&cYou don't have permission."
