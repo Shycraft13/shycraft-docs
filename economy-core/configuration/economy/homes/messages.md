@@ -14,6 +14,7 @@ messages:
   cooldown:         "&7Please wait &#FCE300%time%s&7."
   no-permission:    "&cNo permission for that slot."
   homes-full:       "&cAll home slots are full."
+  world-disabled:   "&cYou cannot set a home in this world."
 
   renamed:           "&#00A4FC&lHOME &r&7» &fHome &#FCE300%old% &fis now &#FCE300%name%&f."
   rename-usage:      "&#00A4FC&lHOME &r&7» &fUsage: &#FCE300/home rename <home> <name>"

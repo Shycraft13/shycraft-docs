@@ -8,6 +8,9 @@ homes:
   default: 2
   teleport-delay: 5
 
+  disabled-worlds:
+    - spawn
+
   rename:
     enabled: true
     min-length: 3
