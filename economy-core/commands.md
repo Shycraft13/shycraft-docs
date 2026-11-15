@@ -25,7 +25,7 @@ Every command below is registered dynamically and can be turned off in its featu
 | --- | --- |
 | `/home [name]` | Teleport to a home. Without a name opens the home menu. |
 | `/homes` | Open the home menu. |
-| `/sethome <name>` | Create or overwrite a home at your current location. |
+| `/sethome` | Set a home at your current location in the first free slot. Not possible in the worlds listed in `disabled-worlds` (default: `spawn`). |
 | `/delhome <name>` | Delete a home. |
 
 Home limits are permission-based: give players `economy.homes.<n>` to grant up to `n` homes. Highest matching node wins. Default without any node is 2 homes.
