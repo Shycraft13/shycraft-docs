@@ -17,6 +17,7 @@ messages:
   firework-blocked: "&cYou cannot use fireworks while in combat."
 
   teleport-blocked: "&cYou cannot teleport while in combat."
+  teleport-partner-blocked: "&c%player% is in combat."
 
   command-blocked: "&cYou cannot use this command while in combat."
 
