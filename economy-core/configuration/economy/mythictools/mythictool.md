@@ -10,14 +10,14 @@ TREECHOPPER:
     AMOUNT: 10
   BLOCKS-PER-TICK: 3
   DELAY-TICKS: 2
-  FORTUNE-SILK-SWITCH: true
+  FORTUNE-SILK-SWITCH: false
   NAME: "&#00A4FC&lMYTHIC TREECHOPPER"
   LORE:
     - "&7Breaks Trees Instantly"
     - "&8Self Destruct: %time%"
   ENCHANTMENTS:
     - EFFICIENCY:5
-    - SILK_TOUCH:1
+    - FORTUNE:3
     - UNBREAKING:3
     - MENDING:1
 
@@ -34,14 +34,14 @@ DRILL:
     - SAND
     - GRAVEL
     - SPAWNER
-  FORTUNE-SILK-SWITCH: true
+  FORTUNE-SILK-SWITCH: false
   NAME: "&#00A4FC&lMYTHIC DRILL"
   LORE:
     - "&79 Blocks Per Break"
     - "&8Self Destruct: %time%"
   ENCHANTMENTS:
     - EFFICIENCY:5
-    - SILK_TOUCH:1
+    - FORTUNE:3
     - UNBREAKING:3
     - MENDING:1
 
@@ -50,7 +50,7 @@ MULTITOOL:
     NAME: FALLING_DUST
     MATERIAL: PURPLE_CONCRETE_POWDER
     AMOUNT: 10
-  FORTUNE-SILK-SWITCH: true
+  FORTUNE-SILK-SWITCH: false
   NAME: "&#00A4FC&lMYTHIC MULTITOOL"
   LORE:
     - "&7Mines Everything Optimally"
@@ -94,14 +94,14 @@ SHOVEL:
   DISABLED-BLOCKS:
     - DIRT_PATH
     - FARMLAND
-  FORTUNE-SILK-SWITCH: true
+  FORTUNE-SILK-SWITCH: false
   NAME: "&#00A4FC&lMYTHIC SHOVEL"
   LORE:
     - "&79 Blocks Per Break"
     - "&8Self Destruct: %time%"
   ENCHANTMENTS:
     - EFFICIENCY:5
-    - SILK_TOUCH:1
+    - FORTUNE:3
     - UNBREAKING:3
     - MENDING:1
 
