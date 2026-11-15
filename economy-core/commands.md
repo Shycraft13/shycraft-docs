@@ -45,7 +45,8 @@ Home limits are permission-based: give players `economy.homes.<n>` to grant up t
 | Command | Description |
 | --- | --- |
 | `/rtp [world]` | Random-teleport within the configured zones for the given world. Accepts the world name or its display alias from `config.yml`. |
-| `/rtpqueue` | Random-teleport into a 1v1 queue with another player. |
+| `/rtpqueue [player]` | Random-teleport into a 1v1 queue with another player. With a player name, opens a menu to challenge that player to a duel. |
+| `/massrtpq` | Join or leave the open Mass RTPQueue round. Alias `/mrtpq`. |
 
 ## Spawn & AFK
 

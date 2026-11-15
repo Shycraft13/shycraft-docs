@@ -78,4 +78,30 @@ GUI:
       - "&ffor &#00FC00%world%"
       - ""
       - "&#00FC00▶ &#00FC00&l&nCLICK&r &#00FC00to confirm"
+
+  DUEL:
+    TITLE: "&8ʀᴛᴘ ᴅᴜᴇʟ"
+
+    OPPONENT:
+      SLOT: 13
+      MATERIAL: PLAYER_HEAD
+      TITLE: "&#00A4FC&l%player%"
+      LORE:
+        - "&7Opponent"
+        - ""
+        - "&#00A4FCInformation"
+        - "&fThe player you"
+        - "&fchallenge to a duel"
+
+    CONFIRM:
+      MATERIAL: LIME_STAINED_GLASS_PANE
+      TITLE: "&#00FC00&lSEND DUEL"
+      LORE:
+        - "&7Duel"
+        - ""
+        - "&#00FC00Information"
+        - "&fChallenge &#00FC00%player%"
+        - "&fin &#00FC00%world%"
+        - ""
+        - "&#00FC00▶ &#00FC00&l&nCLICK&r &#00FC00to confirm"
 ```

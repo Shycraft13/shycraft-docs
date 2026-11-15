@@ -63,7 +63,7 @@ messages:
     - ""
     - "%center%%join%"
     - ""
-  mass-join-text: "&#00A4FC▶ /rtpq mass ◀"
+  mass-join-text: "&#00A4FC▶ /massrtpq ◀"
   mass-join-hover: "&fClick to join the &#00A4FCMass RTPQueue"
   mass-joined: "&#00A4FC&lRTPQUEUE &r&7» &fYou joined the Mass RTPQueue in &#00A4FC%world%&f. Run &#00A4FC/rtpq &fagain to leave."
   mass-waiting: "&7Mass RTPQueue starts in &#00A4FC%time%&7, run &#00A4FC/rtpq &7to leave"
