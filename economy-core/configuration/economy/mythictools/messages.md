@@ -23,7 +23,7 @@ messages:
     - "&cOr:    /mythictool lockdown"
     - "&7Tools: %tools%"
     - "&7Time examples: 30m, 2h, 1d, 1h30m"
-  give-player-not-found: "&cPlayer &f%player% &cnot found or not online."
+  give-player-not-found: "&cPlayer %player% not found or not online."
   unknown-tool: "&cUnknown tool '%tool%'. Available: %tools%"
   invalid-time: "&cInvalid time format. Examples: 30m, 2h, 1d"
   give-done: "&#00A4FC&lADMIN &r&7» &fGave &#00FC99%player% &fthe &#FCE300%tool% &f%kind% for the specified duration."
