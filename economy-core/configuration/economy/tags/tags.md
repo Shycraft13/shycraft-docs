@@ -234,3 +234,17 @@ tags:
     DISPLAY: "&8[&#00FFD1&lC&#00D9DC&lY&#00B2E8&lB&#008CF4&lE&#0066FF&lR&8]"
     PERMISSION: "economycore.tag.cyber"
 ```
+
+## Tag keys
+
+Each tag sits under `tags.<id>`. The id is only used in commands; players see `DISPLAY`.
+
+| Key | Default | What it does |
+| --- | --- | --- |
+| `MATERIAL` | `NAME_TAG` | Icon shown in `/tags`. |
+| `DISPLAY` | | The tag text players see, shown through the `%economy_tag%` placeholder. |
+| `PERMISSION` | `economycore.tag.<id>` | Permission that grants the tag. |
+| `CREDIT-UNLOCK` | `true` | Whether players can unlock the tag with tag credits in `/tags` (only while `credits.enabled` is on in `config.yml`). Set it to `false` for a tag that must stay rank or store only: it can then only be gained through its permission or `/tagsmanager give`. |
+| `CREDIT-COST` | `1` | How many tag credits the unlock costs. |
+
+`CREDIT-UNLOCK` and `CREDIT-COST` are not in the default file; add them to a tag when you need them, then run `/economy reload`. `/tagsmanager create`, `edit` and `delete` rewrite this file and write both keys for every tag.
