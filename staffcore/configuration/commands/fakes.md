@@ -12,9 +12,9 @@ two files for readability.
 Each handler intercepts a small set of command names, cancels the
 vanilla command and sends its own message instead.
 
-- `fake-pl` — replaces `/pl`, `/plugins`, `/icanhasbukkit`, `/?`.
-- `fake-version` — replaces `/version`, `/ver`, `/about`.
-- `fake-help` — replaces `/help`.
+- `fake-pl`: replaces `/pl`, `/plugins`, `/icanhasbukkit`, `/?`.
+- `fake-version`: replaces `/version`, `/ver`, `/about`.
+- `fake-help`: replaces `/help`.
 
 Common shape for all three:
 
@@ -46,14 +46,14 @@ Every entry under `fake-profile.plugins` describes one plugin that
 appears in the reply when a player tab-completes `/`, `/plugins <arg>`
 or `/version <arg>`. Entry fields:
 
-- `name` — display name shown to the client.
-- `namespace` — lowercase identifier used as the `<namespace>:command`
+- `name`: display name shown to the client.
+- `namespace`: lowercase identifier used as the `<namespace>:command`
   prefix.
-- `commands` — list of command roots this fake plugin registers. Root
+- `commands`: list of command roots this fake plugin registers. Root
   names only.
-- `subcommands` — optional map of `command: [arg, arg, ...]` used when
+- `subcommands`: optional map of `command: [arg, arg, ...]` used when
   the player tab-completes an argument.
-- `anticheat: true` — marks the entry as an anticheat.
+- `anticheat: true`: marks the entry as an anticheat.
 
 `fake-profile.enabled: false` disables the tab-complete response
 entirely and returns nothing.

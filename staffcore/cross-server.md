@@ -89,7 +89,7 @@ The source is always explicit: the `<from>` argument names the node whose config
 Two ways to invoke:
 
 - `/staffcore push` (no args, as a player) opens a GUI: pick source node → pick target servers → pick preset → confirm.
-- `/staffcore push <from> <to|*> <preset>` scripted mode. Unknown server-ids are rejected upfront so a typo doesn't silently succeed. `<from>` and `<to>` must differ. When run by a player, the scripted variant still opens the confirm stage of the GUI so a chat typo cannot push by accident. Append `--yes` (alias `-y`) to skip the confirm — required for automation, shell scripts and cron. Console callers always skip. The confirm GUI layout is customizable in [`push/confirm.yml`](configuration/push/confirm.md).
+- `/staffcore push <from> <to|*> <preset>` scripted mode. Unknown server-ids are rejected upfront so a typo doesn't silently succeed. `<from>` and `<to>` must differ. When run by a player, the scripted variant still opens the confirm stage of the GUI so a chat typo cannot push by accident. Append `--yes` (alias `-y`) to skip the confirm, required for automation, shell scripts and cron. Console callers always skip. The confirm GUI layout is customizable in [`push/confirm.yml`](configuration/push/confirm.md).
 
 Node discovery works via Redis heartbeats: every node writes a short-lived key `<prefix>:nodes:<server-id>` with a 30-second TTL, refreshed every 10 seconds. The GUI reads these to list live nodes.
 

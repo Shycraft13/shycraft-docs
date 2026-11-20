@@ -11,11 +11,14 @@ worlds: []
 
 pack:
   file: "default.rgpack"
+
   source-world: ""
   source-chunk-x: 0
   source-chunk-z: 0
+
   bake-min-y: -64
-  bake-max-y: 32
+  bake-max-y: 120
+
   chunks-per-tick: 4
 
 light:
@@ -23,11 +26,13 @@ light:
 
 placement:
   seed: ""
+
   rotation: true
   mirror: true
 
 entities:
   enabled: true
+
   whitelist:
     - "villager"
     - "wandering_trader"
@@ -35,12 +40,18 @@ entities:
     - "glow_item_frame"
     - "painting"
     - "armor_stand"
+
   max-per-chunk: 32
+
   fake-players:
     enabled: true
-    chance: 70
+
+    chance: 30
+
     armor: true
+
     fetch-skins: true
+
     names:
       - "Frostbyte"
       - "xNoScope_"
@@ -54,6 +65,7 @@ entities:
       - "CritMachine"
       - "Godbridger"
       - "ShieldSpam"
+
     skins: []
 ```
 
@@ -74,7 +86,7 @@ Which pack file to serve, and where the next `/rayguard fake bake` will source f
 | `pack.source-world` | `""` (empty) | Source world folder for the next bake. Must **not** be a world listed in `antifreecam.yml`'s `protected-worlds`. Usually written by `/rayguard fake source`, not by hand. |
 | `pack.source-chunk-x` / `pack.source-chunk-z` | `0` / `0` | Source-area corner in chunk coordinates. The bake covers 64 x 64 chunks from this corner, so `-32 -32` covers blocks `-512..511` on both axes. |
 | `pack.bake-min-y` | `-64` | Lowest Y baked into the pack. |
-| `pack.bake-max-y` | `32` | Highest Y baked into the pack. Must be at or above `antifreecam.yml`'s `max-hidden-y`; the plugin warns otherwise. |
+| `pack.bake-max-y` | `120` | Highest Y baked into the pack. Must be at or above `antifreecam.yml`'s `max-hidden-y`; the plugin warns otherwise. With surface fill on, the fake world also paints the filled cells under the ground surface up to this Y; above it they get `surface-fill.fill-block`. `120` covers the ground of almost every overworld area. Bake from a source world that is solid rock with caves up to this height, not normal terrain, or the fake underground shows hills, trees and sky. |
 | `pack.chunks-per-tick` | `4` | Chunk requests issued per tick during a bake. `4` per tick against 4096 chunks is around 51 seconds plus whatever chunk generation costs. Raise on an empty server for a faster bake. |
 
 ## `light`
@@ -112,7 +124,7 @@ Barrier blocks in the source world become fake players standing in that spot. Di
 | Key | Default | Description |
 | --- | --- | --- |
 | `fake-players.enabled` | `true` | Turn fake players on. |
-| `fake-players.chance` | `70` | Percent chance that a given barrier gets a figure. Below 100 some spots stay empty, which is more realistic than every marked spot being occupied on every tile. Decided at bake time and hashed from the block position, so two players see the same figures and a restart does not re-roll them. Changing this value requires a rebake to take effect. `0` disables every figure. `100` populates every barrier. |
+| `fake-players.chance` | `30` | Percent chance that a given barrier gets a figure. Below 100 some spots stay empty, which is more realistic than every marked spot being occupied on every tile. Decided at bake time and hashed from the block position, so two players see the same figures and a restart does not re-roll them. Changing this value requires a rebake to take effect. `0` disables every figure. `100` populates every barrier. |
 | `fake-players.armor` | `true` | Position-stable random netherite armour with mixed trims. Never changes for a given barrier. |
 | `fake-players.fetch-skins` | `true` | Resolve every name in `names:` to that account's real Mojang skin. Uses two public endpoints, no auth. Cached in memory for the session. Failures too, so this costs one request per name per start. `/rayguard fake skins` refetches. |
 | `fake-players.names` | 12-name gamer list | Names picked per figure position. Max 16 characters. With `fetch-skins: true`, the figure wears the skin belonging to the name. Use names of accounts that do **not** play on your server. A figure that looks exactly like a regular is not a decoy, it is a misunderstanding waiting to happen. The name is never rendered (no tab entry, no nametag). |

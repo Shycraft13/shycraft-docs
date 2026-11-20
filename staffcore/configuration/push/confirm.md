@@ -122,7 +122,7 @@ For automated pushes (cron, rcon, shell scripts) always append `--yes`:
 ```
 
 `<from>` may be this node's own server-id (direct send) or any live node
-(Redis request — the named source reads and publishes its own configs).
+(Redis request, the named source reads and publishes its own configs).
 Console callers never see the GUI even without `--yes`, so a script running
 from `console.log` shell works either way, but `--yes` is recommended so
 intent is explicit.

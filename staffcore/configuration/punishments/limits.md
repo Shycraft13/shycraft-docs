@@ -48,7 +48,7 @@ groups:
 
 ## Group fields
 
-Every group needs a `permission` node — everything else is optional.
+Every group needs a `permission` node, everything else is optional.
 
 | Key | Description |
 | --- | --- |
@@ -70,10 +70,10 @@ like `"7 days"` or `"3 hours"` also parse.
 When a staff member matches multiple groups, the effective limit is derived
 per rule:
 
-- **Duration caps** — **highest** match wins. A staff member with both a
+- **Duration caps**: **highest** match wins. A staff member with both a
   `helper` and a `moderator` group ends up with the moderator's cap.
-- **Cooldowns** — **lowest** match wins. Cooldowns are strictest bound.
-- **`require_template`** — strict. Any matched group setting it to `true`
+- **Cooldowns**: **lowest** match wins. Cooldowns are strictest bound.
+- **`require_template`**: strict. Any matched group setting it to `true`
   forces the staff member into template-only mode; no other group can
   "unlock" free-form punishments.
 
@@ -92,7 +92,7 @@ through this permission.
 
 If the original issuer's group cannot be resolved (staff not online AND
 no LuckPerms available for the offline lookup), the `.group` permission
-fails closed — the caller must fall back to the broad `staffcore.unban`
+fails closed, the caller must fall back to the broad `staffcore.unban`
 or issue the reversal from an account that holds it.
 
 ## Template override
@@ -116,7 +116,7 @@ restarts. Expired cooldowns are cleaned up automatically.
 
 ## Bypass permissions
 
-All bypass nodes default to `false` — grant them explicitly.
+All bypass nodes default to `false`: grant them explicitly.
 
 | Node | Effect |
 | --- | --- |

@@ -102,6 +102,8 @@ permissions:
 
   - staffcore.utils.fly
   - staffcore.utils.fly.other
+  - staffcore.utils.godmode
+  - staffcore.utils.godmode.other
   - staffcore.utils.flyspeed
   - staffcore.utils.flyspeed.other
   - staffcore.utils.speed

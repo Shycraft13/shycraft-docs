@@ -9,9 +9,9 @@ actual key/value structure you need to edit.
 
 Two top-level roots:
 
-- `config/` — cross-cutting configs: master `config.yml`, database, permission
+- `config/`: cross-cutting configs: master `config.yml`, database, permission
   and placeholder reference.
-- `economy/` — one folder per feature. Each folder holds `config.yml`,
+- `economy/`: one folder per feature. Each folder holds `config.yml`,
   `messages.yml`, `sounds.yml` and any `gui/*.yml` files that feature uses.
 
 Use `/economy reload` to reload every file at runtime.

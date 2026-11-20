@@ -8,27 +8,38 @@ Hides entire chunk sections below a configurable Y level on the client. Sections
 enabled: true
 
 max-hidden-y: 30
+
 light-strip-y: 321
+
 cube-height: 16
 
 reveal-distance: 128.0
+
 reveal-range: 5.0
+
 scan-max-y: 65
+
 scan-interval-ticks: 8
+
 max-reveals-per-scan: 15
 
 entity-hiding: true
+
 hide-section-effects: true
+
+surface-fill:
+  enabled: true
+  thickness: 3
+  edge-skirt: 8
+  close-holes: 2
+  soft-above-sea: 30
+  fill-block: stone
+  end-fill-block: end_stone
 
 fill-block: deepslate
 
 protected-worlds:
   - world
-
-force-chunk-refresh: true
-force-chunk-refresh-delay-ticks: 3
-force-chunk-refresh-debounce-ms: 750
-force-chunk-refresh-unload-first: true
 ```
 
 ## Keys
@@ -46,9 +57,12 @@ force-chunk-refresh-unload-first: true
 | `max-reveals-per-scan` | `15` | Max sections revealed per player per scan tick. Bounds the network burst when a player teleports into a mined cave. |
 | `entity-hiding` | `true` | Also hide entities inside hidden cubes. Prevents mobs from appearing to float through the fill. |
 | `hide-section-effects` | `true` | Drop particles, sounds, world events, block actions and break animations whose origin sits inside a hidden section. Your own section is always revealed, so this never mutes anything you do yourself. |
+| `surface-fill.enabled` | `true` | Also hide everything under the ground surface above `max-hidden-y`. Every block more than `thickness` layers below the local surface stays filled until the player has line of sight to it, so a freecam sees solid ground under the whole map. Caves, ravines and mines open up the same way as below `max-hidden-y`. With this on, the scan runs at every height and `scan-max-y` no longer stops it. Trade-off: rooms under a roof and cave mouths farther away than `reveal-distance` show the fill block until the player gets line of sight. |
+| `surface-fill.thickness` | `3` | Real block layers kept under the surface. |
+| `surface-fill.edge-skirt` | `8` | At a chunk border whose neighbour chunk is not known yet, the filled floor is pulled this many blocks below the column's own ground. |
+| `surface-fill.close-holes` | `2` | Shafts and holes up to twice this many blocks wide are treated as solid ground, so a 1x1 shaft or a small pit is filled like the terrain around it and opens up by line of sight like a cave. `0` turns it off. |
+| `surface-fill.soft-above-sea` | `30` | From this many blocks above sea level, a thin build with air under it (sky base, bridge, map art, house on stilts) does not count as ground and nothing under it is filled. Below that line everything stays filled. |
+| `surface-fill.fill-block` | `stone` | Block for filled cells the fake world does not cover (fake world off, or above its baked range). |
+| `surface-fill.end-fill-block` | `end_stone` | Block for filled cells in End worlds. The End has no fake world and no `max-hidden-y` zone: only the solid core of each island is filled, so thin islands and the void stay as they are. |
 | `fill-block` | `deepslate` | Block used to fill hidden sections on the client when the fake world is off or does not cover this Y. Any solid block name works. |
-| `protected-worlds` | `[world]` | Worlds where anti-freecam is active. Folder names, case-sensitive. Worlds not on this list are shipped unchanged. |
-| `force-chunk-refresh` | `true` | Workaround for a Minecraft 1.21.11 client bug where large reveal bursts leave transparent-face glitches in caves. After each burst on a chunk the plugin resends the chunk a few ticks later so the client rebuilds the mesh cleanly. Cost: about one extra chunk resend per burst per chunk. |
-| `force-chunk-refresh-delay-ticks` | `3` | Delay in ticks between the reveal burst and the follow-up chunk resend. |
-| `force-chunk-refresh-debounce-ms` | `750` | Per-chunk debounce for the follow-up resend. Prevents a chain of reveals from producing a chain of resends. |
-| `force-chunk-refresh-unload-first` | `true` | Tell the client to unload the chunk before the resend. The stronger workaround for the 1.21.11 bug: costs a brief flicker (chunk goes empty for around 20-50 ms) but is the only reliable fix in bad cases. Set to `false` to fall back to a plain resend. |
+| `protected-worlds` | `[world]` | Worlds where anti-freecam is active. Folder names, case-sensitive. Worlds not on this list are shipped unchanged. End worlds can be listed too; they use surface fill only. |

@@ -35,9 +35,9 @@ Syntax:
 %economy_lb_<type>_position%          the viewing player's own rank
 ```
 
-- `<type>` — one of `money`, `kills`, `deaths`, `playtime`, `shards`
-- `<pos>` — the rank number, `1` being the top spot
-- `<field>` — either `name` (the player's name) or `value` (the metric value)
+- `<type>`: one of `money`, `kills`, `deaths`, `playtime`, `shards`
+- `<pos>`: the rank number, `1` being the top spot
+- `<field>`: either `name` (the player's name) or `value` (the metric value)
 
 If the rank is empty or the player is unranked, the placeholder returns `N/A`.
 
@@ -58,8 +58,8 @@ If the rank is empty or the player is unranked, the placeholder returns `N/A`.
 
 ### Common uses
 
-- **Scoreboard sidebar** — show top 3 richest / top 3 killers on the right side of every player's screen.
-- **Tab list header/footer** — show the viewer's own balance and rank.
-- **Hologram** — put a "Top 10 Richest" hologram at spawn using DecentHolograms or similar.
-- **Chat format** — prefix chat with a player's team and balance.
-- **Leaderboard menu** — put a live top 3 straight into the lore of a category button, see [`economy/leaderboard/gui/category.yml`](configuration/economy/leaderboard/gui/category.md).
+- **Scoreboard sidebar**: show top 3 richest / top 3 killers on the right side of every player's screen.
+- **Tab list header/footer**: show the viewer's own balance and rank.
+- **Hologram**: put a "Top 10 Richest" hologram at spawn using DecentHolograms or similar.
+- **Chat format**: prefix chat with a player's team and balance.
+- **Leaderboard menu**: put a live top 3 straight into the lore of a category button, see [`economy/leaderboard/gui/category.yml`](configuration/economy/leaderboard/gui/category.md).

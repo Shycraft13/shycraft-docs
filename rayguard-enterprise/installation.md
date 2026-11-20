@@ -2,7 +2,7 @@
 
 ## Requirements
 
-- **Server software**: Paper 1.21 or newer (or a Paper fork, Folia supported).
+- **Server software**: Paper 1.21.8 to 26.3 (or a Paper fork, Folia supported).
 - **Java**: 21 or newer.
 - **PacketEvents plugin**: required. Grab the latest release from [Modrinth](https://modrinth.com/plugin/packetevents) or SpigotMC and drop it into `plugins/`.
 - **LuckPerms**: optional. If present, the bypass permission is checked through LuckPerms.

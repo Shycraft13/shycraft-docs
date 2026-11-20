@@ -7,7 +7,7 @@ Quick walkthroughs for the most common admin tasks. Every action here is a `*man
 Kits are stored under `plugins/EconomyCore/economy/kits/kits/`. You can hand-write the YAML if you want, but the in-game workflow is much easier because it captures your exact inventory layout, slot by slot.
 
 1. Give yourself a clean inventory containing exactly the items and slots you want in the kit.
-2. Run `/kitmanager create <name>` — the kit is created from your current inventory, exact slots preserved.
+2. Run `/kitmanager create <name>`: the kit is created from your current inventory, exact slots preserved.
 3. Edit the kit's cooldown, permission and display in `economy/kits/kits/<name>.yml`.
 4. Test with `/kit claim <name>`. Give the kit to yourself again bypassing the cooldown with `/kitmanager give <you> <name>`.
 
@@ -19,10 +19,10 @@ Full config keys live under [Configuration → economy → kits](configuration/e
 
 AFK zones are rectangular regions where players earn shards while idling. You need two corners.
 
-1. Run `/afkmanager afkarea wand` — you get the AFK wand.
+1. Run `/afkmanager afkarea wand`: you get the AFK wand.
 2. **Left-click** any block for corner 1.
 3. **Right-click** any block for corner 2.
-4. Run `/afkmanager afkarea create <name>` — the zone is created from those two corners.
+4. Run `/afkmanager afkarea create <name>`: the zone is created from those two corners.
 5. Reward interval and amount are global, configured in [`economy/afk/config.yml`](configuration/economy/afk/config.md) under `afk.reward`.
 
 Delete with `/afkmanager afkarea delete <name>`.
@@ -38,11 +38,11 @@ Delete with `/afkmanager afkarea delete <name>`.
 
 RTP zones are the pool the random-teleport picks from. Same wand-based flow as AFK zones.
 
-1. `/rtpmanager rtpzone wand` — get the wand.
+1. `/rtpmanager rtpzone wand`: get the wand.
 2. Left-click for corner 1, right-click for corner 2.
 3. `/rtpmanager rtpzone create <name>`.
 
-Delete with `/rtpmanager rtpzone delete <name>`. The world of each zone is stored with the zone — `/rtp` will match on the current world's zones.
+Delete with `/rtpmanager rtpzone delete <name>`. The world of each zone is stored with the zone; `/rtp` will match on the current world's zones.
 
 For per-world settings like cooldown and safe-teleport search, see [`economy/rtp/config.yml`](configuration/economy/rtp/config.md).
 
@@ -57,7 +57,7 @@ For per-world settings like cooldown and safe-teleport search, see [`economy/rtp
 
 Tags are cosmetic name prefixes. You create them from the game and hand them out to players.
 
-1. Run `/tagsmanager create <tag>` — creates a new empty tag.
+1. Run `/tagsmanager create <tag>`: creates a new empty tag.
 2. Edit `plugins/EconomyCore/economy/tags/tags.yml` for the tag's display text and permission requirements (or use `/tagsmanager edit <tag>`).
 3. Give a tag to a player with `/tagsmanager give <player> <tag>`. Take it back with `/tagsmanager remove <player> <tag>`.
 
@@ -72,7 +72,7 @@ Tag credits let players pick a tag themselves instead of you handing out each on
 
 ## Adjust player balance or shards
 
-Fast admin adjustments — no menu needed.
+Fast admin adjustments, no menu needed.
 
 | Task | Command |
 | --- | --- |
@@ -118,7 +118,11 @@ Mythic Tools are temporary premium tools that expire after a set duration.
 /mythictool give <player> <tool> <time>
 ```
 
-Example: `/mythictool give Shycraft13 miner 7d` gives the `miner` tool for seven days. Tool definitions live in `economy/mythictools/mythictool.yml`.
+Example: `/mythictool give Shycraft13 drill 7d` gives the `drill` tool for seven days. Tool ids: `treechopper`, `drill`, `multitool`, `sellaxe`, `shovel`, `bucket`, `firework`, `hastepotion`, `shardbooster`. Tool definitions live in `economy/mythictools/mythictool.yml`.
+
+## Let a mythic tool work in an excluded world
+
+Tools do nothing in the worlds listed under `EXCLUDED-WORLDS` in `economy/mythictools/config.yml`. To let one tool work there anyway, set `WORKS-IN-EXCLUDED-WORLDS: true` in that tool's block in `mythictool.yml`. The firework, the haste potion and the shard booster have it on by default. `/mythictool lockdown` still stops every tool.
 
 ## Force a combat tag
 

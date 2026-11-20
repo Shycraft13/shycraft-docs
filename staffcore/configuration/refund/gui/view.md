@@ -29,7 +29,7 @@ shows a permission error.
 
 ## Slot layout
 
-**Inventory snapshots** — 45 slots (5 rows), matches `/invsee`:
+**Inventory snapshots**: 45 slots (5 rows), matches `/invsee`:
 
 | Slots | Contents |
 | --- | --- |
@@ -39,7 +39,7 @@ shows a permission error.
 | 40 | Offhand |
 | 41..44 | Padding (empty, usable as scratch within the session) |
 
-**Enderchest snapshots** — dynamic size (27, 36, 45, or 54 slots):
+**Enderchest snapshots**: dynamic size (27, 36, 45, or 54 slots):
 
 The view is as tall as the target's enderchest was at capture time. A
 3-row enderchest renders 27 slots; a 6-row one renders 54. Rows are

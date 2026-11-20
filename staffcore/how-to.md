@@ -200,12 +200,12 @@ staffcore.warns
 staffcore.unwarn
 staffcore.kick
 staffcore.punish
-staffcore.template.spam
-staffcore.template.advertising
-staffcore.template.minorspam
-staffcore.template.behavior
+staffcore.template.ban.basic
+staffcore.template.mute.basic
+staffcore.template.warn.basic
+staffcore.template.kick.basic
 staffcore.alts
 ```
 
-For an "admin" role add `staffcore.admin` plus every remaining `staffcore.template.*` and `staffcore.ban.permanent` / `staffcore.mute.permanent`. See [Permissions](permissions.md) for the full node list.
+For an "admin" role add `staffcore.admin` plus `staffcore.template.ban.severe`, `staffcore.template.mute.severe`, `staffcore.template.admin` and `staffcore.ban.permanent` / `staffcore.mute.permanent`. See [Permissions](permissions.md) for the full node list.
 

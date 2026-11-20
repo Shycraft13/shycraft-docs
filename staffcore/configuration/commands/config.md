@@ -9,9 +9,9 @@ actually run, based on the permission group they hold. Gated by
 
 Sister files in the same folder:
 
-- [`fakes.yml`](fakes.md) — replacement responses for `/pl`, `/version`
+- [`fakes.yml`](fakes.md): replacement responses for `/pl`, `/version`
   and `/help`.
-- [`leak-hide.yml`](leak-hide.md) — extra visibility toggles.
+- [`leak-hide.yml`](leak-hide.md): extra visibility toggles.
 
 ## How groups work
 
@@ -22,12 +22,12 @@ group permission fall through to `default`.
 
 Each group carries four independent lists:
 
-- `tab-complete` — which command roots appear when the player presses
+- `tab-complete`: which command roots appear when the player presses
   TAB. Anything not in the list is hidden.
-- `execute` — which command roots the player is allowed to run. A
+- `execute`: which command roots the player is allowed to run. A
   command in `execute` but not `tab-complete` runs when typed but does
   not appear in tab.
-- `deny-tab-complete` / `deny-execute` — override the allow list, deny
+- `deny-tab-complete` / `deny-execute`: override the allow list, deny
   always wins (even over `"*"`).
 
 `"*"` in an allow list means "allow every command". Deny lists then
@@ -63,7 +63,7 @@ Sets the server "brand" string the client shows in its F3 debug
 overlay. Rewrites the outgoing brand payload to `fake-brand.value`.
 Empty `value` disables the rewrite even when `enabled: true`.
 
-Bypass permission: `staffcore.commands.brand.bypass` — a staff member
+Bypass permission: `staffcore.commands.brand.bypass`: a staff member
 with the bypass sees the real brand.
 
 ## Rate limit

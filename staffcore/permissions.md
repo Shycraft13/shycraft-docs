@@ -76,18 +76,17 @@ Every node follows the `staffcore.<feature>` scheme. Defaults are hardcoded in t
 | `staffcore.punish` | `op` | Use `/punish` (opens the picker GUI, or applies a named template). |
 | `staffcore.template.<name>` | `op` | Per-template permission. Every template in `punishments/punishments.yml` declares its own `permission:` field. The shipped defaults are listed below. |
 
-Shipped template permission nodes (edit `punishments/punishments.yml` to add or rename templates, then register the matching node in `config/permissions.yml`):
+The shipped templates share a few tier nodes instead of one node per template, so you only grant a handful of buckets. Edit `punishments/punishments.yml` to change which tier a template uses, and register any new node in `config/permissions.yml`. See [Templates](templates.md) for the full model.
 
-| Node | Template | Category |
-| --- | --- | --- |
-| `staffcore.template.cheating` | `cheating` | Ban |
-| `staffcore.template.xray` | `xray` | Ban |
-| `staffcore.template.exploiting` | `exploiting` | Ban |
-| `staffcore.template.spam` | `spam` | Mute |
-| `staffcore.template.threats` | `threats` | Mute |
-| `staffcore.template.advertising` | `advertising` | Mute |
-| `staffcore.template.minorspam` | `minor-spam` | Warn |
-| `staffcore.template.behavior` | `behavior` | Kick |
+| Node | Covers |
+| --- | --- |
+| `staffcore.template.ban.basic` | Everyday ban templates (griefing, scamming, ...) |
+| `staffcore.template.ban.severe` | Long / permanent bans (cheating, xray, threats, ...) |
+| `staffcore.template.mute.basic` | Everyday mute templates (spam, caps, ...) |
+| `staffcore.template.mute.severe` | Long-form mute templates (slurs, threats, ...) |
+| `staffcore.template.warn.basic` | Every warn template |
+| `staffcore.template.kick.basic` | Every kick template |
+| `staffcore.template.admin` | Permaban / IP-scope templates (doxxing, ban-evasion, ...) |
 
 ## Alts
 
@@ -169,6 +168,8 @@ server aware, and offline-aware via a pending flag applied on next join).
 | --- | --- | --- |
 | `staffcore.utils.fly` | `op` | Toggle fly on yourself (`/fly`). |
 | `staffcore.utils.fly.other` | `op` | Toggle fly on another player (`/fly <player>`). |
+| `staffcore.utils.godmode` | `op` | Toggle godmode on yourself (`/godmode`). |
+| `staffcore.utils.godmode.other` | `op` | Toggle godmode on another player (`/godmode <player>`). |
 | `staffcore.utils.flyspeed` | `op` | Set or reset your own fly speed (`/flyspeed <0-10\|reset>`). |
 | `staffcore.utils.flyspeed.other` | `op` | Set another player's fly speed (`/flyspeed <player> <0-10\|reset>`). |
 | `staffcore.utils.speed` | `op` | Set or reset your own walk speed (`/speed <0-10\|reset>`). |
@@ -261,14 +262,14 @@ the toggle messages and
 [`commands/config.yml`](configuration/commands/config.md) for the
 per-group `staff-commands` lists that decide what gets shown.
 
-Two-perm gate — both are required:
+Two-perm gate, both are required:
 
 | Node | Default | Description |
 | --- | --- | --- |
 | `staffcore.commands.group.<name>` | `false` | Puts the player in the group named `<name>` from `commands/config.yml`. Only groups with `staff: true` in the yaml unlock the toggle. Highest-priority group the player holds wins. |
 | `staffcore.staffmode` | `false` | Actually run `/staffmode`. Without this the group membership above is a dead grant. |
 
-Neither node is granted by `staffcore.admin` — grant them explicitly.
+Neither node is granted by `staffcore.admin`: grant them explicitly.
 `staff-commands` is a **visibility filter**, not a rights grant: a
 staff member still needs the actual command permission
 (`staffcore.vanish`, `staffcore.mute`, ...) for each command in the
@@ -299,13 +300,13 @@ Settings live in [`maintenance/config.yml`](configuration/maintenance/config.md)
 
 Grant one of the group-matching nodes below to a staff member to gate them
 by the matching group in [`punishments/limits.yml`](configuration/punishments/limits.md).
-The shipped groups (`admin`, `moderator`, `helper`) are examples; add /
+The shipped groups (`admin`, `mod`, `helper`) are examples; add /
 remove groups freely and register a matching node in `config/permissions.yml`.
 
 | Node | Default | Description |
 | --- | --- | --- |
 | `staffcore.limit.admin` | `false` | Matches the shipped `admin` group. |
-| `staffcore.limit.mod` | `false` | Matches the shipped `moderator` group. |
+| `staffcore.limit.mod` | `false` | Matches the shipped `mod` group. |
 | `staffcore.limit.helper` | `false` | Matches the shipped `helper` group. |
 | `staffcore.limit.bypass` | `false` | Skip duration caps entirely. |
 | `staffcore.limit.unlimited` | `false` | Skip duration caps AND every cooldown AND `require_template`. |
@@ -318,7 +319,7 @@ remove groups freely and register a matching node in `config/permissions.yml`.
 ## Bypass semantics
 
 - `staffcore.<action>.bypass` only takes effect when `punishments.respect-bypass-permissions: true` in `punishments/config.yml` (default: true).
-- A staff member with `staffcore.admin` can always target another staff member regardless of bypass permissions — the wildcard overrides bypasses.
+- A staff member with `staffcore.admin` can always target another staff member regardless of bypass permissions, the wildcard overrides bypasses.
 - A player with `staffcore.ban.bypass` who is targeted by `/ban` receives the "cannot target that staff member" error (unless the sender has `staffcore.admin`).
 - These bypass nodes exist because tab-completion cross-servers online names, so a staff member with `staffcore.notify` can still accidentally tab-complete another staff member's name into a `/ban`.
 

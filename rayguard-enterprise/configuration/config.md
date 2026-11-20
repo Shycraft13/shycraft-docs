@@ -17,10 +17,15 @@ third-person-cam-distance: 4.5
 third-person-cam-offset-y: 1.5
 
 debug: false
+
 debug-antixray: false
+
 debug-antifreecam: false
+
 debug-entityculling: false
+
 debug-tileculling: false
+
 debug-chunkprotect: false
 ```
 

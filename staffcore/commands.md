@@ -104,7 +104,7 @@ strings live in
 
 | Command | Aliases | Description |
 | --- | --- | --- |
-| `/gamemode <mode> [player]` | `/gm` | Change a player's gamemode. `<mode>` accepts `survival`/`s`/`0`, `creative`/`c`/`1`, `adventure`/`a`/`2`, `spectator`/`sp`/`3` (case-insensitive). Without `[player]`, changes your own gamemode. With a `[player]` argument, works cross-server (online target on another backend) and on offline targets — every backend that stores player data for that UUID converges to the new mode, so the change sticks no matter which node they log into next. |
+| `/gamemode <mode> [player]` | `/gm` | Change a player's gamemode. `<mode>` accepts `survival`/`s`/`0`, `creative`/`c`/`1`, `adventure`/`a`/`2`, `spectator`/`sp`/`3` (case-insensitive). Without `[player]`, changes your own gamemode. With a `[player]` argument, works cross-server (online target on another backend) and on offline targets; every backend that stores player data for that UUID converges to the new mode, so the change sticks no matter which node they log into next. |
 | `/gms [player]` |  | Shortcut for survival. |
 | `/gmc [player]` |  | Shortcut for creative. |
 | `/gma [player]` |  | Shortcut for adventure. |
@@ -170,6 +170,7 @@ offline targets via a pending flag that is applied on their next login.
 | Command | Description |
 | --- | --- |
 | `/fly [player]` | Toggle fly on yourself or another player. |
+| `/godmode [player]` | Toggle godmode (no damage, no hunger) on yourself or another player. Alias `/god`. An action bar indicator shows while it is on. |
 | `/flyspeed [player] <0-10\|reset>` | Set or reset fly speed (0-10). `reset` restores the vanilla default. |
 | `/speed [player] <0-10\|reset>` | Set or reset walk speed (0-10). |
 | `/heal [player]` | Fully heal a player (health, fire, air). |
@@ -187,7 +188,7 @@ in [`reports/config.yml`](configuration/reports/config.md).
 
 | Command | Aliases | Description |
 | --- | --- | --- |
-| `/report <player> <message>` |  | File a report against another player. Everything after `<player>` is the report body — one field, capped by `reports.message-max-chars` (default 800) with a rejection floor of `reports.message-min-chars` (default 3). The full message renders in the staff feed, review GUI and Discord embed. Rate-limited per reporter via `reports.cooldown-seconds` (bypass with `staffcore.report.cooldown-bypass`). |
+| `/report <player> <message>` |  | File a report against another player. Everything after `<player>` is the report body, one field, capped by `reports.message-max-chars` (default 800) with a rejection floor of `reports.message-min-chars` (default 3). The full message renders in the staff feed, review GUI and Discord embed. Rate-limited per reporter via `reports.cooldown-seconds` (bypass with `staffcore.report.cooldown-bypass`). |
 | `/report check <player>` |  | Open the per-target report list (paginated GUI, filter by status, sort by date). |
 | `/report check #<report-id>` |  | Jump straight into the detail GUI for a single report. The `#` prefix disambiguates from a player name. |
 | `/reports` |  | Open the network-wide paginated report list. |

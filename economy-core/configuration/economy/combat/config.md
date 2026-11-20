@@ -53,7 +53,7 @@ A tag ends in one of four ways.
 | `duration` | `16` | Seconds a player stays tagged after dealing or taking PvP damage. Every new hit sets the timer back to the full duration. |
 | `untag-on-kill` | `true` | The killer leaves combat the moment the player they were fighting dies. Bow and trident kills count, the shooter is the killer. The player who died is always untagged, with or without this option. |
 | `logout-kill` | `true` | Quitting while tagged kills the player instead of letting them escape. |
-| — | — | Dying always clears the tag. |
+| - | - | Dying always clears the tag. |
 
 Turn `untag-on-kill` off if you want a survivor of a 2v1 to stay locked in combat: with it on,
 the killer walks away free as soon as one opponent drops, even if a third player is still

@@ -10,12 +10,14 @@ fov-reveal-deg: 110.0
 fov-hide-deg: 125.0
 
 distance-buffer: 5.0
+
 rehide-debounce: 6
 
 corner-rays-enabled: true
 corner-rays-interval: 3
 
 movement-throttle-blocks: 2.0
+
 movement-throttle-degrees: 8.0
 
 max-candidates-per-tick: 200

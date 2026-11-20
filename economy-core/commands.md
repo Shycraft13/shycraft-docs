@@ -6,9 +6,9 @@ Every command below is registered dynamically and can be turned off in its featu
 
 | Command | Aliases | Description |
 | --- | --- | --- |
-| `/money [player]` | — | Show a balance. |
-| `/pay <player> <amount>` | — | Send money to another player. Optional confirmation menu (per-player toggle in `/settings`). |
-| `/shards [player]` | — | Show a shard balance. |
+| `/money [player]` | - | Show a balance. |
+| `/pay <player> <amount>` | - | Send money to another player. Optional confirmation menu (per-player toggle in `/settings`). |
+| `/shards [player]` | - | Show a shard balance. |
 
 ## Chat & Messaging
 
@@ -16,8 +16,8 @@ Every command below is registered dynamically and can be turned off in its featu
 | --- | --- | --- |
 | `/msg <player> <message>` | `/pm` | Send a private message. |
 | `/reply <message>` | `/r` | Reply to the last player who messaged you. |
-| `/ignore <player>` | — | Toggle ignoring a player's chat and private messages. |
-| `/unignore <player>` | — | Stop ignoring a player. |
+| `/ignore <player>` | - | Toggle ignoring a player's chat and private messages. |
+| `/unignore <player>` | - | Stop ignoring a player. |
 
 ## Homes
 
@@ -34,11 +34,11 @@ Home limits are permission-based: give players `economy.homes.<n>` to grant up t
 
 | Command | Aliases | Description |
 | --- | --- | --- |
-| `/tpa <player>` | — | Request to teleport to a player. |
-| `/tpahere <player>` | — | Request that a player teleports to you. |
-| `/tpaccept` | — | Accept the last incoming request. |
+| `/tpa <player>` | - | Request to teleport to a player. |
+| `/tpahere <player>` | - | Request that a player teleports to you. |
+| `/tpaccept` | - | Accept the last incoming request. |
 | `/tpadeny` | `/tpdeny`, `/tpacancel` | Deny incoming request or cancel your outgoing one. |
-| `/tpauto` | — | Toggle auto-accepting incoming teleport requests. |
+| `/tpauto` | - | Toggle auto-accepting incoming teleport requests. |
 
 ## Random Teleport
 
@@ -66,18 +66,18 @@ Home limits are permission-based: give players `economy.homes.<n>` to grant up t
 
 | Command | Aliases | Description |
 | --- | --- | --- |
-| `/sell` | — | Open the sell GUI to sell items in your inventory. Shulker boxes are emptied and sold too; whether the box itself sells is a per-player toggle in `/settings`. |
-| `/sellhistory [player]` | — | View your (or another player's) sell history. |
+| `/sell` | - | Open the sell GUI to sell items in your inventory. Shulker boxes are emptied and sold too; whether the box itself sells is a per-player toggle in `/settings`. |
+| `/sellhistory [player]` | - | View your (or another player's) sell history. |
 | `/sellmulti` | `/sellmultiplier` | View your active sell multipliers. |
-| `/shop` | — | Open the configured shop menu. |
-| `/worth [item\|hand]` | — | Browse item prices, look up a specific item, or `/worth hand` to check what you're holding. |
+| `/shop` | - | Open the configured shop menu. |
+| `/worth [item\|hand]` | - | Browse item prices, look up a specific item, or `/worth hand` to check what you're holding. |
 
 ## Bounties
 
 | Command | Aliases | Description |
 | --- | --- | --- |
 | `/bounty` | `/bounties` | Open the bounty menu. |
-| `/bounty add <player> <amount>` | — | Place or add to a bounty on a player. |
+| `/bounty add <player> <amount>` | - | Place or add to a bounty on a player. |
 
 ## Kits
 
@@ -115,9 +115,9 @@ Home limits are permission-based: give players `economy.homes.<n>` to grant up t
 
 | Command | Aliases | Description |
 | --- | --- | --- |
-| `/stats [player]` | — | Open the player statistics GUI. |
+| `/stats [player]` | - | Open the player statistics GUI. |
 | `/leaderboard` | `/leaderboards`, `/lb` | Open the leaderboard menu (balance, kills, playtime, shards, bounties). |
-| `/baltop` | — | Direct shortcut to the balance leaderboard. |
+| `/baltop` | - | Direct shortcut to the balance leaderboard. |
 
 ## Settings
 
@@ -133,13 +133,13 @@ Every utility command opens the vanilla screen for that block from anywhere. `/e
 | --- | --- | --- |
 | `/enderchest` | `/ec`, `/ender` | Your ender chest |
 | `/craft` | `/workbench` | Crafting table |
-| `/anvil` | — | Anvil |
+| `/anvil` | - | Anvil |
 | `/grindstone` | `/grind` | Grindstone |
-| `/loom` | — | Loom |
+| `/loom` | - | Loom |
 | `/cartography` | `/carto` | Cartography table |
-| `/smithing` | — | Smithing table |
-| `/stonecutter` | — | Stonecutter |
-| `/glow [player]` | — | Toggle the entity glow flag on yourself, or on another player (admin). |
+| `/smithing` | - | Smithing table |
+| `/stonecutter` | - | Stonecutter |
+| `/glow [player]` | - | Toggle the entity glow flag on yourself, or on another player (admin). |
 | `/nightvision` | `/nv` | Toggle permanent night vision. Survives a restart and cannot be removed by milk or a death while it is on. |
 
 Two more commands live in the same config file but act on the item in your hand:
@@ -179,6 +179,9 @@ Every admin command below is gated by `economycore.admin` (default: `op`).
 | `/tagsmanager credits <add\|remove\|set\|check> <player\|*> [amount]` | Manage a player's tag credits. Players spend them in `/tags` to unlock a tag of their choice. |
 | `/worthmanager set <item\|hand> <price>` | Set the worth of an item. `hand` uses the item you're holding. |
 | `/mythictool give <player> <tool> <time>` | Give a player a timed mythic tool that expires after `<time>`. |
+| `/mythictool lockdown` | Toggle the server-wide mythic tool lockdown: every tool is frozen (loses no time) and does nothing. Saved to `mythictools/config.yml`, so it survives a restart. |
+| `/shardbooster give <player> <time> [multiplier]` | Give a player a running shard booster, as if they drank the potion. Without `multiplier` the `SHARDBOOSTER.MULTIPLIER` from `mythictool.yml` is used (max 100). Replaces a booster that is still running. Works for offline players. |
+| `/shardbooster remove <player>` | End a player's running shard booster. Works for offline players. |
 
 ### World & zone management
 

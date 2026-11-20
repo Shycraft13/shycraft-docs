@@ -621,7 +621,7 @@ bypasses collapse to the same string as the plain form: `Sh!t`,
 ## Bypass vs false positives
 
 There is no configuration that eliminates both. The shipped defaults
-favour precision over recall — turn the knobs to shift the trade-off:
+favour precision over recall; turn the knobs to shift the trade-off:
 
 - More strict (catches more bypass attempts, more false positives):
   turn `collapse-repeats` on, lower `MIN-WORD-LENGTH` to `2`.

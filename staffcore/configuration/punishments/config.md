@@ -81,13 +81,13 @@ kick:
 | `broadcast-to-console` | Also send broadcasts to the server console. |
 | `respect-bypass-permissions` | If true, staff members with `staffcore.<action>.bypass` cannot be targeted by other staff. Overridden by `staffcore.admin`. |
 
-## `punishments.webhook:` — Discord audit log
+## `punishments.webhook:`: Discord audit log
 
 One Discord webhook logs every ban, unban, tempban, mute, unmute, tempmute,
 warn, unwarn and kick to a single channel. Type is signalled by the embed
 color and the emoji in the title.
 
-Fires from the origin server only — a network with multiple backends still
+Fires from the origin server only, a network with multiple backends still
 posts each action exactly once (the cross-server replay path does not
 re-emit).
 
@@ -100,7 +100,7 @@ re-emit).
 | `colors.<action>` | Embed color for each action, as a decimal integer. Tempbans reuse `ban`, tempmutes reuse `mute`. A missing key falls back to grey. |
 
 The embed carries the target name, staff name, reason (as a blockquote in
-the description), and — for tempbans / tempmutes — the duration and the
+the description), and, for tempbans / tempmutes, the duration and the
 expiration date. Warns and unwarns also carry the short warn ID so an
 entry in Discord can be matched back to a `/warns` row.
 

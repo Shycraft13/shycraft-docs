@@ -30,5 +30,4 @@ TARGET-OFF:      "&#00FC99&lVANISH &r&7» &fRevealed &#FCE300%target%&f."
 NOT-FOUND:       "&cPlayer %name% not found."
 USAGE:           "&cUsage: /vanish [player]"
 ACTION-BAR:      "&#00FC99&lVANISHED"
-ACTION-BAR-SECONDS: 5
 ```

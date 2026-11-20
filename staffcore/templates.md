@@ -33,7 +33,7 @@ ban-templates:
         duration: 7d
       third:
         duration: 15d
-        reason: 'Cheating — 3rd offence'
+        reason: 'Cheating, 3rd offence'
       fourth:
         duration: 30d
         message: |-
@@ -107,16 +107,16 @@ Placeholders use `%name%` syntax everywhere.
 
 The default template set is aligned **1:1 with the in-game `/rules` menu**. Griefing, stealing and scamming are legitimate SMP gameplay and have no templates.
 
-Voice-chat templates use the mute action — a mute silences both the target's chat AND their Simple Voice Chat microphone (when SVC is installed and `punishments/config.yml`'s `mute.voicechat.enabled: true`, which is the default).
+Voice-chat templates use the mute action, a mute silences both the target's chat AND their Simple Voice Chat microphone (when SVC is installed and `punishments/config.yml`'s `mute.voicechat.enabled: true`, which is the default).
 
-**Ban templates — Server Rules:**
+**Ban templates, Server Rules:**
 
 - *Client cheats (severe tier)*: `cheating` (catch-all for hacked clients, movement mods, inventory mods, health indicators, radar, freecam, auto-place, easy-place, mouse tweaks, crafting modifications and every other modified-client cheat), `autoclicker`, `macros`, `baritone`, `xray-pack`
 - *Integrity (severe tier)*: `bug-abuse`, `duping`, `seed-abuse`, `irl-trading`
 - *Cross-server*: `cross-server-trading` (basic tier)
 - *Alts (Server Rule: max 5 accounts)*: `alt-limit` (basic tier), `alt-abuse`, `ban-evasion` (severe tier)
 
-**Ban templates — Community / Chat Rules:**
+**Ban templates, Community / Chat Rules:**
 
 - *Staff*: `staff-impersonation`, `staff-disrespect`, `lying-to-staff` (basic tier)
 - *Payment*: `chargeback` (severe tier, straight permaban)
@@ -167,7 +167,7 @@ Typical wiring:
 - **mod** → helper + `ban.severe`, `mute.severe`
 - **admin** → mod + `admin`
 
-Adding a new template? Pick the tier that best fits its severity and reuse the perm — don't invent a new node per template.
+Adding a new template? Pick the tier that best fits its severity and reuse the perm, don't invent a new node per template.
 
 - Every template's `permission:` is a **hard** requirement: without it, staff cannot see the template in the `/punish` picker and cannot apply it directly.
 - The template permission does NOT imply the category permission. A staff member with a template perm but not `staffcore.punish` cannot use `/punish` at all.

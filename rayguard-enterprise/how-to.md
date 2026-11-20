@@ -47,7 +47,7 @@ Everything else stays visible.
 
 ## Hide chests only, leave the rest of the block entities alone
 
-In `tileculling.yml`, trim `tile-entity-blocks:` to the block types you want hidden. To leave chests, leave `CHEST`, `TRAPPED_CHEST`, `BARREL`, `SHULKER_BOX` — remove everything else.
+In `tileculling.yml`, trim `tile-entity-blocks:` to the block types you want hidden. To leave chests, leave `CHEST`, `TRAPPED_CHEST`, `BARREL`, `SHULKER_BOX`; remove everything else.
 
 ## Prove the plugin is working
 
@@ -57,7 +57,7 @@ For anti-freecam, install a freecam client mod as the normal account and try to 
 
 ## Debug a specific feature
 
-Enable the matching debug flag in [`config.yml`](configuration/config.md) (`debug-antixray`, `debug-antifreecam`, `debug-entityculling`, `debug-tileculling`, `debug-chunkprotect`) then `/rayguard reload`. Log lines are prefixed so you can `grep` for the feature you care about. Keep debug off on a live server — the logs are per-player and per state change and get noisy fast.
+Enable the matching debug flag in [`config.yml`](configuration/config.md) (`debug-antixray`, `debug-antifreecam`, `debug-entityculling`, `debug-tileculling`, `debug-chunkprotect`) then `/rayguard reload`. Log lines are prefixed so you can `grep` for the feature you care about. Keep debug off on a live server; the logs are per-player and per state change and get noisy fast.
 
 ## Free a machine binding after moving hosts
 
