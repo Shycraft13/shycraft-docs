@@ -2,8 +2,10 @@
 
 Location: `plugins/StaffCore/reports/messages.yml`
 
-Strings shown by `/report` and `/reports`. Short errors and toggle feedback go
-to the action bar, longer staff-facing output goes to chat.
+Strings shown by `/report` and `/reports`. One-line messages go to chat and the
+action bar, see
+[Chat and action bar messages](../config/config.md#chat-and-action-bar-messages);
+longer staff-facing output goes to chat only.
 
 ```yaml
 no-permission:            "&cNo permission."
@@ -12,8 +14,6 @@ cannot-report-self:       "&cYou cannot report yourself."
 cannot-report-staff:      "&cThis player cannot be reported."
 cooldown-active:          "&cYou can send another report in %time%."
 message-too-short:        "&cYour report must be at least %min% characters."
-usage-report:             "&#F97603Usage: &#FCE300/report <player> <message>&r&7  or  &#FCE300/report check <player|#id>"
-usage-reports:            "&#F97603Usage: &#FCE300/reports"
 no-reports-found:         "&cNo reports found."
 report-failed:            "&cYour report could not be saved. Please try again."
 

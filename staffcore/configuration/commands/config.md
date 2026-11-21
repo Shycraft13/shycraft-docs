@@ -50,8 +50,9 @@ Shown when the player tries to run a command they cannot use, or when
 they type a command that does not exist. The two cases share the same
 message so a player cannot tell them apart.
 
-- `blocked-message-actionbar: true` sends the text to the action bar
-  (brief, no chat clutter). `false` sends it to chat.
+- Delivered like every StaffCore error: red on the action bar, as
+  `ERROR » <text>` in chat, with the error sound. Which channels show
+  follows [`config/config.yml`](../config/config.md#chat-and-action-bar-messages).
 - Group-level `blocked-message` overrides the global one. An empty
   string means silent block (no message at all).
 - `%command%` in the template is replaced with the root the player
@@ -78,8 +79,6 @@ safety margin.
 
 ```yaml
 blocked-message: "&cThis command does not exist"
-
-blocked-message-actionbar: true
 
 fake-brand:
   enabled: true

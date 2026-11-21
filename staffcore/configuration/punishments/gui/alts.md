@@ -78,7 +78,7 @@ ALT-ITEM:
 EMPTY:
   MATERIAL: BARRIER
   SLOT: 13
-  TITLE: "&#FC0000No alts found"
+  TITLE: "&#FC0000&lNO ALTS FOUND"
   LORE:
     - "&7This player has never shared"
     - "&7an IP with another account."

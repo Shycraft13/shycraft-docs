@@ -24,12 +24,6 @@ BYPASS-MISSING:    "&cPlayer %player% is not on the bypass list."
 ALREADY-ENABLED:   "&cMaintenance is already enabled on %target%."
 ALREADY-DISABLED:  "&cMaintenance is not enabled on %target%."
 NOT-FOUND:         "&cPlayer not found."
-USAGE: |-
-  &cUsage:
-  &7- &f/maintenance <on|off> <target|all|proxy>
-  &7- &f/maintenance add <player>
-  &7- &f/maintenance remove <player>
-  &7- &f/maintenance list
 
 LIST-HEADER:        "&#FF9900&lMAINTENANCE &r&7» &fCurrent state"
 LIST-NODES-ON:      "&7Enabled on: &f%nodes%"

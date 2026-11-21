@@ -9,22 +9,21 @@ Legacy `&` colours and `&#RRGGBB` hex are both accepted.
 
 ```yaml
 common:
-  no-permission:              "&cYou lack the permission to run this command."
-  no-permission-console:      "&cConsole must specify a target player."
+  no-permission:              "&cNo permission."
+  no-permission-console:      "&cConsole must name a player."
   player-not-found:           "&cPlayer not found."
-  cross-server-off-global:    "&cCross-server networking is disabled on this backend."
-  cross-server-off-feature:   "&cCross-server gamemode is disabled for this feature."
+  cross-server-off-global:    "&cCross-server is disabled on this server."
+  cross-server-off-feature:   "&cCross-server gamemode is disabled."
 
 gamemode:
-  usage-generic:              "&7Usage: &f/gamemode <survival|creative|adventure|spectator|0-3> [player]"
-  unknown-mode:               "&cUnknown gamemode: &f%mode%&c. Use one of: survival, creative, adventure, spectator (or 0-3)."
-  self-changed:               "&7Your gamemode is now &f%mode%&7."
-  applied-online:             "&7Set &f%player%&7's gamemode to &f%mode%&7."
-  applied-online-remote:      "&7Set &f%player%&7's gamemode to &f%mode%&7 on &f%server%&7."
-  applied-offline:            "&7Set offline &f%player%&7's gamemode to &f%mode%&7."
-  applied-offline-remote:     "&7Offline gamemode change queued for &f%player% &7(&f%mode%&7)."
+  unknown-mode:               "&cUnknown gamemode %mode%."
+  self-changed:               "&#00FC00&lGAMEMODE &r&7» &fYour gamemode is now &#FCE300%mode%&f."
+  applied-online:             "&#00FC00&lGAMEMODE &r&7» &fSet &#00FC99%player%&f's gamemode to &#FCE300%mode%&f."
+  applied-online-remote:      "&#00FC00&lGAMEMODE &r&7» &fSet &#00FC99%player%&f's gamemode to &#FCE300%mode% &fon &#00FC99%server%&f."
+  applied-offline:            "&#00FC00&lGAMEMODE &r&7» &fSet offline &#00FC99%player%&f's gamemode to &#FCE300%mode%&f."
+  applied-offline-remote:     "&#00FC00&lGAMEMODE &r&7» &fOffline gamemode change queued for &#00FC99%player% &7(%mode%)&f."
   route-failed:               "&cGamemode change failed: no route to the target."
-  target-notify:              "&7Your gamemode was set to &f%mode%&7 by &f%staff%&7."
+  target-notify:              "&#00FC00&lGAMEMODE &r&7» &fYour gamemode was set to &#FCE300%mode% &fby &#00FC99%staff%&f."
 ```
 
 ## Message keys
@@ -36,7 +35,6 @@ gamemode:
 | `common.player-not-found` | Target name did not resolve to any known player (not online anywhere, not in the local cache, not returned by Mojang). |
 | `common.cross-server-off-global` | Target is on another backend but `cross-server.enabled` is off network-wide. |
 | `common.cross-server-off-feature` | Target is on another backend but `gamemodes.cross-server` is off for this feature. |
-| `gamemode.usage-generic` | `/gamemode` invoked with no arguments. |
 | `gamemode.unknown-mode` | The mode argument to `/gamemode` did not match any of the accepted spellings or numeric ids. |
 | `gamemode.self-changed` | Sender changed their own gamemode. |
 | `gamemode.applied-online` | Sender changed another online player's gamemode; the target is on this backend. |

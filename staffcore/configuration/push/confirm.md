@@ -89,9 +89,10 @@ CONFIRM:
     - "&#00FC00▶ &#00FC00&l&nCLICK&r &#00FC00to Confirm"
 
 MESSAGES:
-  push-sent:     "&#00FC99StaffCore push: &f%ok%/%total% &7sent &8(from=&f%source%&8, preset=&f%preset-upper%&8)"
-  push-failed:   "&#FC0000StaffCore push failed &8(from=&f%source%&8, preset=&f%preset-upper%&8). See console for details."
-  cancelled:     "&7Push cancelled."
+  push-sent:     "&#00A4FC&lPUSH &r&7» &fSent to &#FCE300%ok%/%total% &fnodes &7(from=%source%, preset=%preset-upper%)&f."
+  push-failed:   "&cPush failed. See console."
+  cancelled:     "&#00A4FC&lPUSH &r&7» &fCancelled."
+  no-targets:    "&cPick one or more targets first."
   scripted-hint: "&7Tip: append &f--yes&7 to skip this confirm in scripts."
 ```
 

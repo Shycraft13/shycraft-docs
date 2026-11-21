@@ -35,6 +35,5 @@ QUIT:
   REASON:           "quit while frozen"
 
 NOT-FOUND:          "&cPlayer %name% not found."
-USAGE:              "&cUsage: /freeze <player> [reason]"
 DEFAULT-REASON:     "Suspicious activity"
 ```

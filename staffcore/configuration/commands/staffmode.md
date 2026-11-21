@@ -107,8 +107,8 @@ indicator-refresh-seconds: 2
 persist: false
 
 messages:
-  toggled-on:            "&7Staffmode enabled."
-  toggled-off:           "&7Staffmode disabled."
+  toggled-on:            "&#F97603&lSTAFFMODE &r&7» &fStaffmode enabled."
+  toggled-off:           "&#F97603&lSTAFFMODE &r&7» &fStaffmode disabled."
 
   no-permission:         "&cNo permission."
   not-staff:             "&cYour group is not a staff group."

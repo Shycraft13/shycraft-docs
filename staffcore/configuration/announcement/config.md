@@ -14,7 +14,6 @@ announcement:
   cross-server: true
 
 ANNOUNCE:
-  USAGE: "&cUsage: /announce <message>"
   SOUND: "UI_TOAST_CHALLENGE_COMPLETE"
 
   TITLE:
@@ -30,7 +29,6 @@ ANNOUNCE:
     FORMAT:  "&#00A4FC&lANNOUNCE &r&7» &f%message%"
 
 BROADCAST:
-  USAGE: "&cUsage: /broadcast <message>"
   FORMAT: "&e&lBROADCAST &r&7» &f%message%"
   SOUND: ""
 ```

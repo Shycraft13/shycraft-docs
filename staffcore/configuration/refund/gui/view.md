@@ -50,7 +50,7 @@ slots.
 
 ```yaml
 GUI:
-  TITLE: "&8%category-title% ᴠɪᴇᴡ"
+  TITLE: "&8%player%'s %category-title% ᴠɪᴇᴡ"
 ```
 
 Placeholders in `TITLE`: `%player%`, `%category%`, `%category-title%`.

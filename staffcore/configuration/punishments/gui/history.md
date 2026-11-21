@@ -17,7 +17,7 @@ GUI:
 LOADING:
   MATERIAL: CLOCK
   SLOT: 31
-  TITLE: "&#AAAAAALoading..."
+  TITLE: "&#AAAAAA&lLOADING"
   LORE:
     - "&7Fetching history"
 
@@ -123,6 +123,10 @@ HISTORY-ITEM:
     - "&fStatus: &#00FC00lifted"
     - "&fBy:     &#00FC99%lifted-by%"
     - "&fOn:     &#AAAAAA%lifted-at%"
+
+  LORE-REPEATED:
+    - "&fTimes:  &#FCE300%count%x"
+    - "&fLast:   &#AAAAAA%last%"
 
   LORE-ID:
     - "&fID: &#AAAAAA%id%"

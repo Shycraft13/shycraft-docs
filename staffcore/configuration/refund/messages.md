@@ -8,43 +8,43 @@ Chat + action-bar strings shown by `/refund`. Legacy `&` colours and
 **Placeholders:** `%player%`, `%server%`, `%category%`, `%amount%`,
 `%item%`, `%shulkers%`, `%world%`.
 
-Chat is used for command feedback (usage, target not found). Action bar is
-used for GUI feedback (permission denies, action results).
+One-line messages go to chat (with their prefix) and to the action bar (without
+it), errors in red, see
+[Chat and action bar messages](../config/config.md#chat-and-action-bar-messages).
 
 ```yaml
 common:
-  no-permission:              "&cYou lack the permission to run this command."
+  no-permission:              "&cNo permission."
   no-permission-console:      "&cConsole cannot open the refund GUI."
   player-not-found:           "&cPlayer not found."
-  cross-server-off-global:    "&cCross-server networking is disabled on this backend."
-  cross-server-off-feature:   "&cCross-server refund is disabled for this feature."
+  cross-server-off-global:    "&cCross-server is disabled on this server."
+  cross-server-off-feature:   "&cCross-server refund is disabled."
 
 refund:
-  usage:                      "&7Usage: &f/refund <player>"
-  opened:                     "&7Opened refund GUI for &f%player%&7."
-  no-backups:                 "&7No backups yet for &f%player%&7 in &f%category%&7."
+  opened:                     "&#00A4FC&lREFUND &r&7» &fOpened the refund GUI for &#00FC99%player%&f."
+  no-backups:                 "&#00A4FC&lREFUND &r&7» &fNo backups yet for &#00FC99%player% &fin &#FCE300%category%&f."
   self:                       "&cYou cannot open your own backups."
 
 view:
   loading:                    "&#AAAAAA&lLOADING"
-  no-permission-take:         "&cYou lack permission to take items."
-  took-item:                  "&7Took &f%amount%x %item%&7."
-  take-only:                  "&cThis view is take-only. Your cursor item goes back on close."
+  no-permission-take:         "&cNo permission to take items."
+  took-item:                  "&#00A4FC&lREFUND &r&7» &fTook &#FCE300%amount%x %item%&f."
+  take-only:                  "&cThis view is take-only."
   cursor-first:               "&cPut down the item on your cursor first."
   drop-blocked:               "&cYou cannot drop items here."
 
 action:
-  no-permission-replace:      "&cYou lack permission for replace."
-  no-permission-giveout:      "&cYou lack permission for give-out."
-  no-permission-teleport:     "&cYou lack permission for teleport."
-  replace-applied:            "&7Replace applied for &f%player%&7."
-  replace-applied-remote:     "&7Replace sent to &f%server%&7."
-  replace-applied-offline:    "&7Offline replace queued for &f%player%&7."
+  no-permission-replace:      "&cNo permission to replace."
+  no-permission-giveout:      "&cNo permission to give out."
+  no-permission-teleport:     "&cNo permission to teleport."
+  replace-applied:            "&#00FC00&lREFUND &r&7» &fReplace applied for &#00FC99%player%&f."
+  replace-applied-remote:     "&#00FC00&lREFUND &r&7» &fReplace sent to &#00FC99%server%&f."
+  replace-applied-offline:    "&#00FC00&lREFUND &r&7» &fOffline replace queued for &#00FC99%player%&f."
   replace-failed:             "&cReplace failed: no route to the target."
-  giveout-done:               "&7Packed backup into &f%shulkers% shulker(s)&7."
-  teleport-done:              "&7Teleported to backup location."
-  teleport-cross-off:         "&cCross-server teleport disabled (teleports feature off)."
-  teleport-world-missing:     "&cWorld &f%world%&c is not loaded on this backend."
+  giveout-done:               "&#00FC00&lREFUND &r&7» &fPacked the backup into &#FCE300%shulkers% &fshulker(s)."
+  teleport-done:              "&#00FC00&lREFUND &r&7» &fTeleported to the backup location."
+  teleport-cross-off:         "&cCross-server teleport is disabled."
+  teleport-world-missing:     "&cWorld %world% is not loaded on this server."
 ```
 
 ## Message keys
@@ -54,7 +54,6 @@ action:
 | `common.no-permission` | `/refund` invoked without `staffcore.refund.use`. |
 | `common.no-permission-console` | `/refund` invoked from console (must be a player). |
 | `common.player-not-found` | Target name did not resolve to any known player (not online, not in the local cache, not returned by Mojang). |
-| `refund.usage` | `/refund` invoked without arguments. |
 | `view.loading` | Item shown while snapshots load for the list GUI. Also used as the fallback label when the item loads from an empty state. |
 | `view.no-permission-take` | Clicking a slot in the View GUI without `staffcore.refund.giveout`. |
 | `view.took-item` | Action bar after a successful take in the View GUI. |

@@ -14,7 +14,7 @@ Placeholders on `ITEM` only: `%ordinal%`, `%date%`, `%server%`, `%world%`, `%x%`
 GUI:
   ROWS: 4
   ITEMS-PER-PAGE: 27
-  TITLE: "&8%category-title% ʙᴀᴄᴋᴜᴘѕ"
+  TITLE: "&8%player%'s %category-title% ʙᴀᴄᴋᴜᴘѕ"
 
 ITEM:
   MATERIAL: BARREL

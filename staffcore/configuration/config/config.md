@@ -14,6 +14,10 @@ staffcore:
 
   lowercase-commands: true
 
+  chat-messages: true
+
+  actionbar-messages: true
+
 features:
   punishments: true
 
@@ -77,7 +81,7 @@ mute:
     - reply
     - pm
     - message
-  blocked-message: "&cYou are muted. You can't use &f/%command% &cright now."
+  blocked-message: "&cYou are muted. You can't use /%command% right now."
 
 freeze:
   blocked-switch-message: "&cYou are frozen. You can't switch servers."
@@ -101,6 +105,8 @@ hidden-channels:
 | --- | --- | --- |
 | `staffcore.debug` | `false` | Verbose logging for diagnostics. |
 | `staffcore.server-id` | `""` (empty) | Unique identifier for THIS node inside the network. Required whenever cross-server or Redis is enabled. Used as the origin stamp on every event, the node-discovery heartbeat key, and the human-readable tag in logs. If left empty the plugin logs a WARNING and falls back to a per-boot random UUID. |
+| `staffcore.chat-messages` | `true` | Send StaffCore's one-line messages to chat, with their prefix. `false` turns chat off for these messages for every player. |
+| `staffcore.actionbar-messages` | `true` | Send the same one-line messages to the action bar, without the prefix. `false` turns the action bar off for these messages for every player. |
 | `features.punishments` | `true` | Master switch for the whole punishments feature group. When `false`, none of `/ban`, `/unban`, `/mute`, `/unmute`, `/warn`, `/unwarn`, `/warns`, `/kick`, `/punish`, `/history` or `/alts` is registered; no database tables are opened; no chat / sign / book / anvil / voicechat mute enforcement runs; cross-server ban events are ignored on this node. Set to `false` when another plugin owns bans and you only want the rest of staffcore. |
 | `features.teleports` | `false` | Master switch for the teleport feature group (`/tp`, `/tphere`, `/tppos`, `/back`). When `false`, none of these commands is registered, no last-location snapshot is kept, and no back-stack is recorded. Turn on to enable; per-feature settings and the cross-server switch live in [`teleports/config.yml`](../teleports/config.md). |
 | `features.inspect` | `true` | Master switch for the inspect feature group (`/invsee`, `/echestsee`). When `false`, neither command is registered and no inspect-related listeners run. |
@@ -113,12 +119,23 @@ hidden-channels:
 | `proxy.wait-for-proxy` | `true` | Block the command until the proxy ACKs. Cleaner semantics; the staff member sees success only when the proxy has actually done the work. |
 | `proxy.timeout-ms` | `2000` | Fall back to a direct DB write / local kick if the proxy is silent for this long. |
 
+## Chat and action bar messages
+
+`staffcore.chat-messages` and `staffcore.actionbar-messages` decide where StaffCore's
+one-line messages appear: in chat (with their prefix), on the action bar (without it), or
+both. With EconomyCore installed, each player can also turn either one off for themselves
+in `/settings` ("Chat Messages", "Action Bar Messages"); without it only these two keys
+apply. Errors show in red on the action bar and as `ERROR » <text>` in chat. Longer output
+such as help pages, lists, `/checkban` and `/checkmute` always goes to chat. A message left
+empty (`""`) in a messages file is not sent at all.
+
 ## Proxy edition
 
 On a Velocity proxy the same file lives at
 `plugins/staffcoreproxy/config/config.yml`. The proxy uses a top-level
 `server-id: ...` (no `staffcore.` prefix). The `proxy:` block is ignored on
-the proxy side.
+the proxy side. The two message keys work there too (under `staffcore:`), without per-player
+toggles.
 
 ## See also
 

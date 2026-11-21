@@ -21,33 +21,30 @@ common:
   player-not-found:   "&cPlayer not found."
   cannot-target-self: "&cYou cannot teleport to yourself."
   cross-server-off:              "&cCross-server teleport is disabled on this network."
-  cross-server-off-global:       "&cCross-server is disabled &7(cross-server.enabled in config/config.yml)&c."
-  cross-server-off-teleports:    "&cCross-server teleport is off &7(teleports.cross-server in teleports/config.yml)&c."
-  cross-server-off-proxy:        "&cProxy is disabled &7(proxy.enabled in config/config.yml)&c. Cross-server teleport needs the Velocity proxy."
+  cross-server-off-global:       "&cCross-server is disabled on this server."
+  cross-server-off-teleports:    "&cCross-server teleport is disabled."
+  cross-server-off-proxy:        "&cCross-server teleport needs the proxy."
   no-safe-location:   "&cNo safe location found near the target."
   blocked-world:      "&cThat world is blocked for teleports."
 
 tp:
-  usage:              "&#F97603Usage: &#FCE300/tp <player>"
   success:            "&#00FC00&lTP &r&7» &fTeleported to &#00FC99%player%&f."
   success-offline:    "&#00FC00&lTP &r&7» &fTeleported to &#00FC99%player%&f's last location &7(offline)&f."
   cross-server:       "&#00FC00&lTP &r&7» &fTransferring you to &#00FC99%server%&f to reach &#00FC99%player%&f..."
   target-notify:      "&#00FC00&lTP &r&7» &#00FC99%sender% &fteleported to you."
 
 tphere:
-  usage:              "&#F97603Usage: &#FCE300/tphere <player>"
   success:            "&#00FC00&lTP &r&7» &fPulled &#00FC99%player% &fto your location."
   cross-server:       "&#00FC00&lTP &r&7» &fPulling &#00FC99%player% &ffrom &#00FC99%server%&f..."
-  target-must-be-online: "&cCannot pull an offline player. Use /tp <player> to reach them instead."
+  target-must-be-online: "&cCannot pull an offline player."
   target-notify:      "&#00FC00&lTP &r&7» &fYou have been teleported to &#00FC99%sender%&f."
 
 tppos:
-  usage:              "&#F97603Usage: &#FCE300/tppos <x> <y> <z> [world] [server]"
   success:            "&#00FC00&lTP &r&7» &fTeleported to &#FCE300%x% %y% %z% &fin &#00FC99%world%&f."
   cross-server:       "&#00FC00&lTP &r&7» &fTransferring you to &#00FC99%server%&f..."
   invalid-coords:     "&cInvalid coordinates."
-  world-not-found:    "&cWorld &f%world% &cnot found on this server."
-  server-not-found:   "&cServer &f%server% &cnot found in the network."
+  world-not-found:    "&cWorld %world% not found on this server."
+  server-not-found:   "&cServer %server% not found in the network."
 
 back:
   no-history:         "&cNo previous location on record."
@@ -70,7 +67,7 @@ spectate:
   ended-by-gamemode:  "&#00FC00&lSPECTATE &r&7» &fGamemode changed, spectating stopped. You stay where you are."
   not-spectating:     "&cYou are not spectating anyone."
   exempt:             "&cThat player cannot be spectated."
-  transfer-failed:    "&cTransfer to &f%server% &cfailed. Try again."
+  transfer-failed:    "&cTransfer to %server% failed. Try again."
   failed:             "&cCould not start spectating. See console."
 ```
 

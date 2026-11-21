@@ -18,9 +18,8 @@ staffclear:
     check-interval-seconds: 5
 
   messages:
-    usage:          "&cUsage: /staffclear <player>"
-    cleared:        "&aReset all staff state of &f%player%&a."
-    cleared-target: "&7Your staff state was reset."
+    cleared:        "&#FF9900&lSTAFFCLEAR &r&7» &fReset all staff state of &#00FC99%player%&f."
+    cleared-target: "&#FF9900&lSTAFFCLEAR &r&7» &fYour staff state was reset."
 ```
 
 ## Options

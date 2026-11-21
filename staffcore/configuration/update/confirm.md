@@ -97,9 +97,10 @@ CONFIRM:
     - "&#00FC00▶ &#00FC00&l&nCLICK&r &#00FC00to Confirm"
 
 MESSAGES:
-  update-sent:    "&#00FC99StaffCore update: &f%ok%/%total% &7sent &8(from=&f%source%&8, jar=&f%jar-name%&8)"
-  update-failed:  "&#FC0000StaffCore update failed &8(from=&f%source%&8, jar=&f%jar-name%&8). See console for details."
-  cancelled:      "&7Update cancelled."
+  update-sent:    "&#00A4FC&lUPDATE &r&7» &fSent to &#FCE300%ok%/%total% &fnodes &7(from=%source%, jar=%jar-name%)&f."
+  update-failed:  "&cUpdate failed. See console."
+  cancelled:      "&#00A4FC&lUPDATE &r&7» &fCancelled."
+  no-targets:     "&cPick one or more targets first."
   scripted-hint:  "&7Tip: append &f--yes&7 to skip this confirm in scripts."
 ```
 

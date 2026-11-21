@@ -24,7 +24,7 @@ Placeholders in `TITLE` / `LORE`: `%player%`, `%category%`, `%category-title%`, 
 ```yaml
 GUI:
   ROWS: 3
-  TITLE: "&8ᴀᴄᴛɪᴏɴѕ"
+  TITLE: "&8%player%'s ᴀᴄᴛɪᴏɴѕ"
 
 REPLACE:
   SLOT: 10

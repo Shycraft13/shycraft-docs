@@ -19,14 +19,14 @@ GUI:
 LOADING:
   MATERIAL: CLOCK
   SLOT: 31
-  TITLE: "&#AAAAAALoading..."
+  TITLE: "&#AAAAAA&lLOADING"
   LORE:
     - "&7Fetching reports"
 
 EMPTY:
   MATERIAL: BARRIER
   SLOT: 31
-  TITLE: "&c&lNO REPORTS"
+  TITLE: "&#FC0000&lNO REPORTS"
   LORE:
     - "&7Nothing to review."
 

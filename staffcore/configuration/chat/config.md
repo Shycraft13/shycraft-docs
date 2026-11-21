@@ -55,7 +55,7 @@ MODERATION:
   PAUSED-TIMED-BROADCAST: "&e&lChat has been paused by %staff% for %duration%."
   RESUMED-BROADCAST:      "&a&lChat has been resumed by %staff%."
   AUTO-RESUMED-BROADCAST: "&a&lChat has been automatically resumed."
-  NOT-PAUSED:             "&7Chat is not currently paused."
+  NOT-PAUSED:             "&cChat is not paused."
   INDEFINITE-LABEL:       "indefinitely"
 
   PAUSED-BLOCK-MESSAGE: "&cChat is currently paused."
