@@ -12,12 +12,7 @@ messages:
   player-not-found: "&cPlayer not found."
   invalid-amount: "&cInvalid amount."
   cooldown: "&cPlease wait before adding another bounty."
-  usage: "&#F97603Usage: &#FCE300/bounty [add <player> <amount>]"
-  usage-add: "&#F97603Usage: &#FCE300/bounty add <player> <amount>"
 
-  bountymanager-usage:        "&cUsage: /bountymanager <add|set|remove|clear> <player> [amount]"
-  bountymanager-usage-clear:  "&cUsage: /bountymanager clear <player>"
-  bountymanager-usage-action: "&cUsage: /bountymanager %action% <player> <amount>"
   bountymanager-invalid-amount: "&cInvalid amount."
   bountymanager-added:   "&#00A4FC&lADMIN &r&7» &fAdded &#00FC00%amount% &fbounty to &#00FC99%player%&f."
   bountymanager-set:     "&#00A4FC&lADMIN &r&7» &fSet &#00FC99%player%&f's bounty to &#00FC00%amount%&f."

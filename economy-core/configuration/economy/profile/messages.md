@@ -6,13 +6,7 @@ Location: `plugins/EconomyCore/economy/profile/messages.yml`
 messages:
   profilemanager-only-players: "&cOnly players can use this command."
   profilemanager-no-permission: "&cNo permission."
-  profilemanager-usage:         "&cUsage: /profilemanager <view|edit|wipe> <player> [...]"
-  profilemanager-usage-view:    "&cUsage: /profilemanager view <player>"
-  profilemanager-usage-edit:    "&cUsage: /profilemanager edit <player> <kills|deaths|playtime> <add|set|remove> <amount>"
-  profilemanager-usage-wipe:    "&cUsage: /profilemanager wipe <player>"
   profilemanager-invalid-amount: "&cInvalid amount."
-  profilemanager-unknown-action: "&cUnknown action."
-  profilemanager-unknown-field:  "&cUnknown field. Use kills, deaths, or playtime."
   profilemanager-player-not-found: "&cPlayer not found."
 
   profilemanager-edit-kills-add:      "&#00A4FC&lADMIN &r&7» &fAdded &#FCE300%amount% &fkills to &#00FC99%player%&f. New total: &#FCE300%total%&f."

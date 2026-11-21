@@ -4,7 +4,7 @@ Location: `plugins/EconomyCore/economy/team/gui/member_edit.yml`
 
 ```yaml
 gui:
-  title: "&8ᴇᴅɪᴛɪɴɢ %player%"
+  title: "&8%player%'s ᴘᴇʀᴍɪѕѕɪᴏɴѕ"
 
 back:
   MATERIAL: ARROW

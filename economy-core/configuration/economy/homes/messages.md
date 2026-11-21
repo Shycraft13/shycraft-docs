@@ -17,7 +17,6 @@ messages:
   world-disabled:   "&cYou cannot set a home in this world."
 
   renamed:           "&#00A4FC&lHOME &r&7» &fHome &#FCE300%old% &fis now &#FCE300%name%&f."
-  rename-usage:      "&#00A4FC&lHOME &r&7» &fUsage: &#FCE300/home rename <home> <name>"
   rename-disabled:   "&cRenaming homes is disabled."
   rename-one-word:   "&cUse a single word, no spaces."
   rename-no-colors:  "&cA home name cannot contain colour codes."
@@ -29,7 +28,5 @@ messages:
   rename-unchanged:  "&cThat home already has that name."
 
   homemanager-no-permission: "&cNo permission."
-  homemanager-usage:         "&cUsage: /homemanager view <player>"
   homemanager-player-not-found: "&cPlayer not found."
-  homemanager-loading:       "&7Loading homes..."
 ```

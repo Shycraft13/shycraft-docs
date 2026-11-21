@@ -11,9 +11,7 @@ messages:
   player-not-found: "&cPlayer not found."
 
   moneymanager-no-permission: "&cNo permission."
-  moneymanager-usage:         "&cUsage: /moneymanager <add|set|remove> <player> <amount>"
   moneymanager-invalid-amount: "&cInvalid amount."
-  moneymanager-unknown-action: "&cUnknown action. Use add, set, or remove."
   moneymanager-added:    "&#00A4FC&lADMIN &r&7» &fAdded &#00FC00%amount% &fto &#00FC99%player%&f. New balance: &#00FC00%total%&f."
   moneymanager-set:      "&#00A4FC&lADMIN &r&7» &fSet &#00FC99%player%&f's balance to &#00FC00%amount%&f."
   moneymanager-removed:  "&#00A4FC&lADMIN &r&7» &fRemoved &#00FC00%amount% &ffrom &#00FC99%player%&f. New balance: &#00FC00%total%&f."

@@ -45,11 +45,9 @@ CHAT:
   IGNORE:
     ENABLED: true
     MESSAGES:
-      USAGE-IGNORE:   "&#FC0000Usage: /ignore <player>"
-      USAGE-UNIGNORE: "&#FC0000Usage: /unignore <player>"
-      SELF:           "&#FC0000You cannot ignore yourself."
-      NOT-FOUND:      "&#FC0000Player not found."
+      SELF:           "&cYou cannot ignore yourself."
+      NOT-FOUND:      "&cPlayer not found."
       NOW-IGNORING:   "&#00A4FC&lIGNORE &r&7» &fYou are now ignoring &#FCE300%player%&f."
       NO-LONGER:      "&#00A4FC&lIGNORE &r&7» &fYou are no longer ignoring &#FCE300%player%&f."
-      NOT-IGNORING:   "&#FC0000You are not ignoring &#FCE300%player%&#FC0000."
+      NOT-IGNORING:   "&cYou are not ignoring %player%."
 ```

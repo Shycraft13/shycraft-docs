@@ -4,5 +4,5 @@ Location: `plugins/EconomyCore/economy/sell/messages.yml`
 
 ```yaml
 messages:
-  sold: "&#00FC00+%amount%"
+  sold: "&#00FC00&lSELL &r&7» &#00FC00+%amount%"
 ```

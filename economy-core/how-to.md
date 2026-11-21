@@ -110,6 +110,17 @@ Whether the **box itself** is sold along with its contents is each player's own
 choice in `/settings` under "Sell shulker boxes" (default on). With it off, the box
 is handed back empty instead of being sold. The contents always sell either way.
 
+## Choose where messages appear
+
+Every short message (a purchase, a payment, an error) shows in chat with its prefix
+and on the action bar at the same time. To turn one channel off for the whole server,
+set `chat-messages: false` or `actionbar-messages: false` in `config/config.yml`.
+Players can turn either one off for themselves in `/settings` under "Chat Messages"
+and "Action Bar Messages". Help pages, lists and announcements always go to chat.
+
+A command typed with missing or wrong arguments does nothing; tab completion shows
+the right syntax.
+
 ## Give someone a Mythic Tool
 
 Mythic Tools are temporary premium tools that expire after a set duration.

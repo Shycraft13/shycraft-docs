@@ -10,6 +10,5 @@ messages:
   already-teleporting: "&cYou are already teleporting."
 
   spawnmanager-no-permission: "&cYou don't have permission."
-  spawnmanager-usage:         "&cUsage: /spawnmanager setspawn"
   spawnmanager-only-players:  "&cOnly players can set spawn."
 ```

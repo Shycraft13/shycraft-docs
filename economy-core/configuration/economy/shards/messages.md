@@ -6,7 +6,6 @@ Location: `plugins/EconomyCore/economy/shards/messages.yml`
 messages:
   shardpay-sent: "&#00A4FC&lSHARDS &r&7» &fPaid &#A303F9%amount% &fto &#00FC99%player%&f."
   shardpay-received: "&#00A4FC&lSHARDS &r&7» &fReceived &#A303F9%amount% &ffrom &#00FC99%player%&f."
-  shardpay-usage: "&cUsage: /%label% <player> <amount>"
   shardpay-disabled: "&cShard payments are disabled."
   shardpay-no-permission: "&cYou don't have permission to use this."
   shardpay-players-only: "&cOnly players can use this command."
@@ -36,13 +35,11 @@ messages:
 
   shards-self:  "&#00A4FC&lSHARDS &r&7» &fYour shards: &#FCE300%shards%"
   shards-other: "&#00A4FC&lSHARDS &r&7» &f%player%'s shards: &#FCE300%shards%"
-  shards-player-not-found: "&#FC0000Player not found."
+  shards-player-not-found: "&cPlayer not found."
 
   admin-no-permission:      "&cNo permission."
-  shardmanager-usage:       "&cUsage: /shardmanager <add|set|remove> <player> <amount>"
   shardmanager-invalid-amount: "&cInvalid amount."
   shardmanager-player-not-found: "&cPlayer not found."
-  shardmanager-unknown-action:   "&cUnknown action. Use add, set, or remove."
   shardmanager-added:       "&#00A4FC&lADMIN &r&7» &fAdded &#A303F9%amount% &fshards to &#00FC99%player%&f. New total: &#A303F9%total%&f."
   shardmanager-set:         "&#00A4FC&lADMIN &r&7» &fSet &#00FC99%player%&f's shards to &#A303F9%amount%&f."
   shardmanager-removed:     "&#00A4FC&lADMIN &r&7» &fRemoved &#A303F9%amount% &fshards from &#00FC99%player%&f. New total: &#A303F9%total%&f."
@@ -54,9 +51,5 @@ messages:
   shardmanager-removed-offline: "&#00A4FC&lADMIN &r&7» &fRemoved &#A303F9%amount% &fshards from offline player &#00FC99%player%&f. New total: &#A303F9%total%&f."
 
   afkmanager-no-permission:   "&cYou don't have permission."
-  afkmanager-usage:           "&cUsage: /afkmanager <setafk|afkarea>"
-  afkmanager-usage-afkarea:   "&cUsage: /afkmanager afkarea <wand|create <name>|delete <name>>"
-  afkmanager-usage-create:    "&cUsage: /afkmanager afkarea create <name>"
-  afkmanager-usage-delete:    "&cUsage: /afkmanager afkarea delete <name>"
   afkmanager-world-mismatch:  "&cBoth corners must be in the same world."
 ```

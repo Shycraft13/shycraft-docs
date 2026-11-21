@@ -19,18 +19,12 @@ messages:
   credits-received: "&#00FC00&lTAG &r&7» &fYou received &#FCE300%amount% &ftag credit(s). Spend them in &#FCE300/tags&f."
 
 manager:
-  usage: "&#00A4FCUsage: &#FCE300/tagsmanager <create|delete|edit|give|remove|credits> ..."
-  usage-credits: "&#00A4FCUsage: &#FCE300/tagsmanager credits <add|remove|set|check> <player> [amount]"
   invalid-amount: "&cInvalid amount."
   credits-added:   "&#00A4FC&lADMIN &r&7» &fAdded &#FCE300%amount% &ftag credit(s) to &#00FC99%player%&f. Now: &#FCE300%credits%&f."
   credits-removed: "&#00A4FC&lADMIN &r&7» &fRemoved &#FCE300%amount% &ftag credit(s) from &#00FC99%player%&f. Now: &#FCE300%credits%&f."
   credits-set:     "&#00A4FC&lADMIN &r&7» &fSet &#00FC99%player%&f's tag credits to &#FCE300%credits%&f."
   credits-check:   "&#00A4FC&lADMIN &r&7» &#00FC99%player% &fhas &#FCE300%credits% &ftag credit(s)."
   credits-mass-done: "&#00A4FC&lADMIN &r&7» &fApplied to &#FCE300%count% &fof &#FCE300%total% &fonline players."
-  usage-create: "&#00A4FCUsage: &#FCE300/tagsmanager create <name> [display]"
-  usage-edit: "&#00A4FCUsage: &#FCE300/tagsmanager edit <name> <display>"
-  usage-give: "&#00A4FCUsage: &#FCE300/tagsmanager give <player> <name>"
-  usage-remove: "&#00A4FCUsage: &#FCE300/tagsmanager remove <player> <name>"
   invalid-name: "&cInvalid name. Letters, digits, _ and - only."
   exists: "&cThat tag already exists."
   not-found: "&cNo such tag."

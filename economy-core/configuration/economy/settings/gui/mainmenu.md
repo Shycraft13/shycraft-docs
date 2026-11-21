@@ -80,7 +80,7 @@ hotbar-messages:
   SLOT: 13
   DEFAULT: true
   MATERIAL: NAME_TAG
-  TITLE: "&#AAAAAA&lHOTBAR MESSAGES"
+  TITLE: "&#AAAAAA&lACTION BAR MESSAGES"
   LORE:
     - "&7Display"
     - ""
@@ -383,6 +383,22 @@ mob-spawns:
     - "&#FC0000▶ &fStatus: %status%"
     - ""
     - "&#FC0000▶ &#FC0000&l&nCLICK&r &#FC0000to Toggle"
+
+chat-messages:
+  SLOT: 38
+  DEFAULT: true
+  MATERIAL: PAPER
+  TITLE: "&#AAAAAA&lCHAT MESSAGES"
+  LORE:
+    - "&7Display"
+    - ""
+    - "&#AAAAAAInformation"
+    - "&fShow server messages"
+    - "&fin your chat"
+    - ""
+    - "&#AAAAAA▶ &fStatus: %status%"
+    - ""
+    - "&#AAAAAA▶ &#AAAAAA&l&nCLICK&r &#AAAAAAto Toggle"
 
 sell-shulker-boxes:
   SLOT: 39

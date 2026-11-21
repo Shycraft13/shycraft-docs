@@ -12,6 +12,5 @@ messages:
   player-not-found:   "&cPlayer not found."
   cooldown:           "&cPlease wait before paying again."
   payments-disabled:  "&c%player% is not accepting payments."
-  usage:              "&#F97603Usage: &#FCE300/pay <player> <amount>"
-  spam-blocked:       "&cToo many payments. Try again in &#FCE300%time%&c."
+  spam-blocked:       "&cToo many payments. Try again in %time%."
 ```

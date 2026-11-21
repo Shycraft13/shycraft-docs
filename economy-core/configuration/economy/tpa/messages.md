@@ -12,7 +12,7 @@ messages:
   denied:              "&#00A4FC&lTPA &r&7» &fRequest denied."
   no-request:          "&cNo pending teleport requests."
   player-not-found:    "&cPlayer not found or not online."
-  already-pending:     "&cAlready have a pending request to &#00FC99%player%&c."
+  already-pending:     "&cAlready have a pending request to %player%."
   accept-text:         "&#00FC00[ACCEPT]"
   accept-hover:        "&7Click to accept the request"
   deny-text:           "&#FC0000[DENY]"

@@ -11,7 +11,5 @@ PRIVATE-MESSAGES:
   DM-DISABLED: "&c%player% is not accepting private messages."
   NO-REPLY-TARGET: "&cNobody has messaged you yet."
 
-  USAGE-MSG: "&cUsage: /%label% <player> <message>"
-  USAGE-REPLY: "&cUsage: /%label% <message>"
   CONSOLE-DENIED: "Console cannot send private messages."
 ```

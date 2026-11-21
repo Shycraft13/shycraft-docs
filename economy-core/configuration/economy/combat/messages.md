@@ -24,11 +24,8 @@ messages:
 
   safezone-blocked: "&cYou cannot enter a safe zone while in combat."
 
-  combatmanager-usage:        "&cUsage: /combatmanager <tag|untag> <player|*> [duration]"
-  combatmanager-usage-tag:    "&cUsage: /combatmanager tag <player> [duration]"
-  combatmanager-usage-untag:  "&cUsage: /combatmanager untag <player|*>"
-  combatmanager-player-offline: "&cPlayer &f%input%&c is not online."
-  combatmanager-invalid-duration: "&cInvalid duration &f%input%&c. Examples: &f120&c, &f120s&c, &f3m&c, &f1h&c."
+  combatmanager-player-offline: "&cPlayer %input% is not online."
+  combatmanager-invalid-duration: "&cInvalid duration %input%. Examples: 120, 120s, 3m, 1h."
   combatmanager-tagged:    "&#00A4FC&lADMIN &r&7» &fTagged &#00FC99%player%&f for &#00FC99%time%&f."
   combatmanager-untagged-all: "&#00A4FC&lADMIN &r&7» &fUntagged &#00FC99%count%&f player(s)."
   combatmanager-not-in-combat: "&#00A4FC&lADMIN &r&7» &#00FC99%player%&f is not in combat."
